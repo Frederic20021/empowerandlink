@@ -1,13 +1,27 @@
 import Link from "next/link";
 
-export default function ContactButton() {
+interface ContactButtonProps {
+  pageName?: string;
+  buttonText?: string;
+  className?: string;
+  wrapperClassName?: string;
+}
+
+export default function ContactButton({ 
+  pageName = '',
+  buttonText = 'お問い合わせ・ご相談はこちら',
+  className = '',
+  wrapperClassName = 'bg-white flex justify-center py-8'
+}: ContactButtonProps) {
+  const href = pageName ? `/contact?from=${encodeURIComponent(pageName)}` : '/contact';
+  
   return (
-    <div className="bg-white flex justify-center py-8">
+    <div className={wrapperClassName}>
       <Link
-        href="/contact"
-        className="bg-blue-600 hover:bg-blue-700 text-white p-4 font-bold rounded-lg transition-colors duration-300 shadow-lg"
+        href={href}
+        className={`bg-blue-600 hover:bg-blue-700 text-white p-4 font-bold rounded-lg transition-colors duration-300 shadow-lg ${className}`}
       >
-        お問い合わせ・ご相談はこちら
+        {buttonText}
       </Link>
     </div>
   );

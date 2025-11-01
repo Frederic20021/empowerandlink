@@ -11,6 +11,6 @@ export default function page() {
         <CEOMessage />
         <Info />
         <Maps />
-        <ContactButton />
+        <ContactButton pageName="会社情報について" />
     </>
 }
