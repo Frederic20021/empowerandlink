@@ -1,7 +1,4 @@
-'use client';
-
 import Link from 'next/link';
-
 interface ContactButtonIframeProps {
   pageName?: string;
   buttonText?: string;

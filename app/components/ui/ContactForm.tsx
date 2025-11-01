@@ -65,19 +65,19 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
 
   return (
     <>
-      <section className="py-8 bg-gray-50 text-black grid gap-8 justify-center px-4">
-        <p className="text-[#2778FA] text-xl font-bold text-center">
+      <section className="py-4 sm:py-8 bg-gray-50 text-black grid gap-4 sm:gap-8 justify-center px-2 sm:px-4">
+        <p className="text-[#2778FA] text-base sm:text-xl font-bold text-center px-2">
           下記フォームより、ご相談ください。<br />
           <span className='text-xs'>３営業日以内に担当よりご連絡させていただきます。</span>
         </p>
         <form
           onSubmit={handleSubmit}
-          className="w-full md:min-w-xl mx-auto grid bg-white text-black rounded-lg shadow-sm p-4 md:p-8 space-y-6"
+          className="w-full max-w-4xl mx-auto grid bg-white text-black rounded-lg shadow-sm p-3 sm:p-6 md:p-8 space-y-4 sm:space-y-6"
         >
           {/* お名前 */}
-          <div className="grid md:grid-cols-[150px_1fr] gap-4 items-start">
-            <label className="flex justify-between items-center gap-2 text-sm font-medium text-gray-700 pt-3">
-              お名前
+          <div className="grid md:grid-cols-[150px_1fr] gap-2 sm:gap-4 items-start">
+            <label className="flex justify-between items-center gap-2 text-xs sm:text-sm font-medium text-gray-700 pt-2 sm:pt-3">
+              <span>お名前</span>
               {reqBTN('必須')}
             </label>
             <input
@@ -87,14 +87,14 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
               onChange={handleChange}
               required
               placeholder="山田　太郎"
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
 
           {/* Company */}
-          <div className="grid md:grid-cols-[150px_1fr] gap-4 items-start">
-            <label className="flex justify-between items-center gap-2 text-sm font-medium text-gray-700 pt-3">
-              会社名
+          <div className="grid md:grid-cols-[150px_1fr] gap-2 sm:gap-4 items-start">
+            <label className="flex justify-between items-center gap-2 text-xs sm:text-sm font-medium text-gray-700 pt-2 sm:pt-3">
+              <span>会社名</span>
               {reqBTN('任意')}
             </label>
             <input
@@ -103,14 +103,14 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
               value={formData.company_name}
               onChange={handleChange}
               placeholder='（法人の方は必ずご入力ください）'
-              className="w-full border border-gray-300 p-3 rounded-md focus:border-blue-500 focus:outline-none"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none"
             />
           </div>
 
           {/* Email */}
-          <div className="grid md:grid-cols-[150px_1fr] gap-4 items-start">
-            <label className="flex justify-between items-center gap-2 text-sm font-medium text-gray-700 pt-3">
-              メールアドレス
+          <div className="grid md:grid-cols-[150px_1fr] gap-2 sm:gap-4 items-start">
+            <label className="flex justify-between items-center gap-2 text-xs sm:text-sm font-medium text-gray-700 pt-2 sm:pt-3">
+              <span className="whitespace-nowrap">メールアドレス</span>
               {reqBTN('必須')}
             </label>
             <div>
@@ -121,15 +121,15 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
                 onChange={handleChange}
                 required
                 placeholder="xxxxxxxxxx@xxx.com"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
           </div>
 
           {/* 郵便番号 */}
-          <div className="grid md:grid-cols-[150px_1fr] gap-4 items-start">
-            <label className="flex justify-between items-center gap-2 text-sm font-medium text-gray-700 pt-3">
-              郵便番号
+          <div className="grid md:grid-cols-[150px_1fr] gap-2 sm:gap-4 items-start">
+            <label className="flex justify-between items-center gap-2 text-xs sm:text-sm font-medium text-gray-700 pt-2 sm:pt-3">
+              <span>郵便番号</span>
               {reqBTN('必須')}
             </label>
             <div>
@@ -140,16 +140,16 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
                 onChange={handleChange}
                 required
                 placeholder="000-0000"
-                className="w-full md:w-64 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full md:w-64 px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-              <p className="text-xs text-gray-500 mt-2">※半角・全角どちらでもOK</p>
+              <p className="text-xs text-gray-500 mt-1 sm:mt-2">※半角・全角どちらでもOK</p>
             </div>
           </div>
 
           {/* ご住所 */}
-          <div className="grid md:grid-cols-[150px_1fr] gap-4 items-start">
-            <label className="flex justify-between items-center gap-2 text-sm font-medium text-gray-700 pt-3">
-              ご住所
+          <div className="grid md:grid-cols-[150px_1fr] gap-2 sm:gap-4 items-start">
+            <label className="flex justify-between items-center gap-2 text-xs sm:text-sm font-medium text-gray-700 pt-2 sm:pt-3">
+              <span>ご住所</span>
               {reqBTN('任意')}
             </label>
             <input
@@ -158,14 +158,14 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
               value={formData.address}
               onChange={handleChange}
               placeholder="○○市○○町 000-00"
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
 
           {/* 電話番号 */}
-          <div className="grid md:grid-cols-[150px_1fr] gap-4 items-start">
-            <label className="flex justify-between items-center gap-2 text-sm font-medium text-gray-700 pt-3">
-              電話番号
+          <div className="grid md:grid-cols-[150px_1fr] gap-2 sm:gap-4 items-start">
+            <label className="flex justify-between items-center gap-2 text-xs sm:text-sm font-medium text-gray-700 pt-2 sm:pt-3">
+              <span>電話番号</span>
               {reqBTN('任意')}
             </label>
             <div>
@@ -175,16 +175,16 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
                   value={formData.phone_number}
                   onChange={handleChange}
                   placeholder="000-0000-0000"
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
-              <p className="text-xs text-gray-500 mt-2">※半角・全角どちらでもOK</p>
+              <p className="text-xs text-gray-500 mt-1 sm:mt-2">※半角・全角どちらでもOK</p>
             </div>
           </div>
 
           {/* subject */}
-          <div className="grid md:grid-cols-[150px_1fr] gap-4 items-start">
-            <label className="flex justify-between items-center gap-2 text-sm font-medium text-gray-700 pt-3">
-              お題名
+          <div className="grid md:grid-cols-[150px_1fr] gap-2 sm:gap-4 items-start">
+            <label className="flex justify-between items-center gap-2 text-xs sm:text-sm font-medium text-gray-700 pt-2 sm:pt-3">
+              <span>お題名</span>
               {reqBTN('必須')}
             </label>
             <input
@@ -193,14 +193,14 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
               value={formData.subject}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
 
           {/* ご相談内容 */}
-          <div className="grid md:grid-cols-[150px_1fr] gap-4 items-start">
-            <label className="flex justify-between items-center gap-2 text-sm font-medium text-gray-700 pt-3">
-              ご相談内容
+          <div className="grid md:grid-cols-[150px_1fr] gap-2 sm:gap-4 items-start">
+            <label className="flex justify-between items-center gap-2 text-xs sm:text-sm font-medium text-gray-700 pt-2 sm:pt-3">
+              <span className="whitespace-nowrap">ご相談内容</span>
               {reqBTN('必須')}
             </label>
             <textarea
@@ -208,19 +208,19 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
               value={formData.message}
               onChange={handleChange}
               rows={6}
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
             />
           </div>
 
           {/* Submit Button */}
-          <div className="flex justify-center pt-6">
+          <div className="flex justify-center pt-4 sm:pt-6">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex items-center gap-3 px-12 py-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed shadow-md hover:shadow-lg"
+              className="flex items-center gap-2 sm:gap-3 px-6 sm:px-12 py-3 sm:py-4 text-sm sm:text-base bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed shadow-md hover:shadow-lg"
             >
               <svg 
-                className="w-5 h-5" 
+                className="w-4 h-4 sm:w-5 sm:h-5" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -234,7 +234,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
               </svg>
               {isSubmitting ? '送信中...' : '内容を確認する'}
               <svg 
-                className="w-5 h-5" 
+                className="w-4 h-4 sm:w-5 sm:h-5" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"

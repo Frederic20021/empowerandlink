@@ -12,7 +12,7 @@ export default function CTA() {
         <p className="mb-8 max-w-2xl mx-auto">
           あなたの未来を共に創り上げましょう。
         </p>
-        <ContactButtonIframe pageName="人材紹介事業に関して" />
+        <ContactButton pageName="人材紹介事業に関して" />
       </section>
     </>
   )
