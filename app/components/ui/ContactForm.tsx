@@ -72,7 +72,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
         </p>
         <form
           onSubmit={handleSubmit}
-          className="w-full min-w-xl mx-auto grid bg-white text-black rounded-lg shadow-sm p-4 md:p-8 space-y-6"
+          className="w-full md:min-w-xl mx-auto grid bg-white text-black rounded-lg shadow-sm p-4 md:p-8 space-y-6"
         >
           {/* お名前 */}
           <div className="grid md:grid-cols-[150px_1fr] gap-4 items-start">
