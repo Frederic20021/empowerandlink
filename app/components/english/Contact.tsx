@@ -22,7 +22,7 @@ export default function Contact() {
                 className="rounded-lg justify-center"
               />
               <h3 className='text-white font-bold text-lg mt-2'>Webからの問い合わせはこちら</h3>
-              <ContactButton pageName="英語教育サービスに関して" buttonText="お問い合わせフォーム" className="bg-white hover:bg-gray-200 rounded-lg cursor-pointer text-black"/>
+              <ContactButton pageName="英語教育サービスに関して"/>
             </div>
             
             {/* Vertical divider line - only visible on medium screens and up */}
