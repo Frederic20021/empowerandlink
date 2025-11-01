@@ -17,7 +17,10 @@ export default function ContactButtonIframe({
   wrapperClassName = 'bg-white flex justify-center py-8',
   breakOutOfIframe = false
 }: ContactButtonIframeProps) {
-  const href = pageName ? `/contact?from=${encodeURIComponent(pageName)}` : '/contact';
+  // Use absolute URL to prevent GitHub Pages navigation
+  const baseUrl = 'https://empowerandlink.com';
+  const path = pageName ? `/contact?from=${encodeURIComponent(pageName)}` : '/contact';
+  const href = `${baseUrl}${path}`;
   
   const handleClick = (e: React.MouseEvent) => {
     if (breakOutOfIframe && window.top !== window.self) {

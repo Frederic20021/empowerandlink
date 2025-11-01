@@ -11,7 +11,10 @@ export default function ContactButton({
   className = '',
   wrapperClassName = ' flex justify-center'
 }: ContactButtonProps) {
-  const href = pageName ? `/contact?from=${encodeURIComponent(pageName)}` : '/contact';
+  // Use absolute URL to prevent GitHub Pages navigation
+  const baseUrl = 'https://empowerandlink.com';
+  const path = pageName ? `/contact?from=${encodeURIComponent(pageName)}` : '/contact';
+  const href = `${baseUrl}${path}`;
   
   return (
     <div className={wrapperClassName}>
