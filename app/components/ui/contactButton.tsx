@@ -10,16 +10,16 @@ interface ContactButtonProps {
 export default function ContactButton({ 
   pageName = '',
   buttonText = 'お問い合わせ・ご相談はこちら',
-  className = 'bg-blue-600 text-white hover:bg-blue-700 py-8',
-  wrapperClassName = 'bg-white flex justify-center'
+  className = '',
+  wrapperClassName = 'bg-white flex justify-center py-8'
 }: ContactButtonProps) {
   const href = pageName ? `/contact?from=${encodeURIComponent(pageName)}` : '/contact';
   
   return (
-    <div className={`${wrapperClassName}`}>
+    <div className={wrapperClassName}>
       <Link
         href={href}
-        className={`p-4 font-bold rounded-lg transition-colors duration-300 shadow-lg ${className}`}
+        className={`bg-blue-600 hover:bg-blue-700 text-white p-4 font-bold rounded-lg transition-colors duration-300 shadow-lg ${className}`}
       >
         {buttonText}
       </Link>
