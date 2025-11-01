@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 interface ContactButtonIframeProps {
   pageName?: string;
   buttonText?: string;
@@ -28,13 +30,13 @@ export default function ContactButtonIframe({
   
   return (
     <div className={wrapperClassName}>
-      <a
+      <Link
         href={href}
         onClick={handleClick}
         className={`bg-blue-600 hover:bg-blue-700 text-white p-4 font-bold rounded-lg transition-colors duration-300 shadow-lg ${className}`}
       >
         {buttonText}
-      </a>
+      </Link>
     </div>
   );
 }

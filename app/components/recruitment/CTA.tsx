@@ -1,4 +1,5 @@
 import ContactButton from "../ui/contactButton"
+import ContactButtonIframe from "../ui/ContactButtonIframe"
 
 export default function CTA() {
   return (
@@ -11,7 +12,7 @@ export default function CTA() {
         <p className="mb-8 max-w-2xl mx-auto">
           あなたの未来を共に創り上げましょう。
         </p>
-        <ContactButton pageName="人材紹介事業に関して" />
+        <ContactButtonIframe pageName="人材紹介事業に関して" />
       </section>
     </>
   )

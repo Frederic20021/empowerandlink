@@ -9,7 +9,7 @@ export default function ContactButton({
   pageName = '',
   buttonText = 'お問い合わせ・ご相談はこちら',
   className = '',
-  wrapperClassName = 'bg-white flex justify-center rounded-lg'
+  wrapperClassName = ' flex justify-center'
 }: ContactButtonProps) {
   const href = pageName ? `/contact?from=${encodeURIComponent(pageName)}` : '/contact';
   

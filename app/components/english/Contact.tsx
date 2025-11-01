@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getAssetPath } from "../../utils/paths";
 import ContactButton from "../ui/contactButton";
+import ContactButtonIframe from "../ui/ContactButtonIframe";
 
 export default function Contact() {
     return <div>
@@ -22,7 +23,7 @@ export default function Contact() {
                 className="rounded-lg justify-center"
               />
               <h3 className='text-white font-bold text-lg mt-2'>Webからの問い合わせはこちら</h3>
-              <ContactButton pageName="英語教育サービスに関して"/>
+              <ContactButtonIframe pageName="英語教育サービスに関して"/>
             </div>
             
             {/* Vertical divider line - only visible on medium screens and up */}
