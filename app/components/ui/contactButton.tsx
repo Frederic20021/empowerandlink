@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 interface ContactButtonProps {
   pageName?: string;
   buttonText?: string;
@@ -17,12 +15,13 @@ export default function ContactButton({
   
   return (
     <div className={wrapperClassName}>
-      <Link
+      <a
         href={href}
+        target="_parent"
         className={`bg-blue-600 hover:bg-blue-700 text-white p-4 font-bold rounded-lg transition-colors duration-300 shadow-lg ${className}`}
       >
         {buttonText}
-      </Link>
+      </a>
     </div>
   );
 }
