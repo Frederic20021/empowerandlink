@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 interface ContactButtonProps {
   pageName?: string;
   buttonText?: string;
@@ -10,19 +8,20 @@ interface ContactButtonProps {
 export default function ContactButton({ 
   pageName = '',
   buttonText = 'お問い合わせ・ご相談はこちら',
-  className = '',
-  wrapperClassName = 'bg-white flex justify-center py-8'
+  className = 'bg-blue-600 text-white hover:bg-blue-700 py-8',
+  wrapperClassName = 'bg-white flex justify-center'
 }: ContactButtonProps) {
   const href = pageName ? `/contact?from=${encodeURIComponent(pageName)}` : '/contact';
   
   return (
-    <div className={wrapperClassName}>
-      <Link
+    <div className={`${wrapperClassName}`}>
+      <a
         href={href}
-        className={`bg-blue-600 hover:bg-blue-700 text-white p-4 font-bold rounded-lg transition-colors duration-300 shadow-lg ${className}`}
+        target="_parent"
+        className={`p-4 font-bold rounded-lg transition-colors duration-300 shadow-lg ${className}`}
       >
         {buttonText}
-      </Link>
+      </a>
     </div>
   );
 }
