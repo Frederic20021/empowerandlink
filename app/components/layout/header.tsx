@@ -48,8 +48,8 @@ useEffect(() => {
     >
       <div className="container mx-auto px-8 py-6 sm:p-8">
         <div className="flex items-center justify-between md:px-16 h-full">
-          <Link className="smallScreenCompanyName white text-sm md:text-xl cursor-pointer font-bold hover:font-extrabold scaler break-words max-w-[60%] sm:max-w-none" href='/'>
-            {`エンパワー&リンク\n株式会社`}
+          <Link className="smallScreenCompanyName white md:text-xl cursor-pointer font-bold hover:font-extrabold scaler break-words max-w-[60%] sm:max-w-none" href='/'>
+            {`エンパワー&リンク株式会社`}
           </Link>
           
           {/* Desktop Navigation */}
