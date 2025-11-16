@@ -8,7 +8,7 @@ export default function MainService() {
         <h2 className="sm:text-3xl text-lg font-bold text-center mb-12">
          人材・職業紹介サービス
         </h2>
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-10 md:mx-8">
           {mainServices.map((service, index) => (
             <Link 
               key={service.id}
@@ -22,7 +22,7 @@ export default function MainService() {
                 {service.title}
                 <span className="sm:text-4xl ml-2">{service.emoji}</span>
               </h3>
-              <p className="mb-4 text-sm sm:text-2xl indent-4 leading-relaxed">
+              <p className="mb-4 text-sm md:text-lg indent-4 leading-relaxed">
                 {service.description}
               </p>
               <ul className="list-disc list-inside space-y-2 text-left">

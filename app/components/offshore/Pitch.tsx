@@ -1,7 +1,6 @@
 'use client'
 
 import Image from "next/image";
-import { getAssetPath } from "../../utils/paths";
 import BTN from "../ui/BTN";
 
 const image = [
@@ -19,14 +18,14 @@ export default function Pitch() {
         {image.map((img, index) => (
           <div key={index} className="flex bg-white flex-col items-center">
           {index === 1 ? (
-            <BTN text="エンパワー＆リンクについて" href="https://empowerandlink.com/" />
+            <BTN text="エンパワー＆リンクについて" href="/" />
           ) : index === 2 ? (
             <BTN text="料金プランを見る" href={`#price-plan`} />
           ) : null}
           <Image
             id={`${index}`}
             alt={`Offshore Service + ${index}`}
-            src={getAssetPath(`${img}`)}
+            src={img}
             width={1920}
             height={1080}
             className="object-cover w-full h-auto"

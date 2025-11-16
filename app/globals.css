@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* Ensure Tailwind scans all files in the App Router during build (helpful on CI/Vercel) */
+@source "./**/*.{js,ts,jsx,tsx}";
 
 :root {
   --background: #ffffff;
@@ -87,4 +89,33 @@ overflow-x: hidden;
   margin: 0px auto;
   justify-content: center;
   color: #ffffff;
+}
+
+@media (max-width: 640px) {
+.smallScreenCompanyName  {
+  white-space: pre-line;
+  }
+}
+
+.naviLinkUnderline {
+  position: relative;
+}
+
+.naviLinkUnderline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+.naviLinkUnderline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
