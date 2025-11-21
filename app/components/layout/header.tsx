@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
-import { navLinks } from '@/app/constants/header';
+import { navLinks } from '@/app/constants/header'; 
 
 
 export default function Header() {

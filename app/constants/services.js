@@ -12,7 +12,7 @@ export const services = [
       title: "日本語教育",
       description: "外国人材向けの実践的な日本語指導を実施、ビジネス会話から生活に密着した、現場で役立つ日本語力を身に付けます。",
       image: getAssetPath("/services/service2.jpg"),
-      link: "/services/japanese"
+      link: "/japanese"
     },
     {
       title: "英語教育",
