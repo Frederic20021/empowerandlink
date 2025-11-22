@@ -6,7 +6,7 @@ export default function Pitch() {
     <>
     <div className="text-black relative overflow-hidden min-h-screen px-8 md:px-16">
       {/* Curved Background - Full Width & Height */}
-      <div className="pointer-events-none absolute left-0 right-0 top-15 bottom-0 z-0">
+      <div className="pointer-events-none absolute left-0 right-0 top-0 bottom-0 z-0">
         <svg
           className="w-full h-full"
           viewBox="0 0 1440 900"
@@ -19,7 +19,7 @@ export default function Pitch() {
         </svg>
       </div>
       {/* Main Content Grid */}
-      <div className="relative z-10 max-w-4xl grid md:grid-cols-2 mx-auto px-3 gap-8 items-center py-20">
+      <div className="relative z-10 max-w-4xl grid md:grid-cols-2 mx-auto px-3 gap-8 items-center pt-20">
         <div className="space-y-8 mt-20 text-black">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
             日本語コース
@@ -60,7 +60,7 @@ export default function Pitch() {
     </div>
       <div className="relative z-20 py-4 bg-[#e5eaff] w-full rounded-t-lg">
         <Image
-          src={getAssetPath("/japanese/pitchtest.jpg")}
+          src={getAssetPath("/japanese/pitchTest.jpg")}
           alt="pitchImage"
           width={600}
           height={500}
