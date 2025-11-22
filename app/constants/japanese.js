@@ -1,14 +1,29 @@
+import Message from "../components/japanese/Message"
+
 export const coursePoint = [
   {
     id: 1,
     question: "無料体験は、どこまでできますか？",
     answer: "無料体験では、実際の授業に加えてお客様の現在のレベルチェックします。目標設定、学習プランの計画を立てた上で、体験後に詳細なフィードバックもお渡しします。",
-    image: '/japanese/japanese1.jpg'
+    image: '/japanese/study1.jpg'
   },
   {
     id: 2,
     question: "レッスン予約のキャンセルはいつまでできますか？",
     answer: "予約キャンセルは24時間前まで可能です。急な予定変更の場合は、できるだけ早めにご連絡ください。当日キャンセルの場合は1回分消化となります。",
-    image: '/japanese/japanese2.jpg',
+    image: '/japanese/study2.jpg',
+  },
+  {
+    id: 3,
+    question: "月額と単発プランの違いは何ですか？",
+    answer: "月額プランは定期的な学習を継続したい方におすすめです。レッスン料金がお得になり、予約も優先的に取れます。単発プランは必要な時だけ受講したい方向けで、1回ずつお支払いいただくプランです。",
+    image: '/japanese/study3.jpg',
   },
 ]
+
+export const staffMessage = {
+  message: "日本では出会うことのなかった文化や価値観に触れながら、英語だけでなく将来のキャリアに向けたスキルアップができる場所がILACです。\n個性的で熱心な教師陣、各部署のスペシャリスト、世界中から集まる学生のみなさまがILACをユニークなものにしてくれます。\n様々な文化を持つカナダは外国人にも対等なチャンスがあり、夢を実現するのはみなさまの頑張り次第！ここで人生を変えてみませんか？",
+  name: "山田太郎",
+  image: '/hero/avatar1.jpg',
+}
+ 
