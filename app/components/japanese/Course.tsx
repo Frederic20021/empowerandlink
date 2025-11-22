@@ -29,7 +29,7 @@ export default function Course() {
         <div className="flex gap-4 mx-auto">
           <div className="flex justify-center items-center">
             <Link
-              href="/contact"
+              href="https://empowerandlink.com/contact"
               className="border-red-700 bg-white border-2 hover:bg-red-700 text-red-700 hover:text-white px-3 sm:px-4 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-bold rounded-lg transition-colors duration-300 shadow-lg"
             >
               お問い合わせ
@@ -37,7 +37,7 @@ export default function Course() {
           </div>
           <div className="flex justify-center items-center">
             <Link
-              href="/contact"
+              href="https://empowerandlink.com/contact"
               className="border-red-700 bg-red-600 text-white border-2 hover:bg-white hover:text-red-700 px-3 sm:px-4 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg font-bold rounded-lg transition-colors duration-300 shadow-lg"
             >
               無料体験お試し(申し込む)

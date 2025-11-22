@@ -9,7 +9,7 @@ export default function Consult() {
         <div className="grid gap-4 py-4 bg-white rounded-lg">
           <span className="mt-2 text-black">Webからお問合せはこちら</span>
           <Link
-            href="/contact"
+            href="https://empowerandlink.com/contact"
             className="hover:shadow-lg bg-green-500 mx-auto px-4 py-2 font-bold rounded-lg"
           >
             お問い合わせ
