@@ -60,7 +60,7 @@ export default function Pitch() {
     </div>
       <div className="relative z-20 py-4 bg-[#e5eaff] w-full rounded-t-lg">
         <Image
-          src={getAssetPath("/japanese/pitchTest.jpg")}
+          src={getAssetPath("/japanese/pitchTest.jpeg")}
           alt="pitchImage"
           width={600}
           height={500}
