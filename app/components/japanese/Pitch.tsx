@@ -3,10 +3,9 @@ import { getAssetPath } from "../../utils/paths";
 
 export default function Pitch() {
   return (
-    <>
-    <div className="text-black relative overflow-hidden min-h-screen px-8 md:px-16">
+    <div className="text-black relative overflow-hidden px-8 md:px-16 pb-8">
       {/* Curved Background - Full Width & Height */}
-      <div className="pointer-events-none absolute left-0 right-0 top-0 bottom-0 z-0">
+      <div className="pointer-events-none absolute left-0 right-0 top-15 md:top-0 bottom-0 z-0">
         <svg
           className="w-full h-full"
           viewBox="0 0 1440 900"
@@ -19,8 +18,8 @@ export default function Pitch() {
         </svg>
       </div>
       {/* Main Content Grid */}
-      <div className="relative z-10 max-w-4xl grid md:grid-cols-2 mx-auto px-3 gap-8 items-center pt-20">
-        <div className="space-y-8 mt-20 text-black">
+      <div className="relative z-10 max-w-4xl grid md:grid-cols-2 mx-auto px-3 gap-8 items-center py-20">
+        <div className="space-y-6 text-black">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
             日本語コース
           </h1>
@@ -42,11 +41,11 @@ export default function Pitch() {
           </h2>
 
           <p className="text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed ">
-            基礎部署・空席提前のある通勤によるマンツーマン指導で、ビジネス不安当に焦る必要を効果として言語、一人ひとりのレベルや目的に合わせてレッスンを超越化できるから、短期間でも確かな成果が期待できます。さらに、日程に予約できる余剰時スケジュールと、継続しやすい料金プランで、自分のペースで無理なく続けられます。
+            実務経験・留学経験のある講師によるマンツーマン指導で、ビジネスで本当に使える英語を効率よく習得。一人ひとりのレベルや目的に合わせてレッスンを最適化できるから、短期間でも確かな成果が期待できます。さらに、自由に予約できる柔軟なスケジュールと、 継続しやすい料金プランで、自分のペースで無理なく続けられます。
           </p>
         </div>
 
-        <div className="rounded-lg overflow-hidden shadow-2xl">
+        <div className="rounded-lg overflow-hidden mt-8 shadow-2xl">
           <Image
             src={getAssetPath("/japanese/japaneseTeaching.jpg")}
             alt="日本語教育 - オンライン学習"
@@ -57,16 +56,16 @@ export default function Pitch() {
         </div>
       </div>
 
-    </div>
-      <div className="relative z-20 py-4 bg-[#e5eaff] w-full rounded-t-lg">
+      {/* Bottom Image Section */}
+      <div className="relative z-20 py-6 bg-[#e5eaff] w-full rounded-t-lg">
         <Image
-          src={getAssetPath("/japanese/pitchTest.jpeg")}
+          src={getAssetPath("/japanese/pitchTest.jpg")}
           alt="pitchImage"
           width={600}
           height={500}
           className="object-fit mx-auto max-w-[300px] md:max-w-2xl"
         />
       </div>
-      </>
+    </div>
   );
 }
