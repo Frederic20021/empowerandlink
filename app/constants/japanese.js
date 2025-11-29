@@ -1,5 +1,3 @@
-import Message from "../components/japanese/Message"
-
 export const coursePoint = [
   {
     id: 1,
@@ -27,3 +25,76 @@ export const staffMessage = {
   image: '/hero/avatar1.jpg',
 }
  
+export const ProfInfo = [
+  /*{
+    id: 1,
+    name: "",
+    kana: "",
+    sections: [
+      {
+        title: "【免許・資格】",
+        items: [
+          "中学・高等学校教論一種免許状 (英語)",
+          "実用英語技能検定1級",
+          "TOEIC 960点",
+        ]
+      },
+      {
+        title: "【経歴】",
+        items: [
+          "私立高校の英語科専任教諭\n\t(進路指導部・国際教育委員会)",
+          "大手日本メーカーにて海外営業\n\t経営・事業企画を担当"
+        ]
+      }
+    ],
+    image: "placeholder.jpg",
+  },*/
+  {
+    id: 1,
+    name: "Si Thu Lin",
+    kana: "シ トゥ リン",
+    sections: [
+      {
+        title: "【免許・資格】",
+        items: [
+          "JLPT (日本語能力試験) N1",
+          "TOEIC 940点",
+        ]
+      },
+      {
+        title: "【経歴】",
+        items: [
+          "日本語通訳・翻訳 3年",
+          "留学生論文コンテスト(2024) 銅賞",
+        ]
+      }
+    ],
+    image: "/english/prof2.jpg",
+  },
+];
+
+export const courses = [
+  {
+  // You can add more courses here
+    id: 1,
+    prof: "Si Thu Lin",
+    tags: ["企業向け", "単発"],
+    payType: "単発",
+    title: "セミナー、講習の通訳",
+    image: "/japanese/interpretation.jpg",
+    description:
+      "外国籍社員、実習生向けのセミナー、研修や講習会での通訳サービスを提供します。専門用語にも対応し、スムーズなコミュニケーションをサポートいたします。",
+    features: {
+      language: "日本語⇔英語⇔ミャンマー語",
+      
+      important: [
+        "時間単位で調整可能",
+        "静岡県内は交通費無料",
+      ],
+    },
+    pricing: {
+      duration: "一日",
+      price: "¥18,000",
+    },
+  },
+]

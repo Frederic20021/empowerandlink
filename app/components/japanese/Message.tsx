@@ -5,7 +5,7 @@ import { getAssetPath } from "../../utils/paths";
 export default function Message() {
     return (
         <div className="my-12 py-6 bg-white text-black">
-                <h2 className="text-2xl font-bold mb-4 text-center">学校のスタッフメッセージ</h2>
+                <h2 className="text-2xl font-bold mb-4 text-center">講師からのメッセージ</h2>
             <div className="mx-auto grid md:flex items-center px-16 md:px-8 justify-center gap-4 max-w-2xl">
                 <div className="min-w-[150px]">
             <Image
