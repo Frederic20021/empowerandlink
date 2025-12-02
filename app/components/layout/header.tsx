@@ -56,7 +56,11 @@ useEffect(() => {
           <nav className="hidden md:flex space-x-8">
             {/*uses Object.entries to convert navLinks to mappable arrays*/} 
             {Object.entries(navLinks).map(([key, { label, href }]) => (
-              <Link key={key} href={href} className={`${pathname === href ? "font-bold border-b-1" : "naviLinkUnderline" } `}>
+              <Link 
+                key={key} 
+                href={href} 
+                className={`${pathname === href || pathname === href.replace(/\/$/, '') ? "font-bold border-b-1" : "naviLinkUnderline" } `}
+              >
                 {label}
               </Link>
             ))}
