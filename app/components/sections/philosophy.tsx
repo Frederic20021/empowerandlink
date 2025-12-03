@@ -28,7 +28,7 @@ export default function PhilosophySection() {
           <div className="space-y-2 animate-fade-in-left py-4 mb-4 justify-self-center">
             {philosophyItems.map((item, index) => (
               <div key={index} className="whitespace-pre-line animate-fade-in-up max-w-[350px] text-center" style={{animationDelay: `${index * 1}s`}}>
-                <h3 className="font-extrabold text-blue-900 mb-2">
+                <h3 className="font-black text-blue-900 mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-700 text-xs leading-relaxed">
@@ -48,7 +48,7 @@ export default function PhilosophySection() {
                   alt="Business Meeting"
                   width={600}
                   height={400}
-                  className="w-full rounded-xl h-full object-cover"
+                  className="max-w-full rounded-xl h-full object-cover"
                 />
               </div>
             </div>

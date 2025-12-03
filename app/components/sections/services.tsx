@@ -11,7 +11,7 @@ export default function Services() {
 
         <div className="lg:flex gap-4 grid md:grid-cols-2 justify-items-center justify-center items-stretch mx-auto">
           {services.map((service, index) => (
-            <Link key={index} href={service.link} className="group cursor-pointer shadow-lg hover:translate-y-[-10px] transition-all bg-white max-w-[250px] min-h-[400px] rounded-lg flex flex-col">
+            <Link key={index} href={service.link} className="group cursor-pointer shadow-lg hover:translate-y-[-10px] duration-500 transition-all bg-white max-w-[250px] min-h-[400px] rounded-lg flex flex-col">
               <div className="overflow-hidden group-hover:shadow-lg transition-shadow rounded-t-lg">
                 <Image
                   src={service.image}
