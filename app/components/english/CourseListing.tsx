@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Calendar from 'react-calendar';
 import emailjs from '@emailjs/browser';
 import { courses } from "@/app/constants/english";
@@ -31,6 +31,24 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
     '09:00', '10:00', '11:00', '13:00', '14:00', '15:00', 
     '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'
   ];
+
+  // Ensure modal is visible when opened (especially in iframes)
+  useEffect(() => {
+    if (showCalendar || showTimeSlots || showUserForm) {
+      // Notify parent window (WordPress) that modal opened
+      // Parent can decide whether to scroll based on iframe position
+      try {
+        if (window.parent !== window) {
+          window.parent.postMessage({ 
+            type: 'modalOpened',
+            courseId: course.id 
+          }, '*');
+        }
+      } catch (e) {
+        // Cross-origin iframe restrictions
+      }
+    }
+  }, [showCalendar, showTimeSlots, showUserForm, course.id]);
 
   // Step 1: Handle date selection
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -277,7 +295,7 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
 
         {/* Step 1: Calendar Modal */}
         {showCalendar && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+          <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-[9999]">
             <div className="bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw]">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-bold text-gray-800">
@@ -306,7 +324,7 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
 
         {/* Step 2: Time Slots Modal */}
         {showTimeSlots && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+          <div className="fixed inset-0  bg-opacity-50 flex items-center justify-center z-[9999]">
             <div className="bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw] max-h-[80vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-bold text-gray-800">
