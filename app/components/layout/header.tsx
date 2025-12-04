@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { usePathname }from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
-import { navLinks } from '@/app/constants/header';
+import { navLinks } from '@/app/constants/header'; 
 
 
 export default function Header() {
