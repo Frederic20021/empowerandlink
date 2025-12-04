@@ -21,6 +21,18 @@ export default function ProfIntro() {
         console.log("Selected prof:", selectedProf);
         console.log("Filtered courses:", filtered);
         console.log("Number of filtered courses:", filtered.length);
+        
+        // Scroll to show the courses
+        setTimeout(() => {
+          const coursesSection = document.getElementById('profIntro');
+          if (coursesSection) {
+            const rect = coursesSection.getBoundingClientRect();
+            window.scrollTo({
+              top: window.scrollY + rect.top - 100,
+              behavior: 'smooth'
+            });
+          }
+        }, 100);
     } else {
         setCourseSelected([]);
     }
@@ -104,7 +116,7 @@ export default function ProfIntro() {
       </div>
       {/*modal section*/}
       {selectedProf && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl shadow-2xl p-6 max-w-lg w-full relative">
             <button
               className="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
