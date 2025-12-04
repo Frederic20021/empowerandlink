@@ -14,7 +14,7 @@ export const services = [
     },
     {
       title: "英語教育",
-      description: "　グローバル人材を目指す社会人・学生向けに、TOEIC対策やビジネス会話を指導。実践的な英語力を身に付け、海外での活躍を支援します。",
+      description: "グローバル人材を目指す社会人・学生向けに、TOEIC対策やビジネス会話を指導。実践的な英語力を身に付け、海外での活躍を支援します。",
       image: "/services/service3.jpg",
       link: "/english"
     },
