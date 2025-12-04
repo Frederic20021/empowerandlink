@@ -324,7 +324,7 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
 
         {/* Step 2: Time Slots Modal */}
         {showTimeSlots && (
-          <div className="fixed inset-0  bg-opacity-50 flex items-center justify-center z-[9999]">
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
             <div className="bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw] max-h-[80vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-bold text-gray-800">
