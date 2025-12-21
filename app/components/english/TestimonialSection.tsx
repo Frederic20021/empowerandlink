@@ -1,7 +1,18 @@
 'use client';
 
 import Image from 'next/image';
+<<<<<<< HEAD
+=======
+import { Noto_Sans_JP } from 'next/font/google';
+import { getAssetPath } from '../../utils/paths';
+>>>>>>> japanese
 import { testimonials } from '@/app/constants/english';
+
+const notoSans = Noto_Sans_JP({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+});
 
 // Star rating component
 const StarRating = ({ rating }: { rating: number }) => {
@@ -11,13 +22,13 @@ const StarRating = ({ rating }: { rating: number }) => {
         <span
           key={star}
           className={`text-sm ${
-            star <= rating ? "text-yellow-400" : "text-gray-300"
+            star <= rating ? "text-yellow-400" : "text-[#d1d5db]"
           }`}
         >
           ★
         </span>
       ))}
-      <span className="ml-1 text-sm text-gray-600">{rating}</span>
+      <span className="ml-1 text-sm text-[#4b5563]">{rating}</span>
     </div>
   );
 };
@@ -36,7 +47,7 @@ const TestimonialCard = ({
           {testimonial.title}
         </span>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-600">総合評価</span>
+          <span className="text-sm text-[#4b5563]">総合評価</span>
           <StarRating rating={testimonial.rating} />
         </div>
       </div>
@@ -53,10 +64,10 @@ const TestimonialCard = ({
               className="w-full h-full object-cover"
             />
           </div>
-            <span className="text-center font-bold text-xs text-gray-500">
+            <span className="text-center font-bold text-xs text-[#6b7280]">
               {testimonial.name}
             </span>
-          <div className='grid gap-2'>
+          <div className='grid gap-2 text-white'>
               <span className="bg-gradient-to-r from-blue-400 to-blue-800 text-center p-2 font-bold mt-8 rounded-lg">
                 担当講師
               </span>
@@ -66,11 +77,11 @@ const TestimonialCard = ({
             </div>
         </div>
         <div className="flex-1">
-          <h3 className="font-bold text-lg mb-2 text-gray-800">
+          <h3 className="font-bold text-lg mb-2 text-[#1f2937]">
             {testimonial.headline}
             <span className="ml-2 text-blue-500">›</span>
           </h3>
-          <p className="text-gray-600 text-sm leading-relaxed mb-3">
+          <p className="text-[#4b5563] text-sm leading-relaxed mb-3">
             {testimonial.content}
           </p>
         </div>
@@ -82,11 +93,11 @@ const TestimonialCard = ({
 // Main testimonials section component
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className={`${notoSans.className} py-16 bg-gray-50 antialiased`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">VOICE</h2>
+          <h2 className="text-4xl font-bold text-[#1f2937] mb-4">VOICE</h2>
           <p className="text-lg text-blue-600 font-medium">お客様の声</p>
         </div>
 

@@ -8,6 +8,7 @@ import { courses } from "@/app/constants/english";
 import { serviceID, templateID, publicKey } from "@/app/constants/emailjs";
 // Add calendar CSS import
 import 'react-calendar/dist/Calendar.css';
+import { getAssetPath } from "@/app/utils/paths";
 
 // Individual course card component
 const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
@@ -180,10 +181,27 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
     } else {
       // Start booking process
       setShowCalendar(true);
+      
+      // Scroll to modal after it renders
+      setTimeout(() => {
+        const modal = document.getElementById('booking-modal');
+        if (modal) {
+          modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+          // Also notify parent iframe handler
+          try {
+            if (window.parent !== window) {
+              window.parent.postMessage({ 
+                type: 'iframeScrollNeeded'
+              }, '*');
+            }
+          } catch (e) {
+            // Cross-origin restriction
+          }
+        }
+      }, 100);
     }
-  };
-
-  // Get button text based on current state
+  };  // Get button text based on current state
   const getButtonText = () => {
     if (selectedDate && selectedTime && userInfo.name) {
       return '予約をリセット';
@@ -271,7 +289,7 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
       </div>
 
       {/* Right side - Pricing and actions */}
-      <div className="mx-auto w-80 p-6 flex flex-col gap-4 justify-center bg-[#EDF6FF] relative">
+      <div className={`mx-auto w-80 p-6 flex flex-col gap-4 justify-center bg-[#EDF6FF] relative`}>
         {/* Action buttons */}
         <div className="space-y-3 font-bold">
           <button
@@ -295,8 +313,13 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
 
         {/* Step 1: Calendar Modal */}
         {showCalendar && (
+<<<<<<< HEAD
           <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-[9999]">
             <div className="bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw]">
+=======
+          <div id="booking-modal" className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+            <div className="relative bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw]">
+>>>>>>> japanese
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-bold text-gray-800">
                   📅 STEP 1: {paymentApplication ? "面談希望日程を選択して下さい" : "日程を選択して下さい"}

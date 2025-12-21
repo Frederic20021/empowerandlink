@@ -20,6 +20,18 @@ export default function ProfIntro() {
         console.log("Selected prof:", selectedProf);
         console.log("Filtered courses:", filtered);
         console.log("Number of filtered courses:", filtered.length);
+        
+        // Scroll to show the courses
+        setTimeout(() => {
+          const coursesSection = document.getElementById('profIntro');
+          if (coursesSection) {
+            const rect = coursesSection.getBoundingClientRect();
+            window.scrollTo({
+              top: window.scrollY + rect.top - 100,
+              behavior: 'smooth'
+            });
+          }
+        }, 100);
     } else {
         setCourseSelected([]);
     }
@@ -28,6 +40,16 @@ export default function ProfIntro() {
   const handleSelectProf = (profName: string) => {
     console.log("handleSelectProf called with:", profName);
     setSelectedProf(profName);
+    
+    // Scroll to modal after state updates (next frame)
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        window.scrollTo({
+          top: Math.max(0, window.innerHeight / 4),
+          behavior: 'smooth'
+        });
+      }, 100);
+    });
   };
   return (
     <div
