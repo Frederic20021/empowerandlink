@@ -47,10 +47,10 @@ const ProfIntro = () => {
                 style={{ fontFamily: "Yu Gothic" }}
                 className="text-base md:text-lg lg:text-xl bg-gradient-to-r from-black to-gray-600 py-1 md:py-2"
               >
-                <h3 className="font-bold text-2xl text-center text-white">
-                  {prof.name}&nbsp;&nbsp;&nbsp;&nbsp;講師
+                <h3 className="font-bold text-lg md:text-xl text-center text-white">
+                  {prof.name}&nbsp;&nbsp;講師
                 </h3>
-                <p className="font-semibold lg:pl-16 pl-14 md:pl-4 text-white">
+                <p className="font-semibold text-center text-white text-xs md:text-sm">
                   ({prof.kana})
                 </p>
               </div>

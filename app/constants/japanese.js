@@ -26,31 +26,32 @@ export const staffMessage = {
 }
  
 export const ProfInfo = [
-  /*{
+  {
     id: 1,
-    name: "",
-    kana: "",
+    name: "小出",
+    kana: "こいで",
     sections: [
       {
         title: "【免許・資格】",
         items: [
-          "中学・高等学校教論一種免許状 (英語)",
-          "実用英語技能検定1級",
-          "TOEIC 960点",
+          "中学・高等学校教論一種免許状 (国語)",
+          "TOEIC 860点",
         ]
       },
       {
         title: "【経歴】",
         items: [
-          "私立高校の英語科専任教諭\n\t(進路指導部・国際教育委員会)",
-          "大手日本メーカーにて海外営業\n\t経営・事業企画を担当"
+          "カナダ語学留学",
+          "塾講師",
+          "インテリア材海外調達",
+          "自動車メーカー海外営業"
         ]
       }
     ],
-    image: "placeholder.jpg",
-  },*/
+    image: "/japanese/koide.jpg",
+  },
   {
-    id: 1,
+    id: 2,
     name: "Si Thu Lin",
     kana: "シ トゥ リン",
     sections: [
