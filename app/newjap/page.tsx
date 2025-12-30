@@ -101,7 +101,7 @@ export default function JapanesePage() {
                 />
               </div>
 
-              <div className="mt-4 grid grid-cols-3 gap-3">
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="rounded-xl bg-white p-4 shadow-sm ring-1 ring-gray-200">
                   <p className="text-xs text-gray-500">対応</p>
                   <p className="mt-1 text-sm font-extrabold text-gray-900">
@@ -128,26 +128,26 @@ export default function JapanesePage() {
 
       {/* WHO IT'S FOR */}
       <section className="bg-white">
-        <div className="mx-auto text-center max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto text-center max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           <div className="rounded-2xl bg-blue-50 p-6 md:p-8 ring-1 ring-blue-100">
             <h3 className="text-2xl md:text-4xl my-2 font-bold text-blue-900">
               こんなことに
               <span className="underline underline-offset-4">困って</span>
               いませんか？
             </h3>
-            <div className="md:flex gap-4 items-center justify-center">
+            <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
               <Image
                 src={getAssetPath("/japanese/struggle1.jpg")}
                 alt="困っている外国人社員"
                 width={400}
                 height={250}
-                className="max-md:hidden rounded-lg mt-4 shadow-sm ring-1 ring-blue-100"
+                className="hidden md:block rounded-lg mt-4 shadow-sm ring-1 ring-blue-100"
               />
-              <div className="mt-4 grid gap-3 font-bold">
+              <div className="mt-4 grid gap-3 font-bold w-full md:max-w-2xl">
                 {commonChallenges.map((text) => (
                   <div
                     key={text}
-                    className="rounded-xl md:min-w-2xl text-left mx-auto bg-white p-4 shadow-sm ring-1 ring-blue-100"
+                    className="w-full rounded-xl text-left mx-auto bg-white p-4 shadow-sm ring-1 ring-blue-100"
                   >
                     <p className="text-sm flex gap-2 text-gray-700">
                       <FaCheck />
@@ -161,28 +161,35 @@ export default function JapanesePage() {
         </div>
       </section>
 
-            <div className="text-center mt-8 font-bold">
-              <h2 className="text-2xl md:text-3xl font-extrabold">{recommendedFor.title}</h2>
-              <p className="mt-3 text-gray-600">{recommendedFor.description}</p>
-              <ul className="mt-6 space-y-3 inline-block text-left">
-                {recommendedFor.items.map((text) => (
-                  <li key={text} className="flex items-start gap-3">
-                    <FaCheckCircle className="mt-1 h-4 w-4 text-green-600" />
-                    <span className="text-gray-700">{text}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="grid mx-auto justify-center items-center p-4 bg-white text-black mt-8">
-              <h2 className="font-extrabold text-lg md:text-xl">まずは無料相談・体験から</h2>
-              <button 
-                onClick={() => window.location.href = '#profIntro'}
-                className="bg-blue-700 mx-auto p-4 cursor-pointer rounded-2xl mt-4 hover:bg-blue-800 transition-colors duration-300">
-                <Link href='/contact'
-                className="text-white font-bold">問い合わせする</Link>
-              </button>
-            </div>
+      {/* RECOMMENDED + QUICK CTA */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+          <div className="text-center font-bold">
+            <h2 className="text-xl md:text-3xl font-extrabold">{recommendedFor.title}</h2>
+            <p className="mt-3 text-sm md:text-lg text-gray-600">{recommendedFor.description}</p>
+            <ul className="mt-6 space-y-3 inline-block text-left">
+              {recommendedFor.items.map((text) => (
+                <li key={text} className="flex items-start gap-3">
+                  <FaCheckCircle className="mt-1 h-4 w-4 text-green-600" />
+                  <span className="text-gray-700">{text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-10 grid justify-items-center gap-4 rounded-2xl bg-blue-50 p-6 ring-1 ring-blue-100 text-center">
+            <h2 className="font-extrabold text-lg md:text-xl">まずは無料相談・体験から</h2>
+            <button
+              onClick={() => window.location.href = "#profIntro"}
+              className="w-full sm:w-auto bg-blue-700 px-6 py-4 cursor-pointer rounded-2xl hover:bg-blue-800 transition-colors duration-300"
+            >
+              <Link href="/contact" className="text-white font-bold">
+                問い合わせする
+              </Link>
+            </button>
+          </div>
+        </div>
+      </section>
 
 
       {/* PROFESSORS */}
@@ -217,7 +224,7 @@ export default function JapanesePage() {
                   </div>
                 </div>
 
-                <div className="p-6 font-black mx-auto space-y-5">
+                <div className="p-6 font-black mx-auto space-y-5 text-center">
                   {prof.sections.map((section, idx) => (
                     <div key={`${prof.id}-sec-${idx}`}>
                       <p className="text-sm font-extrabold text-blue-800">
@@ -227,7 +234,7 @@ export default function JapanesePage() {
                         {section.items.map((item, itemIdx) => (
                           <li
                             key={`${prof.id}-item-${itemIdx}`}
-                            className="flex items-start justify-left gap-2 text-sm text-gray-700"
+                            className="flex items-start justify-center gap-2 text-sm text-gray-700"
                           >
                             <FaCheckCircle className="mt-0.5 h-4 w-4 text-green-600" />
                             <span className="whitespace-pre-line">{item}</span>
@@ -331,7 +338,7 @@ export default function JapanesePage() {
                   <div className="mt-6">
                     <Link
                       href="/contact"
-                      className="inline-flex w-full items-center justify-center rounded-lg bg-blue-600 px-4 py-3 text-sm font-bold text-white hover:bg-red-700"
+                      className="inline-flex w-full items-center justify-center rounded-lg bg-blue-600 px-4 py-3 text-sm font-bold text-white hover:bg-blue-700"
                     >
                       この内容で相談する
                     </Link>
