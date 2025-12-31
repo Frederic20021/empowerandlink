@@ -121,7 +121,7 @@ export const courses = [
   {
     id: 2,
     prof: "Si Thu Lin",
-    tags: ["学生向け", "文書の添削"],
+    tags: ["個人サポート", "文書の添削"],
     payType: "月額",
     title: "ビジネス日本語文書添削コース",
     image: "/japanese/writing.jpg",
