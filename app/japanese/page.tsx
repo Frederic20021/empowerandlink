@@ -1,21 +1,27 @@
-import Pitch from "@/app/components/japanese/Pitch";
-import Course from "@/app/components/japanese/Course";
-import Consult from "../components/japanese/Consult";
-import Message from "../components/japanese/Message";
-import ProfIntro from "@/app/components/japanese/ProfIntro";
-import Point from "../components/japanese/Point";
-import ServiceListing from "../components/japanese/ServiceListing";
+import { Noto_Sans_JP } from "next/font/google";
 
-export default function Home() {
+import Hero from "@/app/components/japanese/Hero";
+import Challenges from "@/app/components/japanese/Challenges";
+import Recommended from "@/app/components/japanese/Recommended";
+import Professors from "@/app/components/japanese/Professors";
+import ServiceListing from "@/app/components/japanese/ServiceListing";
+import CTA from "@/app/components/japanese/CTA";
+
+const notoSans = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+});
+
+export default function JapanesePage() {
   return (
-    <div className="min-h-screen bg-[#e5eaff]">
-        <Pitch />
-        <Course />
-        <ProfIntro />
-        <Point />
-        <ServiceListing />
-        <Message />
-        <Consult />
+    <div className={`${notoSans.className} min-h-screen bg-white text-gray-900`}>
+      <Hero />
+      <Challenges />
+      <Recommended />
+      <Professors />
+      <ServiceListing />
+      <CTA />
     </div>
   );
 }
