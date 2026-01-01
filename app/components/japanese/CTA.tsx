@@ -12,7 +12,7 @@ export default function CTA() {
               まずは無料相談から
             </h2>
             <p className="mt-3 text-blue-100 leading-relaxed">
-              研修内容や通訳の範囲、実施方法など、現場に合わせて一緒に整理します。
+              研修内容や通訳の範囲、実施方法など、現場に合わせて調整いたします。
             </p>
           </div>
 
@@ -25,11 +25,11 @@ export default function CTA() {
                 Webからお問い合わせ
               </Link>
               <Link
-                href="tel:+8108003949485"
+                href="tel:+819045654671"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-bold text-blue-800 ring-1 ring-blue-200 hover:bg-blue-50"
               >
                 <FaPhone className="h-4 w-4" />
-                080-4931-9534
+                090-4565-4671
               </Link>
               <p className="text-xs text-gray-500">
                 お急ぎの場合はお電話もご利用ください。

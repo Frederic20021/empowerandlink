@@ -123,8 +123,8 @@ export default function ServiceListing() {
         customer_phone: userInfo.phone || "未記入",
         customer_message: userInfo.message || "特になし",
         course_name: activeCourse.title,
-        course_price: activeCourse.pricing?.price ?? "",
-        course_duration: activeCourse.pricing?.duration ?? "",
+        course_price: activeCourse.pricing.map(p => p.price).join(", "),
+        course_duration: activeCourse.duration ?? "",
         appointment_datetime: appointmentDateTime,
         subject: `【新規相談予約】${activeCourse.title} - ${userInfo.name}様`,
         timestamp: new Date().toISOString(),
@@ -145,56 +145,54 @@ export default function ServiceListing() {
   };
 
   return (
-      <section className="bg-gray-50">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <div className="flex items-end justify-between gap-6 flex-wrap">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-extrabold">
-                サービス一覧
-              </h2>
-            </div>
+    <section className="bg-gray-50">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div className="flex items-end justify-between gap-6 flex-wrap">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-extrabold">
+              サービス一覧
+            </h2>
           </div>
+        </div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {courses.map((course) => (
-              <article
-                key={course.id}
-                className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 hover:shadow-md transition-shadow"
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={getAssetPath(course.image)}
-                    alt={course.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex flex-wrap gap-2">
-                    {course.tags.map((tag, idx) => (
-                      <span
-                        key={`${course.id}-tag-${idx}`}
-                        className="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                    <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-800">
-                      {course.payType}
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {courses.map((course) => (
+            <article
+              key={course.id}
+              className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 transition-shadow hover:shadow-md"
+            >
+              <div className="relative h-48">
+                <Image
+                  src={getAssetPath(course.image)}
+                  alt={course.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <div className="flex flex-wrap gap-2">
+                  {course.tags.map((tag, idx) => (
+                    <span
+                      key={`${course.id}-tag-${idx}`}
+                      className="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700"
+                    >
+                      {tag}
                     </span>
-                  </div>
+                  ))}
+                  <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-800">
+                    {course.payType}
+                  </span>
+                </div>
 
-                  <h3 className="mt-3 text-lg font-extrabold">
-                    {course.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-                    {course.description}
-                  </p>
+                <h3 className="mt-3 text-lg font-extrabold">{course.title}</h3>
+                <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+                  {course.description}
+                </p>
 
-                  {course.features && (
+                {course.features && (
                   <div className="mt-4 rounded-xl bg-blue-50 p-4 ring-1 ring-blue-100">
                     <p className="text-xs font-bold text-blue-900">対応言語</p>
-                    <p className="mt-1 text-sm text-gray-800">
+                    <p className="mt-1 text-sm text-gray-800 whitespace-pre-line">
                       {course.features.language}
                     </p>
                     {course.features.important?.length ? (
@@ -211,25 +209,42 @@ export default function ServiceListing() {
                       </ul>
                     ) : null}
                   </div>
+                )}
 
-                  )}
+                <div className="mt-auto">
+                  <div className="pt-5 flex items-center justify-between">
+                    <div className="grid">
+                      <span className="text-lg font-bold text-gray-900">
+                        目安：{course.duration}
+                      </span>
 
-                  <div className="mt-5 flex items-center justify-between">
-                    <div>
-                      <p className="text-xs text-gray-500">目安</p>
-                      <p className="text-sm font-bold text-gray-900">
-                        {course.pricing.duration}
-                      </p>
+                      {course.pricing.map((price, idx) => (
+                        <div
+                          key={`${course.id}-price-${idx}`}
+                          className="text-left"
+                        >
+                          <p className="text-sm font-bold text-gray-700">{price.type}</p>
+                        </div>
+                      ))}
                     </div>
-                    <div className="text-right">
-                      <p className="text-xs text-gray-500">料金</p>
-                      <p className="text-lg font-extrabold text-blue-700">
-                        {course.pricing.price}
-                      </p>
+                    <div className="grid text-right">
+                      <span className="text-lg font-bold text-gray-900">
+                        料金
+                      </span>
+                      {course.pricing.map((price, idx) => (
+                        <div
+                          key={`${course.id}-price-amount-${idx}`}
+                          className="text-right"
+                        >
+                          <span className="text-lg font-extrabold text-blue-700">
+                            {price.price}
+                          </span>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  <div className="mt-6">
+                  <div className="pt-6">
                     <button
                       type="button"
                       onClick={() => openBooking(course)}
@@ -239,199 +254,202 @@ export default function ServiceListing() {
                     </button>
                   </div>
                 </div>
-              </article>
-            ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      {/* Step 1: Calendar Modal */}
+      {showCalendar && activeCourse && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999]">
+          <div className="relative bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw]">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="font-bold text-gray-800">
+                📅 日程を選択して下さい（{activeCourse.title}）
+              </h3>
+              <button
+                onClick={resetBooking}
+                className="text-gray-500 hover:text-gray-700 text-xl font-bold"
+                aria-label="閉じる"
+              >
+                ×
+              </button>
+            </div>
+            <Calendar
+              onChange={handleDateChange}
+              value={selectedDate}
+              minDate={new Date()}
+              className="w-full text-black"
+              locale="ja-JP"
+            />
+            <p className="mt-3 text-sm text-gray-600">
+              ご希望の日付をクリックしてください
+            </p>
           </div>
         </div>
+      )}
 
-        {/* Step 1: Calendar Modal */}
-        {showCalendar && activeCourse && (
-          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999]">
-            <div className="relative bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw]">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="font-bold text-gray-800">
-                  📅 日程を選択して下さい（{activeCourse.title}）
-                </h3>
-                <button
-                  onClick={resetBooking}
-                  className="text-gray-500 hover:text-gray-700 text-xl font-bold"
-                  aria-label="閉じる"
-                >
-                  ×
-                </button>
-              </div>
-              <Calendar
-                onChange={handleDateChange}
-                value={selectedDate}
-                minDate={new Date()}
-                className="w-full text-black"
-                locale="ja-JP"
-              />
-              <p className="mt-3 text-sm text-gray-600">
-                ご希望の日付をクリックしてください
+      {/* Step 2: Time Slots Modal */}
+      {showTimeSlots && activeCourse && selectedDate && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999]">
+          <div className="bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw] max-h-[80vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="font-bold text-gray-800">⏰ 時間を選択</h3>
+              <button
+                onClick={() => {
+                  setShowTimeSlots(false);
+                  setShowCalendar(true);
+                }}
+                className="text-gray-500 hover:text-gray-700 text-xl font-bold"
+                aria-label="戻る"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="mb-4 p-3 bg-blue-50 rounded">
+              <p className="text-sm font-semibold text-blue-800">相談内容</p>
+              <p className="text-xs text-blue-600">
+                {activeCourse.title}
+                <br />
+                {selectedDate.toLocaleDateString("ja-JP", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                  weekday: "long",
+                })}
               </p>
             </div>
-          </div>
-        )}
 
-        {/* Step 2: Time Slots Modal */}
-        {showTimeSlots && activeCourse && selectedDate && (
-          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999]">
-            <div className="bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw] max-h-[80vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="font-bold text-gray-800">⏰ 時間を選択</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {timeSlots.map((time) => (
                 <button
-                  onClick={() => {
-                    setShowTimeSlots(false);
-                    setShowCalendar(true);
-                  }}
-                  className="text-gray-500 hover:text-gray-700 text-xl font-bold"
-                  aria-label="戻る"
+                  key={time}
+                  onClick={() => handleTimeSelection(time)}
+                  className="p-2 text-sm text-black border rounded hover:bg-blue-50 hover:border-blue-500"
                 >
-                  ×
+                  {time}
                 </button>
-              </div>
-
-              <div className="mb-4 p-3 bg-blue-50 rounded">
-                <p className="text-sm font-semibold text-blue-800">相談内容</p>
-                <p className="text-xs text-blue-600">
-                  {activeCourse.title}
-                  <br />
-                  {selectedDate.toLocaleDateString("ja-JP", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                    weekday: "long",
-                  })}
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                {timeSlots.map((time) => (
-                  <button
-                    key={time}
-                    onClick={() => handleTimeSelection(time)}
-                    className="p-2 text-sm text-black border rounded hover:bg-blue-50 hover:border-blue-500"
-                  >
-                    {time}
-                  </button>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Step 3: User Information Form Modal */}
-        {showUserForm && activeCourse && selectedDate && selectedTime && (
-          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999]">
-            <div className="bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw] max-h-[80vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="font-bold text-gray-800">👤 お客様情報</h3>
-                <button
-                  onClick={() => {
-                    setShowUserForm(false);
-                    setShowTimeSlots(true);
-                  }}
-                  className="text-gray-500 hover:text-gray-700 text-xl font-bold"
-                  aria-label="戻る"
-                >
-                  ×
-                </button>
-              </div>
-
-              <div className="mb-4 p-3 bg-blue-50 rounded">
-                <p className="text-sm font-semibold text-blue-800">予約内容</p>
-                <p className="text-xs text-blue-600">
-                  {activeCourse.title}
-                  <br />
-                  {selectedDate.toLocaleDateString("ja-JP", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                    weekday: "long",
-                  })}{" "}
-                  {selectedTime}
-                </p>
-              </div>
-
-              <form className="space-y-4 text-black">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    お名前 <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    value={userInfo.name}
-                    onChange={(e) => setUserInfo({ ...userInfo, name: e.target.value })}
-                    className="w-full p-2 border border-gray-300 rounded focus:border-blue-500 focus:outline-none"
-                    placeholder="田中太郎"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    メールアドレス <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    value={userInfo.email}
-                    onChange={(e) =>
-                      setUserInfo({ ...userInfo, email: e.target.value })
-                    }
-                    className="w-full p-2 border border-gray-300 rounded focus:border-blue-500 focus:outline-none"
-                    placeholder="example@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    電話番号
-                  </label>
-                  <input
-                    type="tel"
-                    value={userInfo.phone}
-                    onChange={(e) =>
-                      setUserInfo({ ...userInfo, phone: e.target.value })
-                    }
-                    className="w-full p-2 border border-gray-300 rounded focus:border-blue-500 focus:outline-none"
-                    placeholder="090-1234-5678"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    メッセージ・ご要望
-                  </label>
-                  <textarea
-                    value={userInfo.message}
-                    onChange={(e) =>
-                      setUserInfo({ ...userInfo, message: e.target.value })
-                    }
-                    className="w-full p-2 border border-gray-300 rounded focus:border-blue-500 focus:outline-none"
-                    rows={3}
-                    placeholder="ご質問やご要望があればお書きください"
-                  />
-                </div>
-
-                <button
-                  type="button"
-                  onClick={handleBookingSubmit}
-                  disabled={isSubmitting}
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                      処理中...
-                    </>
-                  ) : (
-                    "予約リクエストを送信"
-                  )}
-                </button>
-              </form>
+      {/* Step 3: User Information Form Modal */}
+      {showUserForm && activeCourse && selectedDate && selectedTime && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999]">
+          <div className="bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw] max-h-[80vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="font-bold text-gray-800">👤 お客様情報</h3>
+              <button
+                onClick={() => {
+                  setShowUserForm(false);
+                  setShowTimeSlots(true);
+                }}
+                className="text-gray-500 hover:text-gray-700 text-xl font-bold"
+                aria-label="戻る"
+              >
+                ×
+              </button>
             </div>
+
+            <div className="mb-4 p-3 bg-blue-50 rounded">
+              <p className="text-sm font-semibold text-blue-800">予約内容</p>
+              <p className="text-xs text-blue-600">
+                {activeCourse.title}
+                <br />
+                {selectedDate.toLocaleDateString("ja-JP", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                  weekday: "long",
+                })}{" "}
+                {selectedTime}
+              </p>
+            </div>
+
+            <form className="space-y-4 text-black">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  お名前 <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  value={userInfo.name}
+                  onChange={(e) =>
+                    setUserInfo({ ...userInfo, name: e.target.value })
+                  }
+                  className="w-full p-2 border border-gray-300 rounded focus:border-blue-500 focus:outline-none"
+                  placeholder="田中太郎"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  メールアドレス <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  value={userInfo.email}
+                  onChange={(e) =>
+                    setUserInfo({ ...userInfo, email: e.target.value })
+                  }
+                  className="w-full p-2 border border-gray-300 rounded focus:border-blue-500 focus:outline-none"
+                  placeholder="example@email.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  電話番号
+                </label>
+                <input
+                  type="tel"
+                  value={userInfo.phone}
+                  onChange={(e) =>
+                    setUserInfo({ ...userInfo, phone: e.target.value })
+                  }
+                  className="w-full p-2 border border-gray-300 rounded focus:border-blue-500 focus:outline-none"
+                  placeholder="090-1234-5678"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  メッセージ・ご要望
+                </label>
+                <textarea
+                  value={userInfo.message}
+                  onChange={(e) =>
+                    setUserInfo({ ...userInfo, message: e.target.value })
+                  }
+                  className="w-full p-2 border border-gray-300 rounded focus:border-blue-500 focus:outline-none"
+                  rows={3}
+                  placeholder="ご質問やご要望があればお書きください"
+                />
+              </div>
+
+              <button
+                type="button"
+                onClick={handleBookingSubmit}
+                disabled={isSubmitting}
+                className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                    処理中...
+                  </>
+                ) : (
+                  "予約リクエストを送信"
+                )}
+              </button>
+            </form>
           </div>
-        )}
-      </section>
+        </div>
+      )}
+    </section>
   );
 }

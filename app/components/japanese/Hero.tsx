@@ -20,19 +20,18 @@ export default function Hero() {
               <span className="text-xs font-semibold text-blue-700">
                 日本語サービス
               </span>
-              <span className="text-xs text-gray-500">個別サポート</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-[40px] font-extrabold tracking-tight">
               <span className="inline">
-                仕事で使える<span className="text-blue-700"> 日本語</span>を、
-              </span>
-              必要な形で。
+                仕事で必要な<span className="text-blue-700"> 日本語 </span>を、
+              </span><br />
+              必要な形でお届けします。
             </h1>
 
             <p className="text-base md:text-lg font-medium text-gray-600 leading-relaxed">
-              外国籍社員・実習生向けの研修、セミナー・講習での通訳、学習サポートまで。
-              目的・現場に合わせて内容を設計し、スムーズなコミュニケーションと成果を支えます。
+              外国籍社員・実習生向けのセミナー・講習での通訳、文書の翻訳、日本語学習をサポートします。
+              目的・現場に合わせて内容を設計し、職場でのスムーズなコミュニケーションを支えます。
             </p>
 
             <div className="flex flex-wrap gap-2">
@@ -81,7 +80,7 @@ export default function Hero() {
               </div>
               <div className="rounded-xl bg-white p-4 shadow-sm ring-1 ring-gray-200">
                 <p className="text-xs text-gray-500">形式</p>
-                <p className="mt-1 text-sm font-extrabold text-gray-900">オンライン中心</p>
+                <p className="mt-1 text-sm font-extrabold text-gray-900">オンライン・対面</p>
               </div>
               <div className="rounded-xl bg-white p-4 shadow-sm ring-1 ring-gray-200">
                 <p className="text-xs text-gray-500">内容</p>

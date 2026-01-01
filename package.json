@@ -7,6 +7,7 @@
     "predeploy": "npm run build && touch out/.nojekyll",
     "deploy": "gh-pages -d out -t",
     "dev": "next dev --turbopack",
+    "prepare": "husky install",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
