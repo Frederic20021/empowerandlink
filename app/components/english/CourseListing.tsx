@@ -47,6 +47,7 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
         }
       } catch (e) {
         // Cross-origin iframe restrictions
+        console.log('Iframe communication error:', e);
       }
     }
   }, [showCalendar, showTimeSlots, showUserForm, course.id]);
@@ -197,6 +198,7 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
             }
           } catch (e) {
             // Cross-origin restriction
+            console.log('Iframe communication error:', e);
           }
         }
       }, 100);
