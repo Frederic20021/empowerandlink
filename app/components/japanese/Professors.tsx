@@ -24,7 +24,7 @@ export default function Professors() {
                     alt={prof.name}
                     width={64}
                     height={64}
-                    className="h-full w-full object-center"
+                    className="h-full w-full object-cover"
                   />
                 </div>
                 <div>

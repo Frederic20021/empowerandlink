@@ -188,29 +188,31 @@ export default function ServiceListing() {
                 <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                   {course.description}
                 </p>
+                {course.id != 1 && (<br />)}
 
-                {course.features && (
-                  <div className="mt-4 rounded-xl bg-blue-50 p-4 ring-1 ring-blue-100">
+                 {course.features && (
+                  <div className="my-4 md:h-60 rounded-xl bg-blue-50 p-4 ring-1 ring-blue-100 flex flex-col">
                     <p className="text-xs font-bold text-blue-900">対応言語</p>
-                    <p className="mt-1 text-sm text-gray-800 whitespace-pre-line">
+                    <p className="mt-1 text-sm text-gray-800 whitespace-pre-line flex-1">
                       {course.features.language}
                     </p>
                     {course.features.important?.length ? (
-                      <ul className="mt-3 space-y-2">
-                        {course.features.important.map((item, idx) => (
-                          <li
-                            key={`${course.id}-imp-${idx}`}
-                            className="flex items-start gap-2 text-sm text-gray-700"
-                          >
-                            <FaCheckCircle className="mt-0.5 h-4 w-4 text-green-600" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="mt-auto pt-3">
+                        <ul className="space-y-2">
+                          {course.features.important.map((item, idx) => (
+                            <li
+                              key={`${course.id}-imp-${idx}`}
+                              className="flex items-start gap-2 text-sm text-gray-700"
+                            >
+                              <FaCheckCircle className=" h-4 w-4 text-green-600" />
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     ) : null}
                   </div>
                 )}
-
                 <div className="mt-5 flex items-center justify-between">
                   <div className="grid">
                     <span className="text-sm font-bold text-gray-900">
