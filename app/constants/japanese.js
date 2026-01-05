@@ -141,7 +141,7 @@ export const courses = [
     pricing:  [
       {
         type: "文書添削コース",
-        price: "¥32,000",
+        price: "¥25,000~",
       },
       {
         type: "翻訳A4(1枚)",

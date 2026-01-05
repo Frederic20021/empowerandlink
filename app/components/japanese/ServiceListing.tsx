@@ -211,48 +211,46 @@ export default function ServiceListing() {
                   </div>
                 )}
 
-                <div className="mt-auto">
-                  <div className="pt-5 flex items-center justify-between">
-                    <div className="grid">
-                      <span className="text-lg font-bold text-gray-900">
-                        目安：{course.duration}
-                      </span>
+                <div className="mt-5 flex items-center justify-between">
+                  <div className="grid">
+                    <span className="text-sm font-bold text-gray-900">
+                      目安：{course.duration}
+                    </span>
 
-                      {course.pricing.map((price, idx) => (
-                        <div
-                          key={`${course.id}-price-${idx}`}
-                          className="text-left"
-                        >
-                          <p className="text-sm font-bold text-gray-700">{price.type}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="grid text-right">
-                      <span className="text-lg font-bold text-gray-900">
-                        料金
-                      </span>
-                      {course.pricing.map((price, idx) => (
-                        <div
-                          key={`${course.id}-price-amount-${idx}`}
-                          className="text-right"
-                        >
-                          <span className="text-lg font-extrabold text-blue-700">
-                            {price.price}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
+                    {course.pricing.map((price, idx) => (
+                      <div
+                        key={`${course.id}-price-${idx}`}
+                        className="text-left"
+                      >
+                        <p className="text-lg text-gray-500">{price.type}</p>
+                      </div>
+                    ))}
                   </div>
+                  <div className="grid text-right">
+                    <span className="text-sm font-bold text-gray-900">
+                      料金
+                    </span>
+                    {course.pricing.map((price, idx) => (
+                      <div
+                        key={`${course.id}-price-amount-${idx}`}
+                        className="text-right"
+                      >
+                        <span className="text-xl font-extrabold text-blue-700">
+                          {price.price}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-                  <div className="pt-6">
-                    <button
-                      type="button"
-                      onClick={() => openBooking(course)}
-                      className="inline-flex w-full items-center justify-center rounded-lg bg-blue-600 px-4 py-3 text-sm font-bold text-white hover:bg-blue-700 hover:ring-2 hover:ring-blue-300 transition-all"
-                    >
-                      この内容で相談する
-                    </button>
-                  </div>
+                <div className="mt-auto pt-6">
+                  <button
+                    type="button"
+                    onClick={() => openBooking(course)}
+                    className="inline-flex w-full items-center justify-center rounded-lg bg-blue-600 px-4 py-3 text-sm font-bold text-white hover:bg-blue-700 hover:ring-2 hover:ring-blue-300 transition-all"
+                  >
+                    この内容で相談する
+                  </button>
                 </div>
               </div>
             </article>
