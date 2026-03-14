@@ -25,11 +25,11 @@ export default function CTA() {
                 Webからお問い合わせ
               </Link>
               <Link
-                href="tel:+819045654671"
+                href="tel:+817066160410"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-bold text-blue-800 ring-1 ring-blue-200 hover:bg-blue-50"
               >
                 <FaPhone className="h-4 w-4" />
-                090-4565-4671
+                070-6616-0410
               </Link>
               <p className="text-xs text-gray-500">
                 お急ぎの場合はお電話もご利用ください。
