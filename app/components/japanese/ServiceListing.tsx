@@ -5,7 +5,6 @@
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
 import emailjs from "@emailjs/browser";
 
 import { courses } from "@/app/constants/japanese";
