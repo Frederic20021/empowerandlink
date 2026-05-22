@@ -70,7 +70,7 @@ export default function AIInterviewSection() {
               ))}
             </ul>
             <a
-              href="https://empowerandlink.com/smart-mensetsu"
+              href="https://empowerandlink.com/smartmensetsu"
               className="inline-flex items-center gap-2 bg-blue-600 text-white text-sm font-bold py-3 px-7 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(37,99,235,0.42)] shadow-[0_4px_20px_rgba(37,99,235,0.28)]"
             >
               詳細を見る

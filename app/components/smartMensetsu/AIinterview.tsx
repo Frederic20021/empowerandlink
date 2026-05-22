@@ -1,8 +1,8 @@
 'use client';
 import BTN from "../ui/BTN";
 // Adjust these to match smart-mensetsu.com's actual header/footer heights in pixels
-const HEADER_HEIGHT = 1000;
-const FOOTER_HEIGHT = 920;
+const HEADER_HEIGHT = 100;
+const FOOTER_HEIGHT = 980;
 // Controls how tall the visible iframe window is, independent from clipping offsets
 const IFRAME_WINDOW_HEIGHT = 1000;
 
