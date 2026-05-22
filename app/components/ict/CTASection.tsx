@@ -33,7 +33,7 @@ export default function CTASection() {
           お気軽にお問い合わせください。
         </p>
         <a
-          href="/contact"
+          href="https://empowerandlink.com/contact" target="_parent"
           className="inline-flex items-center gap-2 bg-white text-[#1a3562] text-[15px] font-extrabold py-4 px-10 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-[0_4px_24px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_36px_rgba(0,0,0,0.28)]"
         >
           無料相談を申し込む →
