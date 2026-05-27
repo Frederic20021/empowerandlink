@@ -29,8 +29,8 @@ export default function CosmosNav() {
   const pageTarget = isInIframe ? '_top' : undefined;
 
   // Anchor links work as in-page scrolls on home, full-path on other pages
-  const servicesHref = isHome ? '#services' : '/#services';
-  const whyHref      = isHome ? '#why'      : '/#why';
+  const servicesHref = isHome ? '#services' : 'https://empowerandlink.com/#services';
+  const whyHref      = isHome ? '#why'      : 'https://empowerandlink.com/#why';
 
   return (
     <>
