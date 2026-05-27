@@ -128,13 +128,13 @@ export default function PricingFactors() {
               <table className="w-full border-collapse text-[13px]">
                 <thead>
                   <tr>
-                     {f.tableHeaders.map((h, i) => (
+                    {f.tableHeaders.map((h, i) => (
                       <th
                         key={i}
-                        className={`py-1.5 border-b border-black/[0.08] font-semibold ${
+                        className={`py-1.5 border-b border-black/[0.08] text-slate-400 font-semibold ${
                           i === f.tableHeaders.length - 1
                             ? 'text-right text-blue-600'
-                            : 'text-left text-slate-400 pr-2'
+                            : 'text-left pr-2'
                         }`}
                       >
                         {h}
@@ -148,10 +148,10 @@ export default function PricingFactors() {
                       {row.cols.map((col, ci) => (
                         <td
                           key={ci}
-                          className={`py-[7px] border-b border-black/[0.04] ${
+                          className={`py-[7px] border-b border-black/[0.04] text-slate-600 ${
                             ci === row.cols.length - 1
                               ? 'text-right text-blue-600 font-semibold'
-                              : 'text-slate-600 pr-2'
+                              : 'pr-2'
                           }`}
                         >
                           {col}
