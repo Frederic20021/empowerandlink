@@ -118,7 +118,7 @@ export default function Home() {
 
         <div className="hero-content">
           {/* LEFT */}
-          <div className="hero-left">
+          <div className="hero-left bg-[#0d2462]/90 p-4 rounded-xl">
             <div className="hero-badge">
               <span className="badge-pulse" />
               人材紹介 · 言語サービス · ICTソリューション
@@ -392,7 +392,7 @@ export default function Home() {
         <div className="cta-ring cr3" />
         <div className="inner">
           <div className="cta-eyebrow">今すぐ始める</div>
-          <h2>採用課題から言語サービス・AI導入まで、まずはご相談ください</h2>
+          <h2>採用課題から言語サービス・AI導入まで、<br />まずはご相談ください</h2>
           <p>
             サービス概要を知りたい、見積もりを依頼したい等のお問い合わせも歓迎です。<br />
             経験豊富なスタッフが丁寧にご対応いたします。

@@ -7,7 +7,7 @@ export default function CosmosFooter() {
   return (
     <footer className="cosmos-footer" id="about">
       <div className="container mx-auto">
-        <div className="ft-grid">
+        <div className="ft-grid px-12 md:px-18">
           <div className="ft-brand">
             <Link className="logo" href="https://empowerandlink.com/">
               <div className="logo-orb">
