@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { getAssetPath } from '../utils/paths';
 
 export default function NewCompanyPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -134,7 +135,7 @@ export default function NewCompanyPage() {
           <div className="nc-ceo-grid bg-[#0d2462] text-white">
             <div className="nc-ceo-photo">
               <img
-                src="/hero/CEO.jpg"
+                src={getAssetPath('hero/CEO.jpg')}
                 alt="CEO"
                 className="nc-ceo-img"
                 onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
