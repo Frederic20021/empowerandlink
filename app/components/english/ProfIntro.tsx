@@ -104,7 +104,7 @@ export default function ProfIntro() {
               </div>
 
               {prof.sections.map((section, index) => (
-                <div className="font-bold pl-4 md:pl-8" key={index}>
+                <div className="font-bold px-2 md:px-4" key={index}>
                   <h2 className="text-sm md:text-base bg-gradient-to-r from-blue-400 via-blue-900 to-blue-800 text-transparent bg-clip-text font-bold mb-1 md:mb-2">
                     {section.title}
                   </h2>
