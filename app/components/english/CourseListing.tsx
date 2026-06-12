@@ -313,13 +313,8 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
 
         {/* Step 1: Calendar Modal */}
         {showCalendar && (
-<<<<<<< HEAD
-          <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-[9999]">
-            <div className="bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw]">
-=======
           <div id="booking-modal" className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
             <div className="relative bg-white rounded-lg shadow-2xl p-6 w-96 max-w-[90vw]">
->>>>>>> japanese
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-bold text-gray-800">
                   📅 STEP 1: {paymentApplication ? "面談希望日程を選択して下さい" : "日程を選択して下さい"}

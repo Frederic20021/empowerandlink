@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Noto_Sans_JP, Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/layout/header";
-import Footer from "./components/layout/footer";
+import ConditionalLayout from "./components/ConditionalLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,13 +45,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="jp">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} ${inter.variable} antialiased`}
       >
-            <Header />
+          <ConditionalLayout>
             {children}
-            <Footer />
+          </ConditionalLayout>
       </body>
     </html>
   );

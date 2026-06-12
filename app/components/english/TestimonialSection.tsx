@@ -1,11 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-<<<<<<< HEAD
-=======
 import { Noto_Sans_JP } from 'next/font/google';
-import { getAssetPath } from '../../utils/paths';
->>>>>>> japanese
 import { testimonials } from '@/app/constants/english';
 
 const notoSans = Noto_Sans_JP({
