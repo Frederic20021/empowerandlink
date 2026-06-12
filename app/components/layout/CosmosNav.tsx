@@ -3,15 +3,11 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { getAssetPath } from '../../utils/paths';
-
 export default function CosmosNav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen]     = useState(false);
-  const [isInIframe, setIsInIframe] = useState(false);
   const pathname = usePathname();
   const isHome   = pathname === '/';
-  const logoSrc  = getAssetPath('/logo.jpg');
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
@@ -19,28 +15,18 @@ export default function CosmosNav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Detect iframe — only then do we need target="_top" to break out
-  useEffect(() => {
-    setIsInIframe(window.self !== window.top);
-  }, []);
-
-  // When inside an iframe, page links must target the parent window.
-  // Hash links (#services, #why) scroll within the iframe so they don't need it.
-  const pageTarget = isInIframe ? '_top' : undefined;
-
-  // Anchor links work as in-page scrolls on home, full-path on other pages
-  const servicesHref = isHome ? '#services' : 'https://empowerandlink.com/#services';
-  const whyHref      = isHome ? '#why'      : 'https://empowerandlink.com/#why';
+  const servicesHref = isHome ? '#services' : '/#services';
+  const whyHref      = isHome ? '#why'      : '/#why';
 
   return (
     <>
       {/* ════════════ NAV ════════════ */}
       <nav id="nav" className={isScrolled ? 'scrolled' : ''}>
         <div className="nav-inner">
-          <Link className="logo" href="https://empowerandlink.com/" target={pageTarget}>
+          <Link className="logo" href="/">
             <div className="logo-orb">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={logoSrc} className="logo-design" alt="エンパワー＆リンク ロゴ" />
+              <img src="/logo.jpg" className="logo-design" alt="エンパワー＆リンク ロゴ" />
             </div>
             <div className="logo-texts">
               <span className="logo-en">Empower&amp;Link Co., Ltd.</span>
@@ -51,8 +37,8 @@ export default function CosmosNav() {
           <ul className="nav-links">
             <li><a href={servicesHref}>提供サービス</a></li>
             <li><a href={whyHref}>４つの強み</a></li>
-            <li><Link href="https://empowerandlink.com/company" target={pageTarget}>会社概要</Link></li>
-            <li><Link href="https://empowerandlink.com/contact" className="nav-cta" target={pageTarget}>お問い合わせ</Link></li>
+            <li><Link href="/company">会社概要</Link></li>
+            <li><Link href="/contact" className="nav-cta">お問い合わせ</Link></li>
           </ul>
 
           <div className="hbg" onClick={() => setMenuOpen(v => !v)}>
@@ -66,8 +52,8 @@ export default function CosmosNav() {
         <ul>
           <li><a href={servicesHref} onClick={() => setMenuOpen(false)}>サービス</a></li>
           <li><a href={whyHref}      onClick={() => setMenuOpen(false)}>選ばれる理由</a></li>
-          <li><Link href="https://empowerandlink.com/company" target={pageTarget} onClick={() => setMenuOpen(false)}>会社概要</Link></li>
-          <li><Link href="https://empowerandlink.com/contact" target={pageTarget} onClick={() => setMenuOpen(false)}>お問い合わせ</Link></li>
+          <li><Link href="/company" onClick={() => setMenuOpen(false)}>会社概要</Link></li>
+          <li><Link href="/contact" onClick={() => setMenuOpen(false)}>お問い合わせ</Link></li>
         </ul>
       </div>
     </>

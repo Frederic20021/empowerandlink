@@ -32,7 +32,7 @@ export default function Hero() {
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <a
-            href="https://empowerandlink.com/contact" target="_parent"
+            href="/contact"
             className="bg-blue-600 text-white text-md font-bold py-2 px-4 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(37,99,235,0.5)] shadow-[0_0_28px_rgba(37,99,235,0.35)] no-underline"
           >
             無料ヒアリングを申し込む（60分）

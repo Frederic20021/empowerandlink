@@ -1,11 +1,8 @@
 {
   "name": "empowerandlink",
   "version": "0.1.0",
-  "homepage": "https://frederic20021.github.io/empowerandlink/",
   "private": true,
   "scripts": {
-    "predeploy": "npm run build && touch out/.nojekyll",
-    "deploy": "gh-pages -d out -t",
     "dev": "next dev --turbopack",
     "prepare": "husky install || true",
     "build": "next build",
@@ -34,7 +31,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
-    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -1,18 +1,15 @@
 import Link from 'next/link';
-import { getAssetPath } from '../../utils/paths';
 
 export default function CosmosFooter() {
-  const logoSrc = getAssetPath('/logo.jpg');
-
   return (
     <footer className="cosmos-footer" id="about">
       <div className="container mx-auto">
         <div className="ft-grid px-12 md:px-18">
           <div className="ft-brand">
-            <Link className="logo" href="https://empowerandlink.com/">
+            <Link className="logo" href="/">
               <div className="logo-orb">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={logoSrc} className="logo-design" alt="エンパワー＆リンク ロゴ" />
+                  <img src="/logo.jpg" className="logo-design" alt="エンパワー＆リンク ロゴ" />
               </div>
               <div className="logo-texts">
                 <span className="logo-en">Empower&amp;Link Co., Ltd.</span>
@@ -28,18 +25,18 @@ export default function CosmosFooter() {
           <div className="ft-col">
             <h4>サービス</h4>
             <ul className="ft-links">
-              <li><Link href="https://empowerandlink.com/recruitment">人材紹介</Link></li>
-              <li><Link href="https://empowerandlink.com/english">英語教育</Link></li>
-              <li><Link href="https://empowerandlink.com/japanese">日本語教育</Link></li>
-              <li><Link href="https://empowerandlink.com/ict">ICT事業</Link></li>
+              <li><Link href="/recruitment">人材紹介</Link></li>
+              <li><Link href="/english">英語教育</Link></li>
+              <li><Link href="/japanese">日本語教育</Link></li>
+              <li><Link href="/ict">ICT事業</Link></li>
             </ul>
           </div>
 
           <div className="ft-col">
             <h4>会社情報</h4>
             <ul className="ft-links">
-              <li><Link href="https://empowerandlink.com/company">会社概要</Link></li>
-              <li><Link href="https://empowerandlink.com/contact">お問い合わせ</Link></li>
+              <li><Link href="/company">会社概要</Link></li>
+              <li><Link href="/contact">お問い合わせ</Link></li>
             </ul>
           </div>
         </div>

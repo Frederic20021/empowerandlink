@@ -35,7 +35,7 @@ export async function listPosts(): Promise<GitHubFile[]> {
   );
   if (!res.ok) return [];
   const data = await res.json();
-  return Array.isArray(data) ? data.filter((f: any) => f.name.endsWith('.md')) : [];
+  return Array.isArray(data) ? data.filter((f: { name: string }) => f.name.endsWith('.md')) : [];
 }
 
 export async function getPostContent(path: string): Promise<GitHubContent | null> {

@@ -43,9 +43,7 @@ export default function CTAContact() {
             </div>
             <div>
               <a
-                href="https://empowerandlink.com/contact"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-blue-600 text-white text-[15px] font-bold py-3.5 px-8 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(37,99,235,0.5)] shadow-[0_0_28px_rgba(37,99,235,0.35)] no-underline"
               >
                 問い合わせ申し込む

@@ -19,7 +19,7 @@ export default function CTASection() {
           </div>
           <div className="flex flex-col gap-4 items-center mx-auto">
             <a
-              href="https://empowerandlink.com/contact"
+              href="/contact"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-[#0e2d6e] font-bold text-sm tracking-wider rounded shadow-[0_4px_16px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition-all duration-[0.28s] text-center"
             >
               無料でお問い合わせ

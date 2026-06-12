@@ -21,7 +21,7 @@ export default function Contact() {
                 className="rounded-lg justify-center"
               />
               <h3 className='text-white font-bold text-lg mt-2'>Webからの問い合わせはこちら</h3>
-              <a href="https://empowerandlink.com/contact" target="_parent" 
+              <a href="/contact" 
                 className='bg-white py-2 px-4 hover:bg-gray-100 shadow-lg w-full cursor-pointer'>
                 <span className='font-bold text-black text-center'>お問い合わせフォーム &gt;</span>
               </a>

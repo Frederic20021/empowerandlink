@@ -1,0 +1,191 @@
+# Next.js + Vercel Migration Plan
+## From WordPress/GitHub Pages → Vercel (empowerandlink.com)
+
+---
+
+## Step 1: `next.config.ts` — Remove static export config
+
+Replace the GitHub Pages static export config with Vercel-native config.
+
+**Changes:**
+- Remove `output: 'export'`
+- Remove `trailingSlash: true`
+- Remove `basePath` and `assetPrefix`
+- Remove `env.NEXT_PUBLIC_BASE_PATH`
+- Keep `images: { unoptimized: true }` (images are static files)
+
+**Before:**
+```ts
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/empowerandlink' : '';
+
+const nextConfig: NextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  images: { unoptimized: true },
+  basePath,
+  assetPrefix: basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath
+  }
+};
+```
+
+**After:**
+```ts
+const nextConfig: NextConfig = {
+  images: { unoptimized: true }
+};
+```
+
+---
+
+## Step 2: `app/utils/paths.ts` — Simplify `getAssetPath`
+
+On Vercel at root domain, no prefix is needed. `getAssetPath` returns the path as-is.
+
+```ts
+export const getAssetPath = (path: string): string => {
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  return normalizedPath;
+};
+```
+
+(Or remove the function and inline bare paths — but keeping the function minimizes diffs.)
+
+No callers need to change since the function signature is identical; only the return value changes.
+
+---
+
+## Step 3: Convert all `empowerandlink.com` links to relative paths
+
+### 3a. `app/HomeClient.tsx` — 8 occurrences
+
+- **Lines 158–161** (hero service cards): Change `href: 'https://empowerandlink.com/recruitment'` to `href: '/recruitment'`, etc.
+- **Lines 266, 279, 292, 305** (service section): Change `href="https://empowerandlink.com/..."` to `href="/..."`
+
+### 3b. `app/components/layout/CosmosNav.tsx` — 10 changes
+
+- Remove `isInIframe` detection logic (lines 22-25)
+- Remove `pageTarget` variable (line 29)
+- Change `servicesHref` and `whyHref` to use `'/#services'` and `'/#why'` instead of full URLs
+- Logo link (line 40): `href="/"` instead of `href="https://empowerandlink.com/"`
+- Company link (lines 54, 69): `href="/company"` instead of full URL
+- Contact link (lines 55, 70): `href="/contact"` instead of full URL
+- Remove `target={pageTarget}` from all Link components
+- Remove unused `isInIframe` state variable
+
+### 3c. `app/components/layout/CosmosFooter.tsx` — 6 changes
+
+- Logo link (line 12): `href="/"` instead of `href="https://empowerandlink.com/"`
+- Service links (lines 31-34): `/recruitment`, `/english`, `/japanese`, `/ict`
+- Company link (line 41): `/company`
+- Contact link (line 42): `/contact`
+
+### 3d. Other files with external links:
+
+| File | Line | Change |
+|---|---|---|
+| `app/components/ict/AIInterviewSection.tsx` | 73 | `/smartmensetsu` |
+| `app/components/ict/CTASection.tsx` | 36 | `/contact` |
+| `app/components/ict/NotionSection.tsx` | 134 | `/notion` |
+| `app/components/ict/OffshoreSection.tsx` | 134 | `/offshore` |
+| `app/components/english/Contact.tsx` | 24 | `/contact` |
+| `app/company/page.tsx` | 257 | `/contact` |
+| `app/components/notion/Hero.tsx` | 35 | `/contact` |
+| `app/components/notion/CTAContact.tsx` | 46 | `/contact` |
+| `app/components/recruitment/CTASection.tsx` | 22 | `/contact` |
+| `app/components/smartMensetsu/AIinterview.tsx` | 33 | `/contact` |
+| `app/components/offshore/Pitch.tsx` | 22 | `/` |
+
+---
+
+## Step 4: Remove iframe-related logic in `CosmosNav.tsx`
+
+The entire `isInIframe` detection and `pageTarget` variable exist because the site was embedded in WordPress via iframe. On Vercel (standalone domain), these are unnecessary.
+
+**Remove:**
+- `isInIframe` state variable and `useEffect`
+- `pageTarget` variable
+- All `target={pageTarget}` props
+
+---
+
+## Step 5: `package.json` — Clean up
+
+- Remove `"homepage"` field
+- Remove `"predeploy"` script
+- Remove `"deploy"` script
+- Remove `"gh-pages"` from `devDependencies`
+
+Keep `"vercel-build"` script — Vercel uses this automatically.
+
+---
+
+## Step 6: `.github/workflows/deploy.yml` — Delete
+
+GitHub Pages workflow is no longer needed. Vercel auto-deploys from GitHub.
+
+---
+
+## Step 7: Vercel Setup (manual — web UI)
+
+1. Go to https://vercel.com and import the GitHub repo
+2. Framework preset: **Next.js**
+3. Build command: `npm run vercel-build`
+4. Output directory: `.next` (default)
+5. Add environment variables:
+   - `NEXT_PUBLIC_ADMIN_PASSWORD` — the admin password
+   - `NEXT_PUBLIC_GITHUB_TOKEN` — GitHub fine-grained PAT
+6. Deploy
+
+---
+
+## Step 8: Custom Domain (manual — requires DNS access)
+
+1. In Vercel dashboard → Project → Settings → Domains
+2. Add `empowerandlink.com`
+3. Vercel provides DNS targets (e.g., `cname.vercel-dns.com`)
+4. Update DNS records at your domain registrar / DNS provider:
+   - Replace current WordPress A/CNAME records with Vercel's target
+5. Wait for DNS propagation (5-30 min)
+6. Vercel provisions SSL certificate automatically
+
+---
+
+## Step 9: Verify
+
+After deploy + DNS propagation, test:
+
+| URL | Expected |
+|---|---|
+| `https://empowerandlink.com/` | Home with hero, services, blog section |
+| `https://empowerandlink.com/blog/` | Blog listing |
+| `https://empowerandlink.com/blog/hello-world/` | Blog post |
+| `https://empowerandlink.com/admin/` | Admin login page |
+| `https://empowerandlink.com/recruitment` | Recruitment page |
+| `https://empowerandlink.com/english` | English page |
+| `https://empowerandlink.com/japanese` | Japanese page |
+| `https://empowerandlink.com/ict` | ICT page |
+| `https://empowerandlink.com/company` | Company page |
+| `https://empowerandlink.com/contact` | Contact page |
+
+---
+
+## Notes
+
+- The admin page at `/admin/` uses a GitHub PAT committed client-side. This is acceptable for a fine-grained PAT with `contents:write` scoped to the single repo.
+- `NEXT_PUBLIC_GITHUB_TOKEN` and `NEXT_PUBLIC_ADMIN_PASSWORD` are compile-time environment variables. They must be set in Vercel env vars before deploy.
+- If build fails with ESLint warnings-as-errors, add `eslint: { ignoreDuringBuilds: true }` to `next.config.ts` as a quick fix, or fix the lint issues.
+
+
+
+1. Create branch in this repo:
+git checkout -b vercel-migration
+2. Apply changes (steps 1–6)
+3. Push to GitHub (the same repo, frederic20021/empowerandlink):
+git push origin vercel-migration
+4. Import repo into Vercel — Vercel detects the branch and gives you a free preview URL like:
+https://empowerandlink-git-vercel-migration-frederic20021.vercel.app
+5. Test everything on that preview URL
+6. Merge to main when ready — Vercel auto-deploys main. Then configure the custom domain.

@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { getAssetPath } from './utils/paths';
 import BlogSection from './components/blog/BlogSection';
 
 type PostSummary = {
@@ -155,10 +154,10 @@ export default function HomeClient({ blogPosts }: { blogPosts: PostSummary[] }) 
 
           <div className="hero-right">
             {[
-              { icon: '👥', title: '職業・人材紹介', href: 'https://empowerandlink.com/recruitment', body: '法人向け：東南・南アジアの優秀な人材を採用から定着まで一貫サポート。個人向け：キャリアカウンセリング・転職支援サービス。'},
-              { icon: '🌐', title: '英語教育', href: 'https://empowerandlink.com/english', body: 'グローバル人材を目指す社会人・学生向けに、TOEIC対策やビジネス会話を指導。' },
-              { icon: '📖', title: '日本語教育', href: 'https://empowerandlink.com/japanese', body: '採用後の語学サポートで定着率を向上。JLPT対応のビジネス語学指導を提供。' },
-              { icon: '💻', title: 'ICT事業', href: 'https://empowerandlink.com/ict', body: 'AI活用・クラウド導入など最先端ICTソリューションで企業の業務変革を支援。' },
+              { icon: '👥', title: '職業・人材紹介', href: '/recruitment', body: '法人向け：東南・南アジアの優秀な人材を採用から定着まで一貫サポート。個人向け：キャリアカウンセリング・転職支援サービス。'},
+              { icon: '🌐', title: '英語教育', href: '/english', body: 'グローバル人材を目指す社会人・学生向けに、TOEIC対策やビジネス会話を指導。' },
+              { icon: '📖', title: '日本語教育', href: '/japanese', body: '採用後の語学サポートで定着率を向上。JLPT対応のビジネス語学指導を提供。' },
+              { icon: '💻', title: 'ICT事業', href: '/ict', body: 'AI活用・クラウド導入など最先端ICTソリューションで企業の業務変革を支援。' },
             ].map(card => (
               <Link href={card.href} key={card.title}>
                 <div className="data-card">
@@ -263,7 +262,7 @@ export default function HomeClient({ blogPosts }: { blogPosts: PostSummary[] }) 
               <div className="svc-tags">
                 <span className="tag">特定技能</span><span className="tag">技人国</span><span className="tag">転職支援</span>
               </div>
-              <Link href="https://empowerandlink.com/recruitment" className="svc-link">詳しく見る →</Link>
+              <Link href="/recruitment" className="svc-link">詳しく見る →</Link>
             </div>
 
             <div className="svc-card">
@@ -276,7 +275,7 @@ export default function HomeClient({ blogPosts }: { blogPosts: PostSummary[] }) 
               <div className="svc-tags">
                 <span className="tag">TOEIC対策</span><span className="tag">ビジネス英語</span><span className="tag">オンライン対応</span>
               </div>
-              <Link href="https://empowerandlink.com/english" className="svc-link">詳しく見る →</Link>
+              <Link href="/english" className="svc-link">詳しく見る →</Link>
             </div>
 
             <div className="svc-card">
@@ -289,7 +288,7 @@ export default function HomeClient({ blogPosts }: { blogPosts: PostSummary[] }) 
               <div className="svc-tags">
                 <span className="tag">JLPT対策</span><span className="tag">職場用日本語</span><span className="tag">人材定着支援</span>
               </div>
-              <Link href="https://empowerandlink.com/japanese" className="svc-link">詳しく見る →</Link>
+              <Link href="/japanese" className="svc-link">詳しく見る →</Link>
             </div>
 
             <div className="svc-card">
@@ -302,7 +301,7 @@ export default function HomeClient({ blogPosts }: { blogPosts: PostSummary[] }) 
               <div className="svc-tags">
                 <span className="tag">AI面接</span><span className="tag">ノーションAI</span><span className="tag">IT人材紹介</span>
               </div>
-              <Link href="https://empowerandlink.com/ict" className="svc-link">詳しく見る →</Link>
+              <Link href="/ict" className="svc-link">詳しく見る →</Link>
             </div>
           </div>
         </div>

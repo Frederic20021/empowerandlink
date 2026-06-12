@@ -30,7 +30,7 @@ export default function AIinterview() {
                 />
             </div>
             <div className="flex flex-col items-center bg-white py-8">
-                <BTN text="無料デモを申し込む" href="https://empowerandlink.com/contact" target="_top"/>
+                <BTN text="無料デモを申し込む" href="/contact"/>
             </div>
         </section>
     );
