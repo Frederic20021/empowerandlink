@@ -1,6 +1,6 @@
 const OWNER = 'frederic20021';
 const REPO = 'empowerandlink';
-const BRANCH = 'blog';
+const BRANCH = 'main';
 const BLOG_DIR = 'content/blog';
 const IMAGES_DIR = 'public/images/blog';
 

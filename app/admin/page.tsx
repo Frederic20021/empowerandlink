@@ -133,7 +133,9 @@ export default function AdminPage() {
     setSaving(false);
 
     if (ok) {
-      setMsg('保存しました！サイトが再デプロイされるまで数分かかります。');
+      const hook = process.env.NEXT_PUBLIC_VERCEL_DEPLOY_HOOK;
+      if (hook) fetch(hook, { method: 'POST' }).catch(() => {});
+      setMsg('保存しました！反映まで約1～2分かかります。');
       setEditing(false);
       loadPosts();
     } else {
