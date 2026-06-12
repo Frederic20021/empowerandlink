@@ -8,6 +8,14 @@ function getToken(): string {
   return process.env.NEXT_PUBLIC_GITHUB_TOKEN || '';
 }
 
+function btoaUTF8(str: string): string {
+  return btoa(Array.from(new TextEncoder().encode(str), b => String.fromCharCode(b)).join(''));
+}
+
+function atobUTF8(base64: string): string {
+  return new TextDecoder().decode(new Uint8Array(Array.from(atob(base64.replace(/\n/g, '')), c => c.charCodeAt(0))));
+}
+
 function headers() {
   return {
     Authorization: `Bearer ${getToken()}`,
@@ -46,7 +54,7 @@ export async function getPostContent(path: string): Promise<GitHubContent | null
   if (!res.ok) return null;
   const data = await res.json();
   return {
-    content: atob(data.content.replace(/\n/g, '')),
+    content: atobUTF8(data.content),
     sha: data.sha,
   };
 }
@@ -55,11 +63,12 @@ export async function commitFile(
   path: string,
   content: string,
   message: string,
-  sha?: string
+  sha?: string,
+  alreadyEncoded?: boolean
 ): Promise<boolean> {
   const body: Record<string, unknown> = {
     message,
-    content: btoa(content),
+    content: alreadyEncoded ? content : btoaUTF8(content),
     branch: BRANCH,
   };
   if (sha) body.sha = sha;
@@ -92,7 +101,7 @@ export async function uploadImage(
   base64Content: string
 ): Promise<string | null> {
   const path = `${IMAGES_DIR}/${filename}`;
-  const ok = await commitFile(path, base64Content, `Upload image ${filename}`);
+  const ok = await commitFile(path, base64Content, `Upload image ${filename}`, undefined, true);
   if (!ok) return null;
   return `/images/blog/${filename}`;
 }
