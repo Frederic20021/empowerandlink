@@ -6,8 +6,6 @@ import Calendar from 'react-calendar';
 import emailjs from '@emailjs/browser';
 import { courses } from "@/app/constants/english";
 import { serviceID, templateID, publicKey } from "@/app/constants/emailjs";
-// Add calendar CSS import
-import 'react-calendar/dist/Calendar.css';
 import { getAssetPath } from "@/app/utils/paths";
 
 // Individual course card component
@@ -47,6 +45,7 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
         }
       } catch (e) {
         // Cross-origin iframe restrictions
+        console.log('Iframe communication error:', e);
       }
     }
   }, [showCalendar, showTimeSlots, showUserForm, course.id]);
@@ -197,6 +196,7 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
             }
           } catch (e) {
             // Cross-origin restriction
+            console.log('Iframe communication error:', e);
           }
         }
       }, 100);

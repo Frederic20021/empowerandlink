@@ -20,7 +20,7 @@ export default function Contact() {
                 className="rounded-lg justify-center"
               />
               <h3 className='text-white font-bold text-lg mt-2'>Webからの問い合わせはこちら</h3>
-              <a href="https://empowerandlink.com/contact" target="_parent" 
+              <a href="/contact" 
                 className='bg-white py-2 px-4 hover:bg-gray-100 shadow-lg w-full cursor-pointer'>
                 <span className='font-bold text-black text-center'>お問い合わせフォーム &gt;</span>
               </a>
@@ -39,7 +39,7 @@ export default function Contact() {
               />
               <h3 className='text-white font-bold text-lg mt-2'>お電話での問い合わせはこちら</h3>
               <span className="py-2 px-4">
-                <span className='text-xs'>Tel</span><span className='text-2xl text-center'>090-4565-4671</span>
+                <span className='text-xs'>Tel</span><span className='text-2xl text-center'>070-6616-0410</span>
               </span>
             </div>
           </div>

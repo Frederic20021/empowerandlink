@@ -1,33 +1,32 @@
 'use client';
-import { usePathname } from 'next/navigation';
-import Header from "./layout/header";
-import Footer from "./layout/footer";
 
-export default function ConditionalLayout({ 
-  children 
-}: { 
-  children: React.ReactNode 
+import { usePathname } from 'next/navigation';
+import CosmosNav from './layout/CosmosNav';
+import CosmosFooter from './layout/CosmosFooter';
+
+export default function ConditionalLayout({
+  children,
+}: {
+  children: React.ReactNode;
 }) {
   const pathname = usePathname();
 
-  // Hide header and footer for recruitment and contact pages
-  const hideHeaderFooter = pathname.startsWith('/recruitment') || pathname.startsWith('/contact') || pathname.startsWith('/english') || pathname.startsWith('/offshore') || pathname.startsWith('/japanese');
+  const isHome = pathname === '/';
+  const isAdmin = pathname.startsWith('/admin');
 
-  if (hideHeaderFooter) {
-    // Return only children without header/footer with iframe-optimized wrapper
-    return (
-      <div className="w-full min-h-screen overflow-x-hidden">
-        {children}
-      </div>
-    );
-  }
-  
-  // Return normal layout with header/footer for other pages
+  if (isAdmin) return <>{children}</>;
+
   return (
     <>
-      <Header />
-      {children}
-      <Footer />
+      <CosmosNav />
+      {isHome ? (
+        children
+      ) : (
+        <div style={{ paddingTop: 'var(--nav-h)' }}>
+          {children}
+        </div>
+      )}
+      <CosmosFooter />
     </>
   );
 }

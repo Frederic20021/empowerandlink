@@ -31,7 +31,7 @@ export const companyData = [
   },
   {
     label: "電話番号",
-    value: "090-4565-4671"
+    value: "070-6616-0410"
   },
   {
     label: "資本金",

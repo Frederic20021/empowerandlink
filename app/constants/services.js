@@ -20,9 +20,9 @@ export const services = [
     },
     {
       title: "ICT事業",
-      description: "IT人材の紹介と企業向けICT導入支援を展開。クラウドなど最先端技術に対応した人材とAI面接等のソリューションを提供します。",
-      image: "/services/service4.jpg",
-      link: "/offshore"
+      description: "IT人材の紹介と企業向けICT導入支援を展開、クラウドと基盤構築技術に対応した人材と企業機能のソリューションを提供します。",
+      image: getAssetPath("/services/service4.jpg"),
+      link: "/ict"
     }
   ]
 

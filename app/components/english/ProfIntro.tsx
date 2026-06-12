@@ -94,16 +94,16 @@ export default function ProfIntro() {
                 style={{ fontFamily: "Yu Gothic" }}
                 className="text-base md:text-lg lg:text-xl bg-gradient-to-r from-black to-gray-600 py-1 md:py-2"
               >
-                <h3 className="font-bold text-2xl text-center text-white">
-                  {prof.name}&nbsp;&nbsp;&nbsp;&nbsp;講師
+                <h3 className="font-bold text-lg md:text-xl text-center text-white">
+                  {prof.name}&nbsp;&nbsp;講師
                 </h3>
-                <p className="font-semibold lg:pl-16 pl-14 md:pl-4 text-white">
+                <p className="font-semibold text-center text-white text-xs md:text-sm">
                   ({prof.kana})
                 </p>
               </div>
 
               {prof.sections.map((section, index) => (
-                <div className="font-bold pl-4 md:pl-8" key={index}>
+                <div className="font-bold px-2 md:px-4" key={index}>
                   <h2 className="text-sm md:text-base bg-gradient-to-r from-blue-400 via-blue-900 to-blue-800 text-transparent bg-clip-text font-bold mb-1 md:mb-2">
                     {section.title}
                   </h2>

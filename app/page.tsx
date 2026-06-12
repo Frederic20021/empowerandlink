@@ -1,14 +1,15 @@
-import HeroSection from './components/sections/hero'
-import PhilosophySection from './components/sections/philosophy'
-import Services from './components/sections/services'
-import { heroText }from './constants/heroText'
+import { getAllPosts } from './utils/blog';
+import HomeClient from './HomeClient';
 
 export default function Home() {
-  return (
-    <div className="min-h-screen">
-      <HeroSection heroText={heroText} />
-      <PhilosophySection />
-      <Services />
-    </div>
-  );
+  const posts = getAllPosts();
+  const blogPosts = posts.map(p => ({
+    slug: p.slug,
+    title: p.title,
+    date: p.date,
+    excerpt: p.excerpt,
+    coverImage: p.coverImage,
+  }));
+
+  return <HomeClient blogPosts={blogPosts} />;
 }
