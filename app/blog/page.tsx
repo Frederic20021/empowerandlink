@@ -28,7 +28,7 @@ export default function BlogListingPage() {
               <p>まだ記事がありません。</p>
             </div>
           ) : (
-            <div className="blog-grid">
+            <div className="blog-grid z-100">
               {posts.map(post => (
                 <PostCard key={post.slug} {...post} />
               ))}

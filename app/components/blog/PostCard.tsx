@@ -13,7 +13,7 @@ type PostCardProps = {
 
 export default function PostCard({ slug, title, date, excerpt, coverImage }: PostCardProps) {
   return (
-    <Link href={`/blog/${slug}/`} className="blog-card fi">
+    <Link href={`/blog/${slug}/`} className="blog-card">
       <div className="blog-card-image">
           <img
             src={coverImage.startsWith('/') ? getAssetPath(coverImage) : coverImage}
