@@ -1010,9 +1010,20 @@ overflow-x: hidden;
     linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
   background-size: 52px 52px;
 }
-.blog-listing-hero .container { position: relative; z-index: 1; }
+.blog-listing-hero .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
 .blog-listing-content {
   padding: 3rem 0 5rem;
+}
+.blog-listing-content .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
 }
 .blog-empty {
   text-align: center;
@@ -1214,6 +1225,11 @@ overflow-x: hidden;
   font-weight: 800;
   color: var(--c-text);
 }
+.admin-header-actions {
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+}
 .admin-input {
   width: 100%;
   padding: .75rem 1rem;
@@ -1331,6 +1347,12 @@ overflow-x: hidden;
   gap: .4rem;
 }
 .admin-req { color: #dc2626; }
+.admin-field-label {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--c-text);
+  margin-bottom: .4rem;
+}
 .admin-image-row {
   display: flex;
   gap: .5rem;
@@ -1347,6 +1369,244 @@ overflow-x: hidden;
   justify-content: flex-end;
   gap: .8rem;
   padding-top: .5rem;
+}
+
+/* ── Admin Editor (TipTap) ── */
+.admin-editor {
+  border: 1px solid #d0d8e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.admin-editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 6px 8px;
+  border-bottom: 1px solid #e8ecf0;
+  background: #f8f9fb;
+  align-items: center;
+}
+.admin-editor-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #4a5568;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background .15s, color .15s;
+}
+.admin-editor-btn:hover {
+  background: #e2e8f0;
+  color: #1a202c;
+}
+.admin-editor-btn.active {
+  background: #dbeafe;
+  color: #2563eb;
+}
+.admin-editor-btn strong,
+.admin-editor-btn em,
+.admin-editor-btn s {
+  font-style: normal;
+}
+.admin-editor-sep {
+  width: 1px;
+  height: 20px;
+  background: #d0d8e0;
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+.admin-editor-content {
+  padding: 0;
+}
+.admin-editor-content .ProseMirror {
+  min-height: 400px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 1rem 1.25rem;
+  outline: none;
+  font-size: .95rem;
+  line-height: 1.8;
+  color: #1a202c;
+  font-family: inherit;
+}
+.admin-editor-content .ProseMirror > * + * {
+  margin-top: .75em;
+}
+.admin-editor-content .ProseMirror h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0e1c3b;
+  margin: 1.2em 0 .5em;
+  line-height: 1.4;
+}
+.admin-editor-content .ProseMirror h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0e1c3b;
+  margin: 1em 0 .4em;
+  line-height: 1.4;
+}
+.admin-editor-content .ProseMirror p {
+  margin: 0 0 .5em;
+}
+.admin-editor-content .ProseMirror ul,
+.admin-editor-content .ProseMirror ol {
+  padding-left: 1.5em;
+  margin: .5em 0;
+}
+.admin-editor-content .ProseMirror li {
+  margin-bottom: .25em;
+}
+.admin-editor-content .ProseMirror blockquote {
+  border-left: 4px solid #60a5fa;
+  padding: .4em 1em;
+  margin: .75em 0;
+  color: #4a6080;
+  background: #f8f9fb;
+  border-radius: 0 6px 6px 0;
+}
+.admin-editor-content .ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1em 0;
+}
+.admin-editor-content .ProseMirror a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+.admin-editor-content .ProseMirror code {
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: .85em;
+}
+.admin-editor-content .ProseMirror pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: .75em 0;
+}
+.admin-editor-content .ProseMirror pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+.admin-editor-content .ProseMirror hr {
+  border: none;
+  border-top: 2px solid #e2e8f0;
+  margin: 1.5em 0;
+}
+.admin-editor-content .ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #a0aec0;
+  pointer-events: none;
+  height: 0;
+}
+
+/* ── Admin Editor: Preview Section ── */
+.admin-preview-section {
+  margin-top: 1rem;
+  border: 1px solid #2a3f5a;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0d1b36;
+}
+.admin-preview-header {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #94a3b8;
+  padding: .6rem 1.25rem;
+  border-bottom: 1px solid #2a3f5a;
+  background: #0a1630;
+}
+.admin-preview-pane {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  max-height: 500px;
+  background: #0d1b36;
+  color: #e0e7f0;
+  font-size: .9rem;
+  line-height: 1.7;
+}
+.admin-preview-pane h1,
+.admin-preview-pane h2,
+.admin-preview-pane h3 {
+  color: #ffffff;
+  margin: 0.5em 0;
+}
+.admin-preview-pane h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+.admin-preview-pane h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.admin-preview-pane p {
+  margin: 0 0 .5em;
+}
+.admin-preview-pane ul,
+.admin-preview-pane ol {
+  padding-left: 1.5em;
+  margin: .5em 0;
+}
+.admin-preview-pane li {
+  margin-bottom: .25em;
+}
+.admin-preview-pane blockquote {
+  border-left: 4px solid #60a5fa;
+  padding: .4em 1em;
+  margin: .75em 0;
+  color: #94a3b8;
+  background: rgba(96, 165, 250, .08);
+  border-radius: 0 6px 6px 0;
+}
+.admin-preview-pane img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1em 0;
+}
+.admin-preview-pane a {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+.admin-preview-pane code {
+  background: #1a2d4a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: .85em;
+}
+.admin-preview-pane pre {
+  background: #1a2d4a;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: .75em 0;
+}
+.admin-preview-pane pre code {
+  background: none;
+  padding: 0;
+}
+.admin-preview-pane hr {
+  border: none;
+  border-top: 2px solid #2a3f5a;
+  margin: 1.5em 0;
 }
 
 /* ── Blog responsive ── */
