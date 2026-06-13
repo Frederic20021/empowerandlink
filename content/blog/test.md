@@ -6,14 +6,6 @@ excerpt: "ブログ実装テスト"
 coverImage: /images/blog/1781240297627-CEO.jpg
 published: true
 ---
----
-title: "エンパワー＆リンク、新サービスを開始"
-slug: hello-world
-date: 2026-06-12
-excerpt: "外国人材紹介から言語教育まで、トータルソリューションを提供するエンパワー＆リンクの最新情報をお届けします。"
-coverImage: /images/blog/placeholder.svg
-published: true
----
 
 ## 新しい時代の幕開け
 

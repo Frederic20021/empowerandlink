@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { listPosts, getPostContent, commitFile, deleteFile, uploadImage, getSlug, type GitHubFile } from '@/app/utils/github';
+import AdminEditor, { type AdminEditorHandle } from './AdminEditor';
 
 type PostForm = {
   title: string;
@@ -34,6 +35,7 @@ export default function AdminPage() {
   const [saving, setSaving] = useState(false);
   const [msg, setMsg] = useState('');
   const [imageUploading, setImageUploading] = useState(false);
+  const editorRef = useRef<AdminEditorHandle>(null);
 
   useEffect(() => {
     if (sessionStorage.getItem('admin_auth') === 'true') {
@@ -103,7 +105,7 @@ export default function AdminPage() {
     setEditing(true);
   }
 
-  function buildMarkdown(f: PostForm): string {
+  function buildMarkdown(f: PostForm, bodyOverride?: string): string {
     const frontmatter = [
       '---',
       `title: "${f.title.replace(/"/g, '\\"')}"`,
@@ -114,7 +116,7 @@ export default function AdminPage() {
       'published: true',
       '---',
       '',
-      f.content,
+      bodyOverride ?? f.content,
     ].filter(l => l).join('\n');
     return frontmatter;
   }
@@ -127,8 +129,9 @@ export default function AdminPage() {
     }
 
     setSaving(true);
+    const md = editorRef.current?.getMarkdown() || '';
     const path = `${editPath || `content/blog/${form.slug}.md`}`;
-    const content = buildMarkdown(form);
+    const content = buildMarkdown(form, md);
     const ok = await commitFile(path, content, editPath ? `Update ${form.slug}` : `Create ${form.slug}`, editSha || undefined);
     setSaving(false);
 
@@ -178,6 +181,19 @@ export default function AdminPage() {
       }
     };
     reader.readAsDataURL(file);
+  }
+
+  async function handleEditorImageUpload(file: File): Promise<string | null> {
+    return new Promise(resolve => {
+      const reader = new FileReader();
+      reader.onload = async () => {
+        const base64 = (reader.result as string).split(',')[1];
+        const filename = `${Date.now()}-${file.name}`;
+        const path = await uploadImage(filename, base64);
+        resolve(path);
+      };
+      reader.readAsDataURL(file);
+    });
   }
 
   function cancelEdit() {
@@ -235,7 +251,7 @@ export default function AdminPage() {
 
           <label>
             スラッグ（URL識別子） <span className="admin-req">*</span>
-            <input value={form.slug} onChange={e => setForm(p => ({ ...p, slug: e.target.value }))} className="admin-input" placeholder="例: hello-world" />
+            <input value={form.slug} onChange={e => setForm(p => ({ ...p, slug: e.target.value }))} className="admin-input" placeholder="例: blog-test(英文を推奨)" />
           </label>
 
           <label>
@@ -262,10 +278,15 @@ export default function AdminPage() {
             )}
           </label>
 
-          <label>
-            本文（Markdown形式）
-            <textarea value={form.content} onChange={e => setForm(p => ({ ...p, content: e.target.value }))} className="admin-input admin-textarea admin-content-area" rows={15} />
-          </label>
+          <div>
+            <div className="admin-field-label">本文</div>
+            <AdminEditor
+              key={editPath || 'new'}
+              ref={editorRef}
+              initialMarkdown={form.content}
+              onImageUpload={handleEditorImageUpload}
+            />
+          </div>
 
           {msg && <p className="admin-msg">{msg}</p>}
 
@@ -285,7 +306,10 @@ export default function AdminPage() {
     <div className="admin-page">
       <div className="admin-header">
         <h1>ブログ管理</h1>
-        <button onClick={handleNew} className="admin-btn admin-btn-primary">新規記事作成</button>
+        <div className="admin-header-actions">
+          <a href="/" className="admin-btn admin-btn-ghost">ホームページへ戻る</a>
+          <button onClick={handleNew} className="admin-btn admin-btn-primary">新規記事作成</button>
+        </div>
       </div>
 
       {msg && <p className="admin-msg">{msg}</p>}
