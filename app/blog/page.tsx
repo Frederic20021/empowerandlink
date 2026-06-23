@@ -23,6 +23,11 @@ export default function BlogListingPage() {
 
       <section className="blog-listing-content">
         <div className="container">
+          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1rem' }}>
+            <a href="/admin" className="bg-gradient-to-br from-blue-500 to-[#0099e6] text-white py-1 px-2 rounded" style={{ fontSize: '.8rem' }}>
+              管理画面
+            </a>
+          </div>
           {posts.length === 0 ? (
             <div className="blog-empty">
               <p>まだ記事がありません。</p>
