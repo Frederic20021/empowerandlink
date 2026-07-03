@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { Noto_Sans_JP } from 'next/font/google';
 import { testimonials } from '@/app/constants/english';
+import { getAssetPath } from '@/app/utils/paths';
 
 const notoSans = Noto_Sans_JP({
   subsets: ['latin'],
@@ -53,7 +54,7 @@ const TestimonialCard = ({
         <div className="flex-shrink-0 md:grid md:w-[100px] justify-between">
           <div className="md:grid flex gap-2 mx-auto max-md:w-16 max-md:h-16 overflow-hidden">
             <Image
-              src={testimonial.avatar}
+              src={getAssetPath(testimonial.avatar)}
               alt={testimonial.name}
               width={64}
               height={64}

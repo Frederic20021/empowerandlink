@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { getAssetPath } from '@/app/utils/paths';
 
 export default function CosmosFooter() {
   return (
@@ -9,7 +10,7 @@ export default function CosmosFooter() {
             <Link className="logo" href="/">
               <div className="logo-orb">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/logo.jpg" className="logo-design" alt="エンパワー＆リンク ロゴ" />
+                  <img src={getAssetPath('/logo.jpg')} className="logo-design" alt="エンパワー＆リンク ロゴ" />
               </div>
               <div className="logo-texts">
                 <span className="logo-en">Empower&amp;Link Co., Ltd.</span>

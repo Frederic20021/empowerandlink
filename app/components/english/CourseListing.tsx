@@ -256,7 +256,7 @@ const CourseCard = ({ course }: { course: (typeof courses)[0] }) => {
 
           <div className="grid justify-items-center md:flex gap-8 items-center">
             <Image
-              src={course.image}
+              src={getAssetPath(course.image)}
               alt={course.title}
               width={150}
               height={150}

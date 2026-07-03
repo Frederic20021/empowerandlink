@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { getAssetPath } from '@/app/utils/paths';
 export default function CosmosNav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen]     = useState(false);
@@ -15,8 +16,9 @@ export default function CosmosNav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const servicesHref = isHome ? '#services' : '/#services';
-  const whyHref      = isHome ? '#why'      : '/#why';
+  const base       = getAssetPath('/');
+  const servicesHref = isHome ? '#services' : `${base}#services`;
+  const whyHref      = isHome ? '#why'      : `${base}#why`;
 
   return (
     <>
@@ -26,7 +28,7 @@ export default function CosmosNav() {
           <Link className="logo" href="/">
             <div className="logo-orb">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.jpg" className="logo-design" alt="エンパワー＆リンク ロゴ" />
+              <img src={getAssetPath('/logo.jpg')} className="logo-design" alt="エンパワー＆リンク ロゴ" />
             </div>
             <div className="logo-texts">
               <span className="logo-en">Empower&amp;Link Co., Ltd.</span>

@@ -3,6 +3,7 @@
 import { ProfInfo, courses } from "@/app/constants/english";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { getAssetPath } from "@/app/utils/paths";
 
 export default function ProfIntro() {
   const [selectedProf, setSelectedProf] = useState<string | null>(null);
@@ -74,7 +75,7 @@ export default function ProfIntro() {
           >
             <div className="w-[200px] h-[200px] mx-auto">
               <Image
-                src={prof.image}
+                src={getAssetPath(prof.image)}
                 alt={prof.name}
                 width={200}
                 height={200}
@@ -162,7 +163,7 @@ export default function ProfIntro() {
                       </p>
                       </div>
                     <Image
-                      src={course.image}
+                      src={getAssetPath(course.image)}
                       alt={course.title}
                       width={100}
                       height={100}
