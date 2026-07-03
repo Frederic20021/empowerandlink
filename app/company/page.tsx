@@ -254,7 +254,7 @@ export default function NewCompanyPage() {
             経験豊富なスタッフが丁寧にご対応いたします。
           </p>
           <div className="nc-cta-btns">
-            <a href="/contact" className="btn btn-glow">
+            <a href={getAssetPath('/contact')} className="btn btn-glow">
               無料でお問い合わせ
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />

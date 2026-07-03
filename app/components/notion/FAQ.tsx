@@ -29,7 +29,7 @@ const faqs: FAQItemProps[] = [
   },
   {
     question: 'Q. Notion自体のライセンス料金は別途必要ですか？',
-    answer: 'はい、Notion本体のサブスクリプション（Plus/Business/Enterprise）は別途、御社で直接ご契約いただきます。本サービスは「Notionを最大限活用するための構築・運用支援」が対象です。',
+    answer: 'はい、Notion本体の顧問料（Plus/Business/Enterprise）は別途、御社で直接ご契約いただきます。本サービスは「Notionを最大限活用するための構築・運用支援」が対象です。',
   },
   {
     question: 'Q. データの所有権はどちらにありますか？',

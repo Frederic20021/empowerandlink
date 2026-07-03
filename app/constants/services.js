@@ -1,21 +1,22 @@
+import { getAssetPath } from '@/app/utils/paths';
 
 export const services = [
     {
       title: "人材・職業紹介",
       description: "企業のニーズに沿った人材をご提案します。東南・南アジアの各国人材、幅広い業種に対応しております。",
-      image: "/services/service1.jpg",
+      image: getAssetPath("/services/service1.jpg"),
       link: "/recruitment"
     },
     {
       title: "日本語教育",
       description: "外国人材向けの実践的な日本語指導を実施、ビジネス会話から生活に密着した、現場で役立つ日本語力を身に付けます。",
-      image: "/services/service2.jpg",
+      image: getAssetPath("/services/service2.jpg"),
       link: "/japanese"
     },
     {
       title: "英語教育",
       description: "グローバル人材を目指す社会人・学生向けに、TOEIC対策やビジネス会話を指導。実践的な英語力を身に付け、海外での活躍を支援します。",
-      image: "/services/service3.jpg",
+      image: getAssetPath("/services/service3.jpg"),
       link: "/english"
     },
     {

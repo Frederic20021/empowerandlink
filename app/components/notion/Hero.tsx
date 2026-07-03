@@ -1,3 +1,5 @@
+import { getAssetPath } from '@/app/utils/paths';
+
 export default function Hero() {
   return (
     <section className="py-[50px] pb-10 text-center relative overflow-hidden bg-slate-50">
@@ -16,7 +18,7 @@ export default function Hero() {
       <div className="max-w-[1080px] mx-auto px-6 relative z-10">
         <div className="mb-6">
           <span className="inline-block text-[11px] font-bold tracking-[0.12em] uppercase text-blue-600 bg-blue-600/[0.08] border border-blue-600/25 px-3 py-1 rounded-full">
-            Notion業務改善サブスクリプション
+            Notion業務改善顧問料
           </span>
         </div>
         <h1
@@ -32,7 +34,7 @@ export default function Hero() {
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <a
-            href="/contact"
+            href={getAssetPath('/contact')}
             className="bg-blue-600 text-white text-md font-bold py-2 px-4 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(37,99,235,0.5)] shadow-[0_0_28px_rgba(37,99,235,0.35)] no-underline"
           >
             無料ヒアリングを申し込む（60分）

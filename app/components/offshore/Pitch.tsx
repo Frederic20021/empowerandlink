@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image";
+import { getAssetPath } from "@/app/utils/paths";
 import BTN from "../ui/BTN";
 
 const image = [
@@ -25,7 +26,7 @@ export default function Pitch() {
           <Image
             id={`${index}`}
             alt={`Offshore Service + ${index}`}
-            src={img}
+            src={getAssetPath(img)}
             width={1920}
             height={1080}
             className="object-cover w-full h-auto"

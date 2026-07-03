@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { getAssetPath } from "@/app/utils/paths";
 import { services } from "@/app/constants/services";
 
 export default function Services() {
@@ -14,7 +15,7 @@ export default function Services() {
             <Link key={index} href={service.link} className="group cursor-pointer shadow-lg hover:translate-y-[-10px] transition-all bg-white max-w-[250px] min-h-[400px] rounded-lg flex flex-col">
               <div className="overflow-hidden group-hover:shadow-lg transition-shadow rounded-t-lg">
                 <Image
-                  src={service.image}
+                  src={getAssetPath(service.image)}
                   alt={service.title}
                   width={300}
                   height={300}

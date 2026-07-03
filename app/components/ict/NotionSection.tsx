@@ -1,3 +1,5 @@
+import { getAssetPath } from '@/app/utils/paths';
+
 function NotionIllustration() {
   return (
     <svg viewBox="0 0 540 400" xmlns="http://www.w3.org/2000/svg" className="block w-full h-auto">
@@ -113,7 +115,7 @@ export default function NotionSection() {
             >
               Notion業務改善
               <br />
-              サブスクリプション
+              顧問料
             </h2>
             <p className="text-[15px] text-slate-600 leading-[1.9] mb-7">
               情報の分散・業務の属人化・ツールの乱立——よくある課題を、
@@ -131,7 +133,7 @@ export default function NotionSection() {
               ))}
             </ul>
             <a
-              href="/notion"
+              href={getAssetPath('/notion')}
               className="inline-flex items-center gap-2 bg-blue-600 text-white text-sm font-bold py-3 px-7 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(37,99,235,0.42)] shadow-[0_4px_20px_rgba(37,99,235,0.28)]"
             >
               詳細を見る
