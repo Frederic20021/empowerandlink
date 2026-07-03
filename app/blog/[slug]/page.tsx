@@ -39,7 +39,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         )}
 
         <div className="blog-post-body markdown-content">
-          <Markdown remarkPlugins={[remarkGfm]}>
+          <Markdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              img: ({ src, alt }) => (
+                <img src={getAssetPath(typeof src === 'string' ? src : '')} alt={alt || ''} />
+              ),
+            }}
+          >
             {post.content}
           </Markdown>
         </div>

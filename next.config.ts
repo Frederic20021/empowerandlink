@@ -1,16 +1,18 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/empowerandlink' : '';
+
 const nextConfig: NextConfig = {
+  output: 'export',
+  trailingSlash: true,
   images: {
     unoptimized: true
   },
-  async rewrites() {
-    return [
-      {
-        source: '/images/blog/:path*',
-        destination: 'https://raw.githubusercontent.com/frederic20021/empowerandlink/main/public/images/blog/:path*',
-      },
-    ];
+  basePath,
+  assetPrefix: basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath
   }
 };
 

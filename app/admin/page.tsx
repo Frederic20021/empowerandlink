@@ -136,9 +136,7 @@ export default function AdminPage() {
     setSaving(false);
 
     if (ok) {
-      const hook = process.env.NEXT_PUBLIC_VERCEL_DEPLOY_HOOK;
-      if (hook) fetch(hook, { method: 'POST' }).catch(() => {});
-      setMsg('保存しました！反映まで約1～2分かかります。');
+      setMsg('保存しました！GitHub Actions によるデプロイをお待ちください。');
       setEditing(false);
       loadPosts();
     } else {

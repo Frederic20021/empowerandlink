@@ -392,7 +392,7 @@ export default function HomeClient({ blogPosts }: { blogPosts: PostSummary[] }) 
         </svg>
       </div>
 
-      <BlogSection posts={blogPosts} />
+      {/*<BlogSection posts={blogPosts} /> */}
 
       {/* ════════════ CTA ════════════ */}
       <div className="wave-down" style={{ background: 'linear-gradient(160deg,#061540 0%,#0d2462 50%,#0e2e78 100%)' }}>
