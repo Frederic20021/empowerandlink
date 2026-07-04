@@ -115,7 +115,7 @@ export default function NotionSection() {
             >
               Notion業務改善
               <br />
-              サービス
+              顧問料
             </h2>
             <p className="text-[15px] text-slate-600 leading-[1.9] mb-7">
               情報の分散・業務の属人化・ツールの乱立——よくある課題を、
