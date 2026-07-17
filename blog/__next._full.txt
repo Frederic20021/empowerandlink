@@ -12,55 +12,117 @@ e:I[53835,["/empowerandlink/_next/static/chunks/2jw51mpsjxm7x.js","/empowerandli
 :HL["/empowerandlink/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/empowerandlink/_next/static/media/ad9c66e761fed85a-s.p.17y412u0mab7-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/empowerandlink/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-6:Tc82,## 浜松未来総合専門学校での英語授業がスタート
+6:T144a,
+## 講義：人的マネージメントと組織Ⅱ ～品質管理（QC）の基礎と実践～
 
-エンパワー＆リンク株式会社は、2026年6月より浜松未来総合専門学校に派遣英語講師 **島田雄次** 先生を派遣し、本格的な英語授業を開始しました。
+エンパワー＆リンク株式会社は、浜松未来総合専門学校にて「人的マネージメントと組織Ⅱ」の講義を担当しています。本講義ではQC検定4級の合格を目標に、品質管理の基礎から実践までを全15回でステップアップしていきます。
 
 ![](/images/blog/1784253416406-0CA6BCAFDD9955ED1C98E5EE7960BB9DB876CCAF.jpeg)
 
-### 派遣の背景
+### 第1コマ：オリエンテーション・品質管理とは
 
-グローバル化が進む現代社会において、実践的な英語コミュニケーション能力の重要性はますます高まっています。特に専門学校においては、即戦力となる人材の育成が求められており、英語教育の質的向上が喫緊の課題となっていました。
+品質管理（QC: Quality Control）とは、買い手の要求に合った品質の製品・サービスを経済的に作り出すための体系的な取り組みです。
 
-浜松未来総合専門学校は、こうした時代の要請に応えるべく、実践的な英語教育を提供できる人材を求めており、エンパワー＆リンクが保有する質の高い人材ネットワークとのマッチングが実現しました。
+特に重要視しているのが以下のマインドセットです：
 
-* * *
+- **「品質は工程で作り込む」** — 検査で品質を作るのではなく、工程そのもので品質を確保する
+- **「後工程はお客様」** — 自分の作業の結果を受け取る人を常に意識する
+- **顧客満足（CS）** — 顧客が「買ってよかった」と思える価値を提供することが企業の存続に不可欠
 
-### 授業の内容
+### 第2～3コマ：管理活動と改善（PDCA・QCストーリー）
 
-**島田**先生による授業は、週2回のペースで行われており、以下のような内容で構成されています：
+管理の基本であるPDCA（Plan・Do・Check・Act）を繰り返し回し、継続的にレベルを向上させます。
 
-**1\. 実践的な英会話**
+改善の視点として「3ム」（ムリ・ムダ・ムラ）を見つけ出し、取り除く方法を学びます。
 
-教科書に頼りすぎない、実際のシチュエーションを想定したロールプレイング形式の授業が特徴です。学生たちは「レストランでの注文」「道案内」「ビジネスでの自己紹介」など、実際に使えるフレーズを繰り返し練習しています。
+QCストーリー（問題解決の標準手順）：
 
-**2\. グループディスカッション**
+1. テーマ選定
+2. 現状把握
+3. 目標設定
+4. 要因解析
+5. 対策立案・実施
+6. 効果確認
+7. 歯止め（標準化）
 
-少人数のグループに分かれてのディスカッションでは、学生同士が英語で意見を交換します。最初は戸惑っていた学生も、回を重ねるごとに積極的に発言するようになってきました。
+### 第4コマ：工程管理と5M
 
-**3\. プレゼンテーション練習**
+品質を左右する5つの要素（5M）を理解します：
 
-学期末には、各自が選んだテーマについて英語でプレゼンテーションを行う予定です。この取り組みを通じて、学生たちは「伝える力」と「聞く力」をバランスよく伸ばしています。
+- **Man（人）** — 技能・知識・意識
+- **Machine（設備）** — 機械・工具の状態
+- **Material（材料）** — 原材料・部品の品質
+- **Method（方法）** — 作業手順・条件
+- **Measurement（測定）** — 測定方法・精度
+
+特に「異常の早期発見」— いつもと違う状態に気づき、すぐに報告する重要性を強調しています。
 
 ![](/images/blog/1784253428402-2FBD1F361701254081CAA7E397B2858FD46BE8CC.jpeg)
 
-* * *
+### 第5コマ：検査の役割
 
-### 今後の展望
+検査とは品物を判定基準と照らし合わせ、合格・不合格を下すことです。適合と不適合の区別、ロット（同じ条件で作られた製品の集まり）単位での合格判定の考え方を学びます。
 
-エンパワー＆リンクでは、浜松未来総合専門学校での取り組みを皮切りに、今後さらに多くの教育機関への英語講師派遣を拡大していく予定です。
+### 第6コマ：標準化（ルール作り）
 
-当社では、企業様のニーズに合わせた人材派遣サービスを提供しております。英語教育に限らず、外国人材の紹介・派遣、通訳・翻訳サービス、AI面接ツールなど、人材に関するトータルソリューションをワンストップでご提供可能です。
+標準化の目的は「誰がやっても、いつやっても、同じ結果が出る」ようにすることです。作業標準書を正しく作成し遵守することが、品質保証の第一歩です。
 
-ご興味のある教育機関・企業様は、お気軽に\[お問い合わせページ\]([https://empowerandlink.com/contact)よりご連絡ください。](https://empowerandlink.com/contact\)%E3%82%88%E3%82%8A%E3%81%94%E9%80%A3%E7%B5%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82)
+### 第7～8コマ：事実に基づく判断とデータの活用
 
-\---
+勘や経験に頼らず、データ（事実）で判断する「事実に基づく管理」の重要性を学びます。
+
+データの基礎：
+- 平均値の計算：x̄ = Σxi / n
+- QC七つ道具（基礎）：
+  1. パレート図
+  2. 特性要因図（フィッシュボーン）
+  3. グラフ
+  4. チェックシート
+  5. ヒストグラム
+  6. 散布図
+  7. 管理図
+
+### 第9コマ：企業活動とQCD
+
+企業が管理すべき重要項目であるQCD＋PSMEを学びます：
+- Quality（品質）
+- Cost（コスト）
+- Delivery（納期）
+- Productivity（生産性）
+- Safety（安全）
+- Morale（意欲）
+- Ethics（倫理）
+
+また、社会人としての基本である「報・連・相」（報告・連絡・相談）の重要性も指導しています。
+
+### 第10コマ：5Sと安全衛生
+
+整理・整頓・清掃・清潔・しつけの5S活動は品質管理の基盤です。品質以前に働く人の安全が最優先であること、ヒヤリハット活動の重要性を伝えています。
+
+### 第11～13コマ：模擬問題演習
+
+- 品質・マーケットイン（顧客志向）・管理活動の基本用語
+- QCサークル活動、改善の手順、検査の合格判定
+- 標準化の役割、データの見方、ビジネスマナー
+
+QC検定4級は用語の意味を正確に理解し、正誤問題を確実に解くことが合格の近道です。
+
+### 第14コマ：グループワーク
+
+身近な問題（例：欠席を減らす、整理整頓を徹底する）をQCストーリーに当てはめて解決策を検討。チーム内での役割分担や意見交換の積極性も評価します。
+
+### 第15コマ：修了試験
+
+本番形式の試験を実施。80%以上の正答率を目指し、自信を持ってQC検定本試験に臨める状態にします。
+
+---
+
+エンパワー＆リンクでは、教育機関向け講師派遣・カリキュラム開発など、人材育成に関するトータルソリューションを提供しています。ご興味のある教育機関・企業様はお気軽に[お問い合わせ](https://empowerandlink.com/contact)ください。
 
 **エンパワー＆リンク株式会社**
-
-\- Web: [https://empowerandlink.com](https://empowerandlink.com/)
-
-\- お問い合わせ: [https://empowerandlink.com/contact](https://empowerandlink.com/contact)0:{"P":null,"c":["","blog",""],"q":"","i":false,"f":[[["",{"children":["blog",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/empowerandlink/_next/static/chunks/233p45nuh4m5b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/empowerandlink/_next/static/chunks/2iqncfuwqsxel.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/empowerandlink/_next/static/chunks/13hpu0h0ie2z5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/empowerandlink/_next/static/chunks/0nb37146o5fpn.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/empowerandlink/_next/static/chunks/2jw51mpsjxm7x.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/empowerandlink/_next/static/chunks/1_-e5uj41iqu-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable noto_sans_jp_a1846dc2-module__mxjGOG__variable inter_59e20804-module__PZsqlW__variable antialiased","children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","div",null,{"className":"blog-listing-wrapper","children":[["$","section",null,{"className":"blog-listing-hero","children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"sec-head","style":{"textAlign":"center"},"children":[["$","div",null,{"className":"label label-w","style":{"justifyContent":"center"},"children":"Blog / News"}],["$","h1",null,{"className":"sec-title-w","style":{"fontSize":"clamp(1.8rem,3.5vw,2.8rem)"},"children":"お知らせ"}],["$","p",null,{"className":"sec-sub-w","style":{"margin":"0.5rem auto 0"},"children":"エンパワー＆リンクの最新情報をご紹介します。"}],["$","div",null,{"className":"acc-line","style":{"margin":"1rem auto 0"}}]]}]}]}],["$","section",null,{"className":"blog-listing-content","children":["$","div",null,{"className":"container","children":[["$","div",null,{"style":{"display":"flex","justifyContent":"flex-end","marginBottom":"1rem"},"children":["$","a",null,{"href":"/empowerandlink/admin","className":"bg-gradient-to-br from-blue-500 to-[#0099e6] text-white py-1 px-2 rounded","style":{"fontSize":".8rem"},"children":"管理画面"}]}],["$","div",null,{"className":"blog-grid z-100","children":[["$","$L5","hamamatsu-english-class",{"slug":"hamamatsu-english-class","title":"浜松未来総合専門学校での英語授業派遣を開始","date":"2026-07-17","excerpt":"エンパワー＆リンクは2026年6月より、浜松未来総合専門学校へ派遣英語講師を送り出しています。実践的な英語コミュニケーション能力の向上を目指し、学生たちが生き生きと学ぶ様子をお届けします。","coverImage":"/images/blog/1784253403860-2FBD1F361701254081CAA7E397B2858FD46BE8CC.jpeg","content":"$6"}],"$L7","$L8","$L9"]}]]}]}]]}],["$La"],"$Lb"]}],{},null,false,null]},null,false,"$@c"]},null,false,null],"$Ld",false]],"m":"$undefined","G":["$e",["$Lf","$L10","$L11","$L12"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"LfSRgDfQQLS9MIrLFGaci"}
+- Web: https://empowerandlink.com
+- お問い合わせ: https://empowerandlink.com/contact
+0:{"P":null,"c":["","blog",""],"q":"","i":false,"f":[[["",{"children":["blog",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/empowerandlink/_next/static/chunks/233p45nuh4m5b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/empowerandlink/_next/static/chunks/2iqncfuwqsxel.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/empowerandlink/_next/static/chunks/13hpu0h0ie2z5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/empowerandlink/_next/static/chunks/0nb37146o5fpn.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/empowerandlink/_next/static/chunks/2jw51mpsjxm7x.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/empowerandlink/_next/static/chunks/1_-e5uj41iqu-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable noto_sans_jp_a1846dc2-module__mxjGOG__variable inter_59e20804-module__PZsqlW__variable antialiased","children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","div",null,{"className":"blog-listing-wrapper","children":[["$","section",null,{"className":"blog-listing-hero","children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"sec-head","style":{"textAlign":"center"},"children":[["$","div",null,{"className":"label label-w","style":{"justifyContent":"center"},"children":"Blog / News"}],["$","h1",null,{"className":"sec-title-w","style":{"fontSize":"clamp(1.8rem,3.5vw,2.8rem)"},"children":"お知らせ"}],["$","p",null,{"className":"sec-sub-w","style":{"margin":"0.5rem auto 0"},"children":"エンパワー＆リンクの最新情報をご紹介します。"}],["$","div",null,{"className":"acc-line","style":{"margin":"1rem auto 0"}}]]}]}]}],["$","section",null,{"className":"blog-listing-content","children":["$","div",null,{"className":"container","children":[["$","div",null,{"style":{"display":"flex","justifyContent":"flex-end","marginBottom":"1rem"},"children":["$","a",null,{"href":"/empowerandlink/admin","className":"bg-gradient-to-br from-blue-500 to-[#0099e6] text-white py-1 px-2 rounded","style":{"fontSize":".8rem"},"children":"管理画面"}]}],["$","div",null,{"className":"blog-grid z-100","children":[["$","$L5","hamamatsu-english-class",{"slug":"hamamatsu-english-class","title":"浜松未来総合専門学校での講義「人的マネージメントと組織Ⅱ」～品質管理（QC）の基礎と実践～","date":"2026-07-17","excerpt":"エンパワー＆リンクは浜松未来総合専門学校にて「人的マネージメントと組織Ⅱ」の講義を担当。QC検定4級合格を目指し、品質管理の基礎から実践までを学ぶ全15回のカリキュラムをご紹介します。","coverImage":"/images/blog/1784253403860-2FBD1F361701254081CAA7E397B2858FD46BE8CC.jpeg","content":"$6"}],"$L7","$L8","$L9"]}]]}]}]]}],["$La"],"$Lb"]}],{},null,false,null]},null,false,"$@c"]},null,false,null],"$Ld",false]],"m":"$undefined","G":["$e",["$Lf","$L10","$L11","$L12"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"oOOgsQSMZoaNguj_-1KWz"}
 13:I[77217,["/empowerandlink/_next/static/chunks/2jw51mpsjxm7x.js","/empowerandlink/_next/static/chunks/1_-e5uj41iqu-.js"],"OutletBoundary"]
 14:"$Sreact.suspense"
 17:I[77217,["/empowerandlink/_next/static/chunks/2jw51mpsjxm7x.js","/empowerandlink/_next/static/chunks/1_-e5uj41iqu-.js"],"ViewportBoundary"]
