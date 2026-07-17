@@ -386,7 +386,6 @@ export default function HomeClient({ blogPosts }: { blogPosts: PostSummary[] }) 
       </section>
 
       {/* ════════════ BLOG SECTION ════════════ */}
-      {/*
       <div className="wave-up" style={{ background: '#ffffff' }}>
         <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <path d="M0,20 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#0b1e50" />
@@ -400,7 +399,6 @@ export default function HomeClient({ blogPosts }: { blogPosts: PostSummary[] }) 
           <path d="M0,20 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#061540" />
         </svg>
       </div>
-      */}
 
       <section id="cta">
         <div className="cta-ring cr1" />
