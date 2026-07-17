@@ -9,4 +9,4 @@
 :HL["/empowerandlink/images/blog/1784253403860-2FBD1F361701254081CAA7E397B2858FD46BE8CC.jpeg","image"]
 :HL["/empowerandlink/images/blog/1784253416406-0CA6BCAFDD9955ED1C98E5EE7960BB9DB876CCAF.jpeg","image"]
 :HL["/empowerandlink/images/blog/1784253428402-2FBD1F361701254081CAA7E397B2858FD46BE8CC.jpeg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"hamamatsu-english-class","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"oOOgsQSMZoaNguj_-1KWz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"hamamatsu-english-class","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"64CymQFKtjoTz1FrVl_dC"}
