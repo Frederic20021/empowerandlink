@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "NEXT_PUBLIC_GITHUB_TOKEN= NEXT_PUBLIC_VERCEL_DEPLOY_HOOK= npm run build && touch out/.nojekyll",
+    "predeploy": "git fetch origin main && git checkout origin/main -- content/blog/ public/images/blog/ && NEXT_PUBLIC_GITHUB_TOKEN= NEXT_PUBLIC_VERCEL_DEPLOY_HOOK= npm run build && touch out/.nojekyll",
     "deploy": "gh-pages -d out -t"
   },
   "dependencies": {
