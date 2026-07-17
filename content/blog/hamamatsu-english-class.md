@@ -27,8 +27,6 @@ published: true
 
 ![](/images/blog/1784253428402-2FBD1F361701254081CAA7E397B2858FD46BE8CC.jpeg)
 
-エンパワー＆リンクは、教育機関向け講師派遣・カリキュラム開発など、人材育成に関するトータルソリューションを提供しています。ご興味のある教育機関・企業様はお気軽に[お問い合わせ](https://empowerandlink.com/contact)ください。
+### 今後の展開
 
-**エンパワー＆リンク株式会社**
-- Web: https://empowerandlink.com
-- お問い合わせ: https://empowerandlink.com/contact
+エンパワー＆リンクでは、本講義での取り組みを皮切りに、今後さらに多くの教育機関への講師派遣・カリキュラム開発を拡大していく予定です。教育機関様のニーズに合わせた人材育成プログラムのご提案が可能ですので、お気軽に[お問い合わせ](https://empowerandlink.com/contact)ください。
