@@ -391,12 +391,12 @@ overflow-x: hidden;
 }
 .stats-row {
   display: flex; justify-content: space-around; align-items: center;
-  flex-wrap: wrap; gap: 1.5rem;
+  gap: 1.5rem;
 }
-.stat { text-align: center; }
+.stat { text-align: center; flex: 1 1 0; min-width: 0; }
 .stat-num { font-size: 2.6rem; font-weight: 900; color: var(--c-n); line-height: 1; }
 .stat-num sup { font-size: 1.1rem; font-weight: 700; color: var(--c-sky); }
-.stat-label { font-size: .72rem; color: var(--c-muted); margin-top: .3rem; }
+.stat-label { font-size: .72rem; color: var(--c-muted); margin-top: .3rem; white-space: pre-line; line-height: 1.5; }
 .stat-div { width: 1px; height: 55px; background: var(--c-bl); }
 
 /* ════════════════════════
@@ -560,7 +560,7 @@ overflow-x: hidden;
 }
 .why-head h3 { color: #ffffff; font-size: .98rem; flex: 1; }
 .why-body { padding: 1.4rem 1.8rem; background: rgba(10,28,80,.75); backdrop-filter: blur(12px); }
-.why-body p { color: rgba(255,255,255,.65); font-size: .84rem; line-height: 1.85; }
+.why-body p { color: rgba(255,255,255,.65); font-size: .84rem; line-height: 1.85; white-space: pre-line; }
 
 /* ════════════════════════
    CTA
@@ -987,9 +987,42 @@ overflow-x: hidden;
   background: rgba(255,255,255,.06);
 }
 
+/* ════════════════════════
+   LANGUAGE TOGGLE
+═══════════════════════ */
+.lang-toggle {
+  display: flex;
+  border: 1px solid rgba(255,255,255,.20);
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(4px);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: .75rem;
+}
+.lang-btn {
+  cursor: pointer;
+  font-weight: 600;
+  color: rgba(255,255,255,.6);
+  transition: color var(--c-t);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.lang-btn:hover { color: #ffffff; }
+.lang-btn.active {
+  color: #67e8f9;
+  font-weight: 700;
+  background: rgba(6,182,212,.30);
+  box-shadow: 0 0 6px rgba(6,182,212,.25);
+}
+.lang-divider {
+  color: rgba(255,255,255,.30);
+  margin: 0 2px;
+  font-weight: 300;
+}
+
 /* ═══════════════════════════════════════════════════
    BLOG LISTING PAGE
-═════════════════════════════════════════════════════ */
+══════════════════════════════════════════════════════ */
 .blog-listing-wrapper {
   font-family: var(--font-noto, 'Noto Sans JP'), var(--font-inter, 'Inter'), sans-serif;
   background: var(--c-d);

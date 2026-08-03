@@ -1,0 +1,183 @@
+import type { Dictionary } from './types';
+
+export const en: Dictionary = {
+  nav: {
+    services: 'Services',
+    why: 'Our Strengths',
+    company: 'Company',
+    contact: 'Contact',
+  },
+  mobNav: {
+    services: 'Services',
+    why: 'Why Us',
+    company: 'Company',
+    contact: 'Contact',
+  },
+  hero: {
+    badge: 'Staffing · Language Services · ICT Solutions',
+    titleLine1: 'Connecting Japan with the World,',
+    titleEm: 'Creating a Vibrant Society',
+    sub: 'Empower & Link supports corporate growth and multicultural society through comprehensive services — from foreign talent recruitment to language services and ICT solutions.',
+    cta: 'Contact Us',
+    viewServices: 'View Services',
+    pills: [
+      'MHLW Licensed',
+      'Foreign Talent',
+      'Career Support',
+      'Online Education',
+      'Interpretation & Translation',
+      'Offshore Development',
+      'AI Implementation',
+    ],
+    cards: {
+      recruitment: {
+        title: 'Staffing & Recruitment',
+        body: 'Corporate: End-to-end support for hiring top talent from Southeast and South Asia. Individual: Career counseling and job placement services.',
+      },
+      english: {
+        title: 'English Education',
+        body: 'TOEIC preparation and business English instruction for professionals and students pursuing global careers.',
+      },
+      japanese: {
+        title: 'Japanese Education',
+        body: 'Post-hire language support to improve retention. Business Japanese instruction aligned with JLPT standards.',
+      },
+      ict: {
+        title: 'ICT Services',
+        body: 'Cutting-edge ICT solutions including AI implementation and cloud adoption to drive business transformation.',
+      },
+    },
+  },
+  stats: {
+    noFee: 'No fees until hiring success\n(recruitment)',
+    noFeeSup: '',
+    businesses: 'Recruitment · English Education\n· Japanese Education · ICT',
+    businessesSup: ' services',
+    countries: 'Multinational\nTalent Network',
+    countriesSup: ' countries',
+    schools: 'Partnered Vocational\nSchools in Shizuoka',
+    schoolsSup: ' schools',
+  },
+  problems: {
+    label: 'Solutions',
+    title1: 'Facing These ',
+    title2: 'Challenges',
+    title3: '?',
+    body: 'Many companies struggle with hiring and retention. Empower & Link supports you as a partner — from the recruitment stage through post-hire follow-up.',
+    cta: 'Get a Free Consultation',
+    items: [
+      { icon: '😓', text: 'Complex procedures and regulations for hiring foreign workers' },
+      { icon: '📢', text: 'Posting job ads but receiving no applications' },
+      { icon: '👥', text: 'Difficulty in attracting young, motivated talents' },
+      { icon: '⏰', text: 'Need for workers willing to handle overtime and holidays' },
+      { icon: '🔄', text: 'High turnover — employees leave soon after hiring' },
+      { icon: '🌐', text: 'Concerns about multilingual and cross-cultural communication' },
+    ],
+  },
+  services: {
+    sectionLabel: 'Our Services',
+    title: 'Four Services to',
+    titleEm: ' Connect Companies with Talent',
+    sub: 'From hiring to retention — comprehensive support for all foreign talent challenges.',
+    recruitment: {
+      title: 'Staffing & Recruitment',
+      body: 'Matching foreign talent to your company\'s needs. Comprehensive support from hiring through visa processing and post-employment retention.',
+      tags: ['Specified Skills', 'Engineer/Specialist', 'Career Support'],
+      link: 'Learn More →',
+    },
+    english: {
+      title: 'English Education',
+      body: 'Practical instruction in business English and TOEIC preparation. Supporting professionals and students pursuing global careers.',
+      tags: ['TOEIC Prep', 'Business English', 'Online Available'],
+      link: 'Learn More →',
+    },
+    japanese: {
+      title: 'Japanese Education',
+      body: 'Practical Japanese instruction for foreign workers. Support for both workplace communication and JLPT certification.',
+      tags: ['JLPT Prep', 'Workplace Japanese', 'Retention Support'],
+      link: 'Learn More →',
+    },
+    ict: {
+      title: 'ICT Services',
+      body: 'AI implementation, cloud adoption, and IT talent placement. Support from business analysis through optimal technology deployment.',
+      tags: ['AI Interview', 'Notion AI', 'IT Talent'],
+      link: 'Learn More →',
+    },
+  },
+  philosophy: {
+    sectionLabel: 'Corporate Philosophy',
+    title: 'Corporate Philosophy',
+    sub: 'Built on three pillars: realizing dreams for workers, revitalizing Japanese businesses, and creating a multicultural society.',
+    pillars: [
+      {
+        icon: '💡',
+        title: 'Realizing Workers\' Dreams',
+        body: 'We support the dreams of foreign and global talent. We listen to each individual\'s aspirations and help them find the right career path.',
+      },
+      {
+        icon: '🏢',
+        title: 'Revitalizing Japanese Businesses',
+        body: 'By introducing foreign talent and ICT, we help Japanese companies adapt to change. Diverse perspectives and process improvements drive innovation and growth.',
+      },
+      {
+        icon: '🌏',
+        title: 'Creating a Multicultural Society',
+        body: 'Connecting Japan with the world to build a society where diverse cultures coexist. We create environments where people of different backgrounds respect and empower each other.',
+      },
+    ],
+  },
+  why: {
+    sectionLabel: 'Why Choose Us',
+    title: 'Four Reasons to ',
+    titleEm: 'Choose Us',
+    sub: 'Beyond simple recruitment — we provide total solutions addressing talent shortages and operational challenges.',
+    cards: [
+      {
+        num: '01',
+        heading: 'Matching Based on the Power of Connection',
+        body: 'Our founder, with backgrounds in education and global business, has long served as a bridge between people and organizations. Built on listening, empathy, and connecting — we deliver matches that go beyond surface-level criteria.',
+      },
+      {
+        num: '02',
+        heading: 'Retention Support Through Language Services',
+        body: 'We offer both English and Japanese education,\nso support doesn\'t end with placement.\nCareer growth and post-hire communication\nsupport keep talent with you longer.\nLong-term retention is built on ongoing support.',
+      },
+      {
+        num: '03',
+        heading: 'Partnerships with Schools & Nation-Wide Networks',
+        body: 'Partnered with two vocational schools in Shizuoka Prefecture for specialist talent. Members of a nationwide recruitment platform, providing access to domestic residents with N2+ Japanese proficiency and more.',
+      },
+      {
+        num: '04',
+        heading: 'AI-Powered Efficiency Solutions',
+        body: 'Talent shortages need more than hiring.\nWe blend AI, IT systems, and technology\nfor comprehensive solutions — addressing\nyour challenges with maximum impact, minimum cost.\nThe right technology mix drives real efficiency.',
+      },
+    ],
+  },
+  blog: {
+    sectionLabel: 'Blog / News',
+    title: 'Latest',
+    titleEm: ' News',
+    sub: 'Stay updated with the latest from Empower & Link.',
+    viewAll: 'View All',
+  },
+  cta: {
+    eyebrow: 'Get Started',
+    title: 'From hiring challenges to language\nservices and AI solutions \n— let\'s talk.',
+    body: 'Inquiries about service overviews and estimates are welcome.\nOur experienced staff will assist you promptly.',
+    btn: 'Free Consultation',
+  },
+  footer: {
+    desc: 'Connecting Japan with the world — contributing to corporate vitality and multicultural society.',
+    license: 'Licensed Employment Placement Agency (MHLW Permit)',
+    services: 'Services',
+    recruitment: 'Staffing & Recruitment',
+    english: 'English Education',
+    japanese: 'Japanese Education',
+    ict: 'ICT Services',
+    company: 'Company',
+    overview: 'Company Overview',
+    contact: 'Contact Us',
+    copyright: '© 2025 Empower & Link Co., Ltd. All Rights Reserved.',
+  },
+};

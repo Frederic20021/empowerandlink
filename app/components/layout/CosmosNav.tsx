@@ -4,11 +4,14 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { getAssetPath } from '@/app/utils/paths';
+import { useLanguage } from '@/lib/i18n';
+
 export default function CosmosNav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen]     = useState(false);
   const pathname = usePathname();
   const isHome   = pathname === '/';
+  const { lang, setLang, t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
@@ -19,6 +22,26 @@ export default function CosmosNav() {
   const base       = getAssetPath('/');
   const servicesHref = isHome ? '#services' : `${base}#services`;
   const whyHref      = isHome ? '#why'      : `${base}#why`;
+
+  const langToggle = (
+    <div className="lang-toggle py-2 ">
+      <button
+        type="button"
+        className={`lang-btn${lang === 'ja' ? ' active' : ''}`}
+        onClick={() => setLang('ja')}
+      >
+        JA
+      </button>
+      <span className="lang-divider">/</span>
+      <button
+        type="button"
+        className={`lang-btn${lang === 'en' ? ' active' : ''}`}
+        onClick={() => setLang('en')}
+      >
+        EN
+      </button>
+    </div>
+  );
 
   return (
     <>
@@ -37,10 +60,11 @@ export default function CosmosNav() {
           </Link>
 
           <ul className="nav-links">
-            <li><a href={servicesHref}>提供サービス</a></li>
-            <li><a href={whyHref}>４つの強み</a></li>
-            <li><Link href="/company">会社概要</Link></li>
-            <li><Link href="/contact" className="nav-cta">お問い合わせ</Link></li>
+            <li><a href={servicesHref}>{t.nav.services}</a></li>
+            <li><a href={whyHref}>{t.nav.why}</a></li>
+            <li><Link href="/company">{t.nav.company}</Link></li>
+            <li><Link href="/contact" className="nav-cta">{t.nav.contact}</Link></li>
+            <li>{langToggle}</li>
           </ul>
 
           <div className="hbg" onClick={() => setMenuOpen(v => !v)}>
@@ -52,10 +76,11 @@ export default function CosmosNav() {
       {/* Mobile menu */}
       <div className={`mob-menu${menuOpen ? ' open' : ''}`}>
         <ul>
-          <li><a href={servicesHref} onClick={() => setMenuOpen(false)}>サービス</a></li>
-          <li><a href={whyHref}      onClick={() => setMenuOpen(false)}>選ばれる理由</a></li>
-          <li><Link href="/company" onClick={() => setMenuOpen(false)}>会社概要</Link></li>
-          <li><Link href="/contact" onClick={() => setMenuOpen(false)}>お問い合わせ</Link></li>
+          <li><a href={servicesHref} onClick={() => setMenuOpen(false)}>{t.mobNav.services}</a></li>
+          <li><a href={whyHref}      onClick={() => setMenuOpen(false)}>{t.mobNav.why}</a></li>
+          <li><Link href="/company" onClick={() => setMenuOpen(false)}>{t.mobNav.company}</Link></li>
+          <li><Link href="/contact" onClick={() => setMenuOpen(false)}>{t.mobNav.contact}</Link></li>
+          <li>{langToggle}</li>
         </ul>
       </div>
     </>

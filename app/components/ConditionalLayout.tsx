@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import { LanguageProvider } from '@/lib/i18n';
 import CosmosNav from './layout/CosmosNav';
 import CosmosFooter from './layout/CosmosFooter';
 
@@ -17,7 +18,7 @@ export default function ConditionalLayout({
   if (isAdmin) return <>{children}</>;
 
   return (
-    <>
+    <LanguageProvider>
       <CosmosNav />
       {isHome ? (
         children
@@ -27,6 +28,6 @@ export default function ConditionalLayout({
         </div>
       )}
       <CosmosFooter />
-    </>
+    </LanguageProvider>
   );
 }

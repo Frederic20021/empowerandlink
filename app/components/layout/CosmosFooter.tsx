@@ -1,7 +1,12 @@
+'use client';
+
 import Link from 'next/link';
 import { getAssetPath } from '@/app/utils/paths';
+import { useLanguage } from '@/lib/i18n';
 
 export default function CosmosFooter() {
+  const { t } = useLanguage();
+
   return (
     <footer className="cosmos-footer" id="about">
       <div className="container mx-auto">
@@ -18,32 +23,32 @@ export default function CosmosFooter() {
               </div>
             </Link>
             <p>
-              日本と世界を繋ぎ、企業の活性化と多文化共生社会の実現に貢献します。<br />
-              有料職業紹介事業者（厚生労働省許可）
+              {t.footer.desc}<br />
+              {t.footer.license}
             </p>
           </div>
 
           <div className="ft-col">
-            <h4>サービス</h4>
+            <h4>{t.footer.services}</h4>
             <ul className="ft-links">
-              <li><Link href="/recruitment">人材紹介</Link></li>
-              <li><Link href="/english">英語教育</Link></li>
-              <li><Link href="/japanese">日本語教育</Link></li>
-              <li><Link href="/ict">ICT事業</Link></li>
+              <li><Link href="/recruitment">{t.footer.recruitment}</Link></li>
+              <li><Link href="/english">{t.footer.english}</Link></li>
+              <li><Link href="/japanese">{t.footer.japanese}</Link></li>
+              <li><Link href="/ict">{t.footer.ict}</Link></li>
             </ul>
           </div>
 
           <div className="ft-col">
-            <h4>会社情報</h4>
+            <h4>{t.footer.company}</h4>
             <ul className="ft-links">
-              <li><Link href="/company">会社概要</Link></li>
-              <li><Link href="/contact">お問い合わせ</Link></li>
+              <li><Link href="/company">{t.footer.overview}</Link></li>
+              <li><Link href="/contact">{t.footer.contact}</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="ft-bottom">
-          <span>© 2025 エンパワー＆リンク株式会社 All Rights Reserved.</span>
+          <span>{t.footer.copyright}</span>
         </div>
       </div>
     </footer>
