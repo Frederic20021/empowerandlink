@@ -2,8 +2,10 @@
 
 import { useEffect, useRef } from 'react';
 import { getAssetPath } from '../utils/paths';
+import { useLanguage } from '@/lib/i18n';
 
 export default function NewCompanyPage() {
+  const { t } = useLanguage();
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -87,11 +89,12 @@ export default function NewCompanyPage() {
         <div className="nc-hero-content">
           <div className="hero-badge">
             <span className="badge-pulse" />
-            会社概要
+            {t.company.hero.badge}
           </div>
           <h1 className="hero-title">
-            人と人とを<em>つなぐ</em><br />
-            それが私たちの使命です。
+            {t.company.hero.title.split('\n').map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
           </h1>
         </div>
       </section>
@@ -100,9 +103,9 @@ export default function NewCompanyPage() {
       <section id="nc-video" className="nc-dark-section">
         <div className="nc-container">
           <div className="sec-head">
-            <div className="label label-w">Company Video</div>
-            <h2 className="sec-title-w">紹介動画</h2>
-            <p className="sec-sub-w">エンパワー＆リンクの事業内容をご紹介します。</p>
+            <div className="label label-w">{t.company.video.sectionLabel}</div>
+            <h2 className="sec-title-w">{t.company.video.title}</h2>
+            <p className="sec-sub-w">{t.company.video.subtitle}</p>
             <div className="acc-line" />
           </div>
           <div className="nc-video-wrap">
@@ -128,8 +131,8 @@ export default function NewCompanyPage() {
       <section id="nc-ceo" className="nc-light-section">
         <div className="nc-container">
           <div className="sec-head">
-            <div className="label label-b">CEO Message</div>
-            <h2 className="sec-title-b">代表挨拶</h2>
+            <div className="label label-b">{t.company.ceo.sectionLabel}</div>
+            <h2 className="sec-title-b">{t.company.ceo.title}</h2>
             <div className="acc-line acc-line-b" />
           </div>
           <div className="nc-ceo-grid bg-[#0d2462] text-white">
@@ -140,16 +143,13 @@ export default function NewCompanyPage() {
                 className="nc-ceo-img"
                 onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
               />
-              <div className="nc-ceo-role">代表取締役社長</div>
-              <div className="nc-ceo-name">角谷 寛人</div>
+              <div className="nc-ceo-role">{t.company.ceo.role}</div>
+              <div className="nc-ceo-name">{t.company.ceo.name}</div>
             </div>
             <div className="nc-ceo-text">
-              <p>エンパワー＆リンク㈱のウェブサイトをご覧頂き、ありがとうございます。</p>
-              <p>私は、学生時代に沢木耕太郎の『深夜特急』や海外映画の影響を受け、東京外国語大学に進学。卒業後は、埼玉県の私立高校で英語科主任・進路指導、三菱製紙㈱で海外営業・経営企画、本田技研工業㈱で事業企画の経験を積ませて頂き、英語×海外×人との繋がりをキャリアの軸として歩んできました。</p>
-              <p>転勤をきっかけに浜松で生活をすると、日本が少子高齢化により、外国の方に労働者、日本社会の一員として来日してもらっていることを肌で実感しました。ただ、日本は長年「移民」を受け入れてこなかったため、国の制度面だけでなくまだまだ民間や地域社会の側にも受け入れのノウハウが整っていないように思います。</p>
-              <p>そこで、多文化共生という課題に先進的に取り組んできた浜松の地から、企業の多様性・グローバル化促進、外国の方の定住をサポートする事業をスタートしたいと思い、エンパワー＆リンク㈱を立ち上げました。</p>
-              <p>日本人・外国人、男性・女性、健常者・障がい者といった枠に捉われず、互いに信頼し合える組織を創り、個人が本来持つ力を発揮することで最高のアイディア、パフォーマンスが生まれると信じています。資源は有限でも繋がりは無限です。</p>
-              <p>新たな一歩を踏み出す勇気を与え、人と人との繋がりを生み出す会社でありたいという想いを社名には込めております。皆さまと共に歩み、ご期待に沿えるよう邁進して参ります。ご愛顧のほど、よろしくお願い申し上げます。</p>
+              {t.company.ceo.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
           </div>
         </div>
@@ -166,21 +166,21 @@ export default function NewCompanyPage() {
       <section id="nc-info" className="nc-dark-section">
         <div className="nc-container">
           <div className="sec-head">
-            <div className="label label-w">Company Info</div>
-            <h2 className="sec-title-w">会社情報</h2>
-            <p className="sec-sub-w">エンパワー＆リンク株式会社の基本情報</p>
+            <div className="label label-w">{t.company.companyInfo.sectionLabel}</div>
+            <h2 className="sec-title-w">{t.company.companyInfo.title}</h2>
+            <p className="sec-sub-w">{t.company.companyInfo.subtitle}</p>
             <div className="acc-line" />
           </div>
           <div className="nc-info-table ">
             {[
-              ['会社名', 'エンパワー&リンク株式会社'],
-              ['代表取締役', '角谷 寛人'],
-              ['所在地', '〒430-0949\n静岡県浜松市中央区\n尾張町124-6\n浜松士業ビル 4階E号室'],
-              ['電話番号', '070-6616-0410'],
-              ['資本金', '500万円'],
-              ['設立', '2025年4月'],
-              ['事業内容', '有料職業紹介事業\n(22-ユ-300927)\n日本語教育\n英語教育\nICTサービス'],
-              ['取引銀行', '三井住友銀行\n浜松磐田信用金庫\nPayPay銀行'],
+              [t.company.companyInfo.labels.companyName, t.company.companyInfo.values.companyName],
+              [t.company.companyInfo.labels.ceo, t.company.companyInfo.values.ceo],
+              [t.company.companyInfo.labels.address, t.company.companyInfo.values.address],
+              [t.company.companyInfo.labels.phone, t.company.companyInfo.values.phone],
+              [t.company.companyInfo.labels.capital, t.company.companyInfo.values.capital],
+              [t.company.companyInfo.labels.established, t.company.companyInfo.values.established],
+              [t.company.companyInfo.labels.business, t.company.companyInfo.values.business],
+              [t.company.companyInfo.labels.banks, t.company.companyInfo.values.banks],
             ].map(([label, value]) => (
               <div className="nc-info-row" key={label}>
                 <div className="nc-info-label">{label}</div>
@@ -202,9 +202,9 @@ export default function NewCompanyPage() {
       <section id="nc-access" className="nc-light-section">
         <div className="nc-container">
           <div className="sec-head">
-            <div className="label label-b">Access</div>
-            <h2 className="sec-title-b">アクセス</h2>
-            <p className="sec-sub-b">浜松士業ビル 4階E号室</p>
+            <div className="label label-b">{t.company.access.sectionLabel}</div>
+            <h2 className="sec-title-b">{t.company.access.title}</h2>
+            <p className="sec-sub-b">{t.company.access.subtitle}</p>
             <div className="acc-line acc-line-b" />
           </div>
           <div className="nc-access-grid fi">
@@ -219,16 +219,20 @@ export default function NewCompanyPage() {
             </div>
             <div className="nc-access-cards">
               <div className="nc-access-card">
-                <h3><span className="nc-tag-blue">所在地</span></h3>
-                <p>〒430-0949<br />静岡県浜松市中央区尾張町124-6<br />浜松士業ビル 4階E号室</p>
+                <h3><span className="nc-tag-blue">{t.company.access.cards.location.title}</span></h3>
+                <p>{t.company.access.cards.location.content.split('\n').map((line, i) => (
+                  <span key={i}>{line}{i < t.company.access.cards.location.content.split('\n').length - 1 && <br />}</span>
+                ))}</p>
               </div>
               <div className="nc-access-card">
-                <h3><span className="nc-tag-blue">交通アクセス</span></h3>
-                <div>JR浜松駅から徒歩10分<br />遠鉄電車「新浜松駅」から徒歩8分</div>
+                <h3><span className="nc-tag-blue">{t.company.access.cards.transport.title}</span></h3>
+                <div>{t.company.access.cards.transport.content.split('\n').map((line, i) => (
+                  <span key={i}>{line}{i < t.company.access.cards.transport.content.split('\n').length - 1 && <br />}</span>
+                ))}</div>
               </div>
               <div className="nc-access-card">
-                <h3><span className="nc-tag-blue">駐車場</span></h3>
-                <p>周辺の有料駐車場をご利用ください</p>
+                <h3><span className="nc-tag-blue">{t.company.access.cards.parking.title}</span></h3>
+                <p>{t.company.access.cards.parking.content}</p>
               </div>
             </div>
           </div>
@@ -247,15 +251,16 @@ export default function NewCompanyPage() {
         <div className="nc-cta-ring nc-cr-1" />
         <div className="nc-cta-ring nc-cr-2" />
         <div className="nc-cta-inner">
-          <div className="nc-cta-eyebrow">お問い合わせ</div>
-          <h2>まずはお気軽にご相談ください</h2>
+          <div className="nc-cta-eyebrow">{t.company.cta.eyebrow}</div>
+          <h2>{t.company.cta.title}</h2>
           <p>
-            サービス概要を知りたい、見積もりを依頼したい等のお問い合わせも歓迎です。<br />
-            経験豊富なスタッフが丁寧にご対応いたします。
+            {t.company.cta.body.split('\n').map((line, i) => (
+              <span key={i}>{line}{i < t.company.cta.body.split('\n').length - 1 && <br />}</span>
+            ))}
           </p>
           <div className="nc-cta-btns">
             <a href={getAssetPath('/contact')} className="btn btn-glow">
-              無料でお問い合わせ
+              {t.company.cta.button}
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

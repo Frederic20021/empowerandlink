@@ -2,10 +2,12 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { serviceID, contactTemplateID, publicKey } from '@/app/constants/emailjs';
+import { useLanguage } from '@/lib/i18n';
 
 
 
 export default function ContactForm() {
+  const { t } = useLanguage();
 
   const [formData, setFormData] = useState({
     user_name: '',
@@ -25,7 +27,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
     setIsSubmitting(true);
     try {
       await emailjs.send(serviceID, contactTemplateID, formData, publicKey);
-      alert('メッセージが送信されました！');
+      alert(t.contact.alerts.success);
       setFormData({
         user_name: '',
         company_name: '',
@@ -36,7 +38,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
       });
     } catch (error) {
       console.log('FAILED...', error);
-      alert('送信に失敗しました。もう一度お試しください。');
+      alert(t.contact.alerts.error);
     } finally {
       setIsSubmitting(false);
     }
@@ -45,10 +47,10 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
   return (
     <>
       <section className="py-8 bg-gray-50 text-black grid gap-8 justify-center px-4">
-        <h3 className="mx-auto text-center text-lg md:text-xl">以下のフォームよりお問い合わせください。</h3> 
+        <h3 className="mx-auto text-center text-lg md:text-xl">{t.contact.intro}</h3> 
         <form onSubmit={handleSubmit} className="grid gap-4 w-full max-w-md mx-auto">
           <div>
-            <label className="block text-sm font-medium mb-2">お名前（必須）</label>
+            <label className="block text-sm font-medium mb-2">{t.contact.labels.name}</label>
             <input 
               type="text" 
               name="user_name" 
@@ -60,7 +62,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
           </div>
           
           <div>
-            <label className="block text-sm font-medium mb-2">会社名（法人の方は必ずご入力ください）</label>
+            <label className="block text-sm font-medium mb-2">{t.contact.labels.company}</label>
             <input 
               type="text" 
               name="company_name" 
@@ -70,7 +72,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-2">メールアドレス（必須）</label>
+            <label className="block text-sm font-medium mb-2">{t.contact.labels.email}</label>
             <input 
               type="email" 
               name="user_email" 
@@ -82,7 +84,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
           </div>
           
           <div>
-            <label className="block text-sm font-medium mb-2">電話番号</label>
+            <label className="block text-sm font-medium mb-2">{t.contact.labels.phone}</label>
             <input 
               type="tel" 
               name="phone_number" 
@@ -93,7 +95,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
           </div>
           
           <div>
-            <label className="block text-sm font-medium mb-2">題名（必須）</label>
+            <label className="block text-sm font-medium mb-2">{t.contact.labels.subject}</label>
             <input 
               type="text" 
               name="subject" 
@@ -105,7 +107,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
           </div>
           
           <div>
-            <label className="block text-sm font-medium mb-2">メッセージ本文（必須）</label>
+            <label className="block text-sm font-medium mb-2">{t.contact.labels.message}</label>
             <textarea 
               name="message" 
               value={formData.message}
@@ -121,7 +123,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
             disabled={isSubmitting}
             className="w-full bg-blue-500 hover:bg-blue-600 cursor-pointer text-white p-3 rounded-md mt-4 transition-colors font-medium"
           >
-            {isSubmitting ? '送信中...' : '送信'}
+            {isSubmitting ? t.contact.submit.submitting : t.contact.submit.idle}
           </button>
         </form>
       </section>

@@ -2,17 +2,20 @@ import Image from "next/image";
 
 import { FaCheckCircle } from "react-icons/fa";
 
-import { ProfInfo } from "@/app/constants/japanese";
+import { useLanguage } from "@/lib/i18n";
 import { getAssetPath } from "@/app/utils/paths";
 
 export default function Professors() {
+  const { t } = useLanguage();
+  const { professors } = t.japanesePage;
+
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <h2 className="text-2xl md:text-3xl font-extrabold">講師紹介</h2>
+        <h2 className="text-2xl md:text-3xl font-extrabold">{professors.title}</h2>
 
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {ProfInfo.map((prof) => (
+          {professors.profiles.map((prof) => (
             <article
               key={prof.id}
               className="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 overflow-hidden"
@@ -31,7 +34,7 @@ export default function Professors() {
                   <p className="md:text-2xl text-lg font-bold">
                     {prof.name}{" "}
                     <span className="text-sm font-semibold text-blue-100">
-                      講師
+                      {professors.instructorLabel}
                     </span>
                   </p>
                   <p className="text-sm text-blue-100">({prof.kana})</p>

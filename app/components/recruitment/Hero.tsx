@@ -1,4 +1,9 @@
+import { useLanguage } from "@/lib/i18n";
+
 export default function Hero() {
+  const { t } = useLanguage();
+  const { hero } = t.recruitment;
+
   return (
     <section
       id="hero-new"
@@ -9,23 +14,25 @@ export default function Hero() {
         <div>
           <div className="hero-badge">
             <span className="badge-pulse" />
-            人材紹介サービス
+            {hero.badge}
           </div>
           <h1 className="text-[#0e2d6e] text-[clamp(2rem,5vw,3.8rem)] font-black leading-[1.12] tracking-tight mb-6">
-            優秀な外国人材と
-            <br />
-            <em className="not-italic text-[#1976d2]">日本企業をつなぐ</em>
+            {hero.title.split('\n').map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < hero.title.split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </h1>
           <p className="text-[#5a738a] text-base lg:text-lg leading-relaxed max-w-[460px] mb-10">
-            採用から定着まで、ワンストップでサポート。
-            経験豊富なスタッフが貴社の人材課題を解決します。
+            {hero.subtitle}
           </p>
           <div className="flex flex-wrap gap-4 mb-12">
             <a
               href="#cta-new"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0057b8] text-white font-bold text-sm tracking-wider rounded shadow-[0_4px_20px_rgba(0,87,184,0.3)] hover:bg-[#0e2d6e] hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(0,87,184,0.4)] transition-all duration-[0.28s]"
             >
-              無料で相談する
+              {hero.ctaPrimary}
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
                 <path
                   d="M3 8h10M9 4l4 4-4 4"
@@ -40,11 +47,11 @@ export default function Hero() {
               href="#problems"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-transparent text-[#0057b8] font-bold text-sm tracking-wider rounded border-2 border-[#0057b8] hover:bg-[#0057b8] hover:text-white hover:-translate-y-0.5 transition-all duration-[0.28s]"
             >
-              課題を見る
+              {hero.ctaSecondary}
             </a>
           </div>
           <div className="flex flex-wrap gap-4 items-center pt-6 max-w-[470px] justify-center border-t border-[#d0dce8]">
-            {["契約書類翻訳無料", "見積り・相談無料", "初期費用ゼロ"].map(
+            {hero.pills.map(
               (item) => (
                 <span
                   key={item}
@@ -66,16 +73,10 @@ export default function Hero() {
         <div className="hidden lg:block">
           <div className="bg-white rounded-2xl p-8 shadow-[0_8px_40px_rgba(14,45,110,0.16)] relative before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-[#0e2d6e] before:to-[#0099e6] before:rounded-t-2xl">
             <div className="text-[0.75rem] font-bold tracking-[0.1em] text-[#5a738a] uppercase mb-5">
-              人材紹介 サービス一覧
+              {hero.serviceList.title}
             </div>
             <ul className="flex flex-col gap-3">
-              {[
-                { icon: "🌏", text: "外国人材の採用支援（特定技能・技人国）" },
-                { icon: "📋", text: "在留資格申請サポート・書類翻訳代行" },
-                { icon: "🎓", text: "ビジネス研修・生活サポート" },
-                { icon: "🗣️", text: "通訳・翻訳サービス" },
-                { icon: "🔄", text: "採用後の定着フォロー" },
-              ].map((item) => (
+              {hero.serviceList.items.map((item) => (
                 <li
                   key={item.text}
                   className="flex items-start gap-3 p-3.5 rounded-lg bg-[#f4f7fc] text-sm text-[#1a2b4a]"
@@ -88,10 +89,10 @@ export default function Hero() {
             <a href="#cta-new">
               <div className="mt-6 p-4 bg-gradient-to-br from-[#0e2d6e] to-[#1976d2] rounded-lg text-center">
                 <div className="text-sm font-bold text-white">
-                  まずは無料でご相談ください
+                  {hero.serviceList.cta}
                 </div>
                 <div className="text-[0.7rem] font-normal text-white/80 mt-1">
-                  ※採用成功まで費用はかかりません
+                  {hero.serviceList.ctaSub}
                 </div>
               </div>
             </a>

@@ -1,3 +1,5 @@
+'use client';
+
 import { Noto_Sans_JP } from "next/font/google";
 import Hero from "@/app/components/recruitment/Hero";
 import Problems from "@/app/components/recruitment/Problems";

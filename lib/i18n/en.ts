@@ -145,7 +145,7 @@ export const en: Dictionary = {
       {
         num: '03',
         heading: 'Partnerships with Schools & Nation-Wide Networks',
-        body: 'Partnered with two vocational schools in Shizuoka Prefecture for specialist talent. Members of a nationwide recruitment platform, providing access to domestic residents with N2+ Japanese proficiency and more.',
+        body: 'Partnered with two vocational schools in Shizuoka Prefecture for specialist talent. Members of a nationwide recruitment platform, providing access to domestic residents with N2+ Japanese proficiency and highly skilled foreign talents.',
       },
       {
         num: '04',
@@ -179,5 +179,878 @@ export const en: Dictionary = {
     overview: 'Company Overview',
     contact: 'Contact Us',
     copyright: '© 2025 Empower & Link Co., Ltd. All Rights Reserved.',
+  },
+  company: {
+    hero: {
+      badge: 'Company Overview',
+      title: 'Connecting People,\nThat is Our Mission.',
+    },
+    video: {
+      sectionLabel: 'Company Video',
+      title: 'Introduction Video',
+      subtitle: 'Learn about our business and services.',
+    },
+    ceo: {
+      sectionLabel: 'CEO Message',
+      title: 'CEO Message',
+      role: 'President & CEO',
+      name: 'Hiroto Kadoya',
+      paragraphs: [
+        'Thank you for visiting the Empower & Link website.',
+        'Influenced by Kotaro Isaka\'s "Midnight Express" and foreign films during my student years, I went on to study at Tokyo University of Foreign Studies. After graduation, I gained experience as an English department head and career guidance counselor at a private high school in Saitama, in overseas sales and corporate planning at Mitsubishi Paper Mills, and in business planning at Honda Motor Co., building my career around the connections between English, overseas experience, and people.',
+        'When I moved to Hamamatsu, I experienced firsthand how Japan\'s declining birthrate and aging population have led to foreign workers becoming members of Japanese society. However, because Japan has not historically accepted immigrants, I believe that not only the national systems but also the private sector and local communities still lack sufficient know-how for acceptance.',
+        'Therefore, from Hamamatsu, which has been at the forefront of addressing multicultural coexistence, I wanted to start a business that supports corporate diversity and globalization, as well as the settlement of foreign nationals, which led to the founding of Empower & Link.',
+        'I believe that by creating an organization where people — regardless of nationality, gender, or ability — can trust each other and unleash their inherent potential, the best ideas and performance will emerge. Resources are finite, but connections are infinite.',
+        'Our company name embodies our desire to be a company that gives people the courage to take the next step and creates connections between people. We will walk together with you and strive to meet your expectations. We appreciate your continued support.',
+      ],
+    },
+    companyInfo: {
+      sectionLabel: 'Company Info',
+      title: 'Company Information',
+      subtitle: 'Basic information about Empower & Link Co., Ltd.',
+      labels: {
+        companyName: 'Company Name',
+        ceo: 'President & CEO',
+        address: 'Address',
+        phone: 'Phone Number',
+        capital: 'Capital',
+        established: 'Established',
+        business: 'Business Operations',
+        banks: 'Banking Partners',
+      },
+      values: {
+        companyName: 'Empower & Link Co., Ltd.',
+        ceo: 'Hiroto Kadoya',
+        address: '〒430-0949\n124-6 Owari-cho, Chuo-ku,\nHamamatsu, Shizuoka\nHamamatsu Shigyo Building 4F Room E',
+        phone: '070-6616-0410',
+        capital: '¥5,000,000',
+        established: 'April 2025',
+        business: 'Licensed Employment Placement Agency\n(MHLW Permit 22-Yu-300927)\nJapanese Language Education\nEnglish Education\nICT Services',
+        banks: 'Sumitomo Mitsui Banking Corporation\nHamamatsu Iwata Shinkin Bank\nPayPay Bank',
+      },
+    },
+    access: {
+      sectionLabel: 'Access',
+      title: 'Access',
+      subtitle: 'Hamamatsu Shigyo Building 4F Room E',
+      cards: {
+        location: {
+          title: 'Location',
+          content: '〒430-0949\n124-6 Owari-cho, Chuo-ku,\nHamamatsu, Shizuoka\nHamamatsu Shigyo Building 4F Room E',
+        },
+        transport: {
+          title: 'Transportation',
+          content: '10 min walk from JR Hamamatsu Station\n8 min walk from Entetsu "Shin-Hamamatsu Station"',
+        },
+        parking: {
+          title: 'Parking',
+          content: 'Please use nearby paid parking lots',
+        },
+      },
+    },
+    cta: {
+      eyebrow: 'Contact Us',
+      title: 'Feel Free to Consult With Us',
+      body: 'Inquiries about service overviews and estimates are welcome.\nOur experienced staff will assist you promptly.',
+      button: 'Free Consultation',
+    },
+  },
+  contact: {
+    intro: 'Please contact us using the form below.',
+    labels: {
+      name: 'Name (Required)',
+      company: 'Company Name (Required for corporate inquiries)',
+      email: 'Email Address (Required)',
+      phone: 'Phone Number',
+      subject: 'Subject (Required)',
+      message: 'Message (Required)',
+    },
+    submit: {
+      idle: 'Send',
+      submitting: 'Sending...',
+    },
+    alerts: {
+      success: 'Your message has been sent!',
+      error: 'Failed to send. Please try again.',
+    },
+  },
+  blogPage: {
+    sectionLabel: 'Blog / News',
+    title: 'News',
+    subtitle: 'Stay updated with the latest from Empower & Link.',
+    emptyState: 'No articles yet.',
+    adminLink: 'Admin Panel',
+    backLink: 'Back to List',
+  },
+  notion: {
+    hero: {
+      badge: 'Notion Business Improvement Consulting',
+      title: 'Transform Your\nBusiness with Notion.',
+      subtitle: 'Information silos, workflow bottlenecks, tool sprawl — we organize and visualize these common challenges with a single Notion workspace.',
+      ctaPrimary: 'Book a Free Hearing (60 min)',
+      ctaSecondary: 'View Pricing',
+      footnote: '*This document is a draft. A formal estimate will be provided after the initial hearing.',
+    },
+    problems: {
+      sectionLabel: 'PROBLEM',
+      title: 'Facing These Challenges?',
+      subtitle: 'Many small and medium businesses struggle with the same operational issues.',
+      items: [
+        {
+          icon: '🗂️',
+          title: 'Information Scattered,\nHard to Find',
+          desc: 'Customer data, project status, and meeting notes are spread across Excel, chat, email, and paper. Just finding the information you need wastes valuable time.',
+        },
+        {
+          icon: '📊',
+          title: 'No Visibility on Progress,\nHandoffs Fail',
+          desc: 'Task and project management depends on individual staff, making team-wide progress sharing impossible. Every resignation or transfer means starting handoffs from scratch.',
+        },
+        {
+          icon: '🔧',
+          title: 'Too Many Tools,\nNone Fully Used',
+          desc: 'Multiple tools have been adopted but lack integration, and AI usage remains sporadic. In the end, you can\'t break free from Excel and paper-based workflows.',
+        },
+      ],
+    },
+    reasons: {
+      sectionLabel: 'WHY NOTION',
+      title: 'Why Notion\nBusiness Improvement',
+      subtitle: 'We address root causes and organize your operations as a system. That\'s our approach.',
+      items: [
+        {
+          icon: '📁',
+          num: '01',
+          title: 'Consolidate Everything in One Environment',
+          desc: 'Integrate customer data, project progress, meeting notes, payment status, and internal knowledge into Notion. Search, share, and update — all from a single screen.',
+        },
+        {
+          icon: '👁️',
+          num: '02',
+          title: 'Visualize Operations and Eliminate Bottlenecks',
+          desc: 'Make visible the workflows that depended on individual knowledge. Progress tracking, gap prevention, and standardized handoffs become achievable across the entire team.',
+        },
+        {
+          icon: '🎯',
+          num: '03',
+          title: 'Deliver the Right Information to the Right People',
+          desc: 'From a single database, instantly provide views tailored to sales staff, managers, and field workers. No more wasted time collecting information.',
+        },
+        {
+          icon: '🤖',
+          num: '04',
+          title: 'Integrate AI Seamlessly into Daily Operations',
+          desc: 'Connect meeting note整理, email drafting, and task extraction directly with Notion data. Use AI continuously in your workflow without switching browsers.',
+        },
+        {
+          icon: '📚',
+          num: '05',
+          title: 'Turn Knowledge into Company Assets',
+          desc: 'Systematically accumulate individual experience, know-how, and response history. Preserve them as organizational intellectual assets anyone can reference and utilize.',
+        },
+        {
+          icon: '🌱',
+          num: '06',
+          title: 'Start Small and Grow Steadily',
+          desc: 'Begin with a subset of operations, confirm usability, and expand incrementally. No massive initial investment or company-wide rollout required.',
+        },
+      ],
+    },
+    basicPlan: {
+      sectionLabel: '1. Basic Plan',
+      title: 'What\'s Included in the Basic Plan',
+      price: '¥40,000',
+      priceSub: '/month (tax excluded)',
+      includesNote: 'All the following services are included in the base fee',
+      includesLabel: '✅ Services Included in the Basic Plan',
+      includes: [
+        'Initial Notion workspace setup',
+        'Online regular meetings: up to 3/month (60 min each)',
+        'Chat support (business days)',
+        'Lightweight data migration from existing Excel/Spreadsheets (1-2 files)',
+        'Basic View and Template creation',
+        '1-3 databases (varies by contract period)',
+      ],
+      footnote: 'Starting with the minimum configuration and expanding as needed is the most sustainable approach.',
+    },
+    pricingFactors: {
+      sectionLabel: '2. How Pricing Works',
+      title: '"6 Points" That Determine Pricing',
+      subtitle: 'Customization fees are added to the base rate based on the following six factors. We explain each using familiar analogies.',
+      factors: [
+        {
+          point: 'POINT 01',
+          icon: '👨‍👩‍👧‍👦',
+          title: 'Number of Employees',
+          analogy: '🎒 Family Trip vs. Group Tour',
+          desc: 'A family of four can manage with just accommodation bookings. But a 30-person group tour requires bus arrangements, meal logistics, and assembly rules — "operations" become the bulk of the work. The more users, the greater the costs for authority design, naming conventions, and training.',
+          tableHeaders: ['Employees', 'Additional Fee/Month'],
+          tableRows: [
+            { cols: ['1-5', '¥0 (included in base)'] },
+            { cols: ['6-15', '+¥10,000'] },
+            { cols: ['16-30', '+¥20,000'] },
+            { cols: ['31-50', '+¥35,000'] },
+            { cols: ['51+', 'Custom quote'] },
+          ],
+        },
+        {
+          point: 'POINT 02',
+          icon: '📱',
+          title: 'Number of Databases (DB)',
+          analogy: '📱 Smartphone Annual Plan',
+          desc: 'Adding a DB is like setting up a new storage cabinet with dividers. You need to establish rules for what goes where and who can access it. The pricing structure mirrors smartphone annual plans — longer contracts offer better value.',
+          tableHeaders: ['Contract Period', 'Free DBs', 'Additional/Each'],
+          tableRows: [
+            { cols: ['12-month (Recommended)', 'Up to 3', '+¥20,000/month'] },
+            { cols: ['6-month', 'Up to 2', '+¥30,000/month'] },
+            { cols: ['Monthly', 'First one only', '+¥35,000/month'] },
+          ],
+        },
+        {
+          point: 'POINT 03',
+          icon: '📦',
+          title: 'Initial Data Migration Volume',
+          analogy: '🚚 Choosing a Moving Company',
+          desc: 'Ten boxes you can pack yourself. Over 100 boxes, you need a full-service mover. Restructuring Excel, Spreadsheets, and paper ledgers into Notion format is exactly like packing for a move.',
+          tableHeaders: ['Migration Volume', 'Initial Fee (One-time)', 'Example'],
+          tableRows: [
+            { cols: ['Standard', '¥80,000', '5 files / 1-3,000 rows'] },
+            { cols: ['Enterprise', '¥400,000+', 'Multiple systems / dedup required'] },
+          ],
+          footnote: 'Paper digitization: +¥50,000/100 pages (scanning + data entry)',
+        },
+        {
+          point: 'POINT 04',
+          icon: '🔌',
+          title: 'External Tool Integrations',
+          analogy: '📱 Peripherals Connected to Your Phone',
+          desc: 'One pair of earphones? Just Bluetooth pairing. But add a smartwatch, wireless charger, car navigation, and smart appliances — pairing settings and maintenance costs accumulate. Notion integrations (Google, Slack, freee, kintone, etc.) follow the same pattern.',
+          tableHeaders: ['Integrations', 'Additional Fee/Month', 'Example'],
+          tableRows: [
+            { cols: ['2-3', '+¥8,000', 'Adding Slack / Gmail'] },
+            { cols: ['6+', '+¥25,000+', 'Advanced integration incl. custom API'] },
+          ],
+        },
+        {
+          point: 'POINT 05',
+          icon: '🤖',
+          title: 'Automation & AI Agents',
+          analogy: '🗺️ Car Navigation Route Settings',
+          desc: '"Just get to the destination" only requires entering an address. But adding "highway priority, avoid traffic, fuel efficiency, ETC discounts" makes calculations and testing increasingly complex. Notion automation works the same way — more conditions mean higher design and testing costs.',
+          tableHeaders: ['Automation Level', 'Additional Fee/Month', 'Details'],
+          tableRows: [
+            { cols: ['Simple', '¥0 (included in base)', 'Auto-record dates on status changes'] },
+            { cols: ['Intermediate', '+¥10,000', '1 AI agent / periodic reminders'] },
+            { cols: ['Advanced', '+¥25,000', 'Complex Formulas / multiple AI agents / many conditions'] },
+          ],
+        },
+        {
+          point: 'POINT 06',
+          icon: '🏋️',
+          title: 'Regular Meetings & Additional Support',
+          analogy: '💪 Gym Monthly Membership',
+          desc: '"Monthly fee includes 3 group lessons free, then charged per session" — think of a gym membership. Online regular meetings are included in the base fee for up to 3 sessions per month. Additional sessions are charged hourly.',
+          tableHeaders: ['Format', 'Additional Fee (tax incl.) /Session'],
+          tableRows: [
+            { cols: ['Online', '¥11,000'] },
+            { cols: ['On-site (West Shizuoka)', '¥16,500 + actual travel costs'] },
+          ],
+          footnote: 'Service area: Hamamatsu, Kosai, Iwata, Fukuroi, Kakegawa, Kikugawa, Okazaki, Mori',
+        },
+      ],
+    },
+    industryExamples: {
+      sectionLabel: '3. Industry-Specific Plan Examples',
+      title: 'Typical Usage\nby Industry',
+      subtitle: 'Different industries require different numbers of databases and operational complexity. We\'ve compiled typical usage examples for 12 industries we frequently support. *All figures below are reference amounts based on 12-month contracts.',
+      tableHeaders: ['Industry', 'Typical DBs', 'Monthly Estimate (12-mo)', 'Main Themes'],
+      tableRows: [
+        {
+          industry: '① Manufacturing',
+          dbCount: '6-8',
+          price: '¥145,000-¥205,000',
+          themes: 'Daily reports, inventory, quality records, equipment maintenance',
+        },
+        {
+          industry: '② Construction (Contractors)',
+          dbCount: '7-10',
+          price: '¥169,500-¥229,500',
+          themes: 'Site photos, cost management, 2024 labor issues',
+        },
+        {
+          industry: '③ Professional Services (Legal, Tax)',
+          dbCount: '5-7',
+          price: '¥88,000-¥128,000',
+          themes: 'Deadline management, document templates',
+        },
+      ],
+      cards: [
+        {
+          title: '① Manufacturing — 20-employee factory, ¥300M revenue',
+          pain: 'Common challenges: paper daily reports → double-entry in Excel / invisible inventory and WIP / knowledge silos / ISO quality records',
+          dbNote: 'Databases to build (7): Projects / Daily Reports / Inventory / Equipment / Quality / Customers / Suppliers',
+          rows: [
+            { label: '20 employees (16-30 bracket)', val: '+¥20,000' },
+            { label: 'External integrations (Gmail+Slack+freee)', val: '+¥15,000' },
+            { label: 'DB additions (4 × ¥20,000)', val: '+¥80,000' },
+            { label: 'Initial data migration (Standard)', val: '¥80,000' },
+          ],
+          total: '¥155,000+',
+        },
+        {
+          title: '② Construction — 15-employee contractor, ¥200M revenue',
+          pain: 'Common challenges: site photos scattered in LINE / 2024 labor time management / estimate→cost→billing standards / safety documents',
+          dbNote: 'Databases to build (8): Projects / Estimates / Orders & Costs / Billing / Subcontractors / Staff / Photos & Drawings / Schedule',
+          rows: [
+            { label: '15 employees', val: '+¥10,000' },
+            { label: 'Photo/drawing storage support', val: '+¥10,000' },
+            { label: 'On-site support (1x/month, 1hr)', val: '+¥16,500' },
+          ],
+          total: '¥189,500',
+        },
+        {
+          title: '③ Professional Services — 5-employee law office',
+          pain: 'Common challenges: deadline management is critical / document template proliferation / client status in head / confidential data handling',
+          dbNote: 'Databases to build (5): Clients / Projects / Deadlines & Tasks / Document Templates / Billing',
+          rows: [
+            { label: '5 employees', val: '¥0' },
+            { label: 'Support (1 online/month)', val: '¥0' },
+          ],
+          total: '¥88,000',
+        },
+      ],
+    },
+    contractTerms: {
+      sectionLabel: '4. Recommended Plans by Contract Period',
+      title: 'We designed the 12-month contract\nto be the best value,\nbecause we want to build\na long-term relationship.',
+      contracts: [
+        {
+          term: '6-Month Contract',
+          dbNote: 'Up to 2 free DBs',
+          add: '+¥30,000',
+          addSub: '/additional DB/month',
+          reason: 'Want to test results in 6 months / medium-scale trial',
+          recommended: false,
+        },
+        {
+          term: '12-Month Contract',
+          dbNote: 'Up to 3 free DBs',
+          add: '+¥20,000',
+          addSub: '/additional DB/month',
+          reason: 'Serious about operational improvement / want to grow together long-term',
+          recommended: true,
+        },
+        {
+          term: 'Monthly Contract',
+          dbNote: 'First one only (one-time)',
+          add: '+¥35,000',
+          addSub: '/additional DB/month',
+          reason: 'Want intensive short-term trial / short-term premium (higher price)',
+          recommended: false,
+        },
+      ],
+    },
+    process: {
+      sectionLabel: '5. Contract Process',
+      title: 'Implementation Flow',
+      steps: [
+        {
+          icon: '📞',
+          label: 'STEP 01',
+          title: 'Initial Hearing (Free, 60 min)',
+          desc: 'We listen to your industry, scale, current workflows, and challenges.',
+        },
+        {
+          icon: '📋',
+          label: 'STEP 02',
+          title: 'Quote Presentation (3-5 business days)',
+          desc: 'Based on the 6 pricing factors, we present a customized estimate for your company.',
+        },
+        {
+          icon: '🤝',
+          label: 'STEP 03',
+          title: 'Contract & Kickoff',
+          desc: 'Finalize contract period, initial data migration scope, and support frequency.',
+        },
+        {
+          icon: '🔨',
+          label: 'STEP 04',
+          title: 'Initial Build (1-2 months)',
+          desc: 'Construct the Notion workspace, migrate data, and create templates.',
+        },
+        {
+          icon: '🚀',
+          label: 'STEP 05',
+          title: 'Go Live — Monthly Reviews for Continuous Improvement',
+          desc: 'We continuously support feature expansion and operational improvement based on usage.',
+        },
+      ],
+    },
+    faq: {
+      sectionLabel: '6. Frequently Asked Questions',
+      title: 'Frequently Asked Questions',
+      items: [
+        {
+          question: 'Q. Can I add or remove databases or support mid-contract?',
+          answer: 'Yes, changes are reflected from the following month. However, the total months of the 12-month contract must still be maintained.',
+        },
+        {
+          question: 'Q. Does the monthly fee apply during the initial build period?',
+          answer: 'Monthly fees begin from the start month of the initial build. Initial data migration fees are billed separately upon completion.',
+        },
+        {
+          question: 'Q. Is a separate Notion license fee required?',
+          answer: 'Yes, Notion\'s own subscription (Plus/Business/Enterprise) must be contracted directly by your company. Our service covers "building and operational support to maximize Notion\'s value."',
+        },
+        {
+          question: 'Q. Who owns the data?',
+          answer: 'All created workspaces and internal data belong entirely to your company. You can continue using them after the contract ends.',
+        },
+        {
+          question: 'Q. Can I cancel mid-contract?',
+          answer: 'Mid-contract cancellation due to unavoidable circumstances (business closure, major business changes, etc.) can be handled through written consultation. For general mid-contract cancellation, a cancellation fee of 50% of the remaining monthly fees applies (e.g., 4 months remaining at ¥120,000/month = ¥240,000). All built Notion workspace and data remain with your company.',
+        },
+        {
+          question: 'Q. How are confidential and personal information handled?',
+          answer: 'We can execute NDAs separately upon request. We access only the minimum necessary information and maintain operation logs. Your workspace accounts are always registered as "Guest" permissions under worker names, with access immediately revocable upon contract termination. For handling personal information (medical, care), we offer a compliance package (+¥15,000/month) that includes authority design and audit log management.',
+        },
+      ],
+    },
+    cta: {
+      eyebrow: 'Request a Consultation',
+      title: 'Start with a Free Initial Hearing.\nWe\'ll assess your current state and ideals,\nthen propose the optimal plan.',
+      subtitle: 'The initial hearing is free and lasts 60 minutes. Please feel free to contact us.',
+      contactPerson: 'Contact: Kurita',
+      contactRole: 'Business Improvement & AI×System Development',
+      button: 'Inquire Now',
+    },
+  },
+  ict: {
+    hero: {
+      badge: 'ICT SERVICE',
+      title: 'Empowering the Future\nof Business with Technology.',
+      subtitle: 'Notion Business Improvement, AI Interview Automation, Offshore Development —\nthree services to advance your company\'s DX.',
+    },
+    flowBar: {
+      steps: [
+        { num: '01', label: 'Notion Business Improvement', sub: 'Streamline workflows, build DX foundations' },
+        { num: '02', label: 'AI Interview Automation', sub: 'Automate recruitment with AI' },
+        { num: '03', label: 'Offshore Development', sub: 'Accelerate development with global engineers' },
+      ],
+    },
+    notionSection: {
+      badge: 'Business DX',
+      title: 'Notion Business\nImprovement Service',
+      description: 'Information silos, workflow bottlenecks, tool sprawl — we organize and visualize these common challenges with a single Notion workspace.\nStarting from ¥40,000/month, our companion support continuously improves your operational foundation alongside AI.',
+      features: [
+        'Centralize information for instant search',
+        'Visualize business workflows',
+        'Automate routine tasks with AI',
+        'Eliminate knowledge silos and handoff issues',
+        'Continuous improvement through monthly reviews',
+        'From ¥40,000/month (tax excluded)',
+      ],
+      cta: 'Learn More',
+    },
+    aiInterviewSection: {
+      badge: 'Recruitment DX',
+      title: 'AI Interview\nAutomation System',
+      description: 'Eliminate first-round interview workload — AI conducts candidate interviews 24/7.\nAuto-scoring and interview log generation let recruitment staff focus on higher-value core tasks.',
+      features: [
+        'Fully automate first-round interviews',
+        '24/7 availability',
+        'AI auto-scoring',
+        'Automatic interview log generation',
+        'Significantly reduce recruitment workload',
+        'Multilingual support (Japanese & English)',
+      ],
+      cta: 'Learn More',
+    },
+    offshoreSection: {
+      badge: 'Global Development',
+      title: 'Offshore\nDevelopment',
+      description: 'We provide top-tier IT engineers worldwide under reliable management.\nWe optimize costs while maintaining Japanese quality standards, accelerating your development.\nAs a member of your team, we create tangible results together.',
+      features: [
+        'World-class IT engineers',
+        'Up to 40% cost reduction',
+        'Japanese quality standards',
+        'Reliable management structure',
+        'Multilingual & multi-timezone support',
+        'Flexible team scaling',
+      ],
+      cta: 'Learn More',
+    },
+    ctaSection: {
+      title: 'Start with a Free\nConsultation',
+      subtitle: 'We listen to your challenges and requirements, then propose the optimal ICT solution.\nPlease feel free to contact us.',
+      button: 'Book a Free Consultation →',
+    },
+  },
+  recruitment: {
+    hero: {
+      badge: 'Staffing & Recruitment Service',
+      title: 'Connecting Top\nForeign Talent with\nJapanese Companies',
+      subtitle: 'End-to-end support from hiring to retention.\nExperienced staff solve your talent challenges.',
+      ctaPrimary: 'Get a Free Consultation',
+      ctaSecondary: 'View Challenges',
+      pills: ['Free contract translation', 'Free estimates & consultation', 'Zero initial costs'],
+      serviceList: {
+        title: 'Staffing & Recruitment Services',
+        items: [
+          { icon: '🌏', text: 'Foreign talent recruitment (Specified Skills & Engineer/Specialist)' },
+          { icon: '📋', text: 'Visa application support & document translation' },
+          { icon: '🎓', text: 'Business training & living support' },
+          { icon: '🗣️', text: 'Interpretation & translation services' },
+          { icon: '🔄', text: 'Post-hire retention follow-up' },
+        ],
+        cta: 'Start with a Free Consultation',
+        ctaSub: '*No fees until successful hiring',
+      },
+    },
+    problems: {
+      sectionLabel: 'Solutions',
+      title: 'Facing These Foreign\nHiring Challenges?',
+      subtitle: 'Many companies struggle with hiring and retention. Empower & Link supports you from the recruitment stage through post-hire follow-up.',
+      cta: 'Discuss Solutions',
+      items: [
+        { icon: '😓', text: 'Complex procedures and regulations for hiring foreign workers' },
+        { icon: '📢', text: 'Posting job ads but receiving no applications' },
+        { icon: '👥', text: 'Difficulty attracting young, motivated talent' },
+        { icon: '⏰', text: 'Need for workers willing to handle overtime and holidays' },
+        { icon: '🔄', text: 'High turnover — employees leave soon after hiring' },
+        { icon: '🌐', text: 'Concerns about multilingual and cross-cultural communication' },
+      ],
+    },
+    services: {
+      sectionLabel: 'Our Services',
+      title: 'From Hiring to Retention,\nOne-Stop Support',
+      subtitle: 'Three services to resolve all challenges associated with foreign talent recruitment.',
+      items: [
+        {
+          title: 'Document Translation & Visa Application Support',
+          description: 'Comprehensive support from translating recruitment documents to filing visa applications, in partnership with specialized administrative scriveners.',
+          tags: ['Document Translation', 'Visa Applications', 'Scrivener Partnership'],
+        },
+        {
+          title: 'Business Training & Living Support',
+          description: 'For Specified Skills workers, we provide legally required support through registered support organizations. Includes Japanese language education, bank account setup, and accompaniment for public procedures.',
+          tags: ['Living Support', 'Japanese Training', 'Registered Support Org.'],
+        },
+        {
+          title: 'Interpretation & Ongoing Follow-up',
+          description: 'Breaking down language barriers to support smooth communication between companies and foreign talent. Contributing to improved post-hire retention rates.',
+          tags: ['Workplace Interpretation', 'Regular Interviews', 'Issue Resolution'],
+        },
+      ],
+    },
+    stats: {
+      items: [
+        { num: '0', unit: '', label: 'No fees until hiring success' },
+        { num: '2', unit: ' types', label: 'Visa types (Specified Skills & Engineer)' },
+        { num: '3', unit: ' fields', label: 'Manufacturing, Drivers, Auto Repair' },
+        { num: '6', unit: '', label: 'Languages supported' },
+      ],
+    },
+    visas: {
+      sectionLabel: 'Visa Types',
+      title: 'Recruitment Support\nfor Various Talent',
+      subtitle: 'We support both Specified Skills and Engineer/Specialist visas. End-to-end support from hiring to visa application.',
+      items: [
+        {
+          title: 'Immediate-impact Foreign Talent',
+          subtitle: 'Specified Skills Visa',
+          description: 'Specializing in manufacturing, logistics, and auto repair in the Hamamatsu/Shizuoka area, we introduce immediate-impact talent. From candidate introduction through visa application, we provide one-stop support.',
+          checks: [
+            'Industrial products manufacturing (for engine parts suppliers)',
+            'Drivers (Hamamatsu area, responding to logistics demand)',
+            'Auto repair (supporting talent from various countries)',
+          ],
+        },
+        {
+          title: 'Specialist & DX Talent',
+          subtitle: 'Engineer/Specialist in Humanities/International Services',
+          description: 'We introduce immediate-impact talent in specialized fields such as engineering and interpretation/translation. We support talent acquisition in DX, IT, and tourism business sectors.',
+          checks: [
+            'DX/IT (Programming, Cybersecurity, CAD)',
+            'Digital talent with JLPT N2 level Japanese',
+            'Tourism business (Hotels, Tour guides, etc.)',
+            'Licensed guides & various interpretation/translation services',
+          ],
+        },
+      ],
+    },
+    process: {
+      sectionLabel: 'How It Works',
+      title: '6 Steps to Hiring',
+      subtitle: 'We provide end-to-end support from initial inquiry to talent confirmation.',
+      steps: [
+        { num: '01', title: 'Inquiry', desc: 'Contact us via our website or directly. Inquiries such as "I want to learn about foreign talent recruitment" are also welcome.' },
+        { num: '02', title: 'Consultation', desc: 'We listen to your needs regarding job types, hiring numbers, nationality, and visa type (Specified Skills or Engineer/Specialist).' },
+        { num: '03', title: 'Estimate & Contract', desc: 'Review the estimate and finalize the contract.' },
+        { num: '04', title: 'Job Posting Begins', desc: 'We begin recruiting and screening candidates using local networks and databases.' },
+        { num: '05', title: 'Screening & Interviews', desc: 'Our interpretation staff attend interviews to prevent miscommunication due to language and cultural gaps.' },
+        { num: '06', title: 'Talent Confirmed', desc: 'Offer notification and final employment condition confirmation. We also handle follow-up and confirmation of intent with the hiree.' },
+      ],
+      footnote: '*Steps 1-6 are provided free of charge. As a success-based model, fees are only invoiced upon labor contract agreement.',
+    },
+    countries: {
+      sectionLabel: 'Supported Countries',
+      title: 'Primarily Sri Lanka\n& Myanmar',
+      subtitle: 'We introduce talent with strong educational backgrounds and pro-Japanese sentiment. In addition to these two countries, we also support Indonesia and others.',
+      items: [
+        {
+          flag: '🇱🇰',
+          name: 'Sri Lanka',
+          meta: 'Sri Lanka | Average Age: 32-35',
+          points: [
+            { num: '01', title: 'Strong Academic Foundation, Lower Training Costs', desc: 'One of South Asia\'s highest education standards with free public education. Fast learning curve and reduced training burden.' },
+            { num: '02', title: 'High Retention via Pro-Japanese & Buddhist Culture', desc: 'Pro-Japanese sentiment and Buddhist cultural values enable smooth adaptation to Japanese workplace environments.' },
+            { num: '03', title: 'Strong English for Communication Needs', desc: 'English education inherited from British colonial era. Ideal for multinational workplaces and companies with overseas operations.' },
+          ],
+        },
+        {
+          flag: '🇲🇲',
+          name: 'Myanmar',
+          meta: 'Myanmar | Average Age: 27-28',
+          points: [
+            { num: '01', title: 'Shared Buddhist Culture for Smooth Adaptation', desc: 'Values of consideration and respect for seniors are deeply rooted, enabling smooth adaptation to Japanese workplace culture.' },
+            { num: '02', title: 'English Capability for Communication', desc: 'Educational environment where students learn in English from high school. Many talent can communicate in both Japanese and English.' },
+            { num: '03', title: 'Resilience and Cooperativeness', desc: 'Endurance and cooperation characteristic of an agricultural nation. Expected to provide long-term, stable employment continuity.' },
+          ],
+        },
+      ],
+    },
+    cta: {
+      eyebrow: 'Get Started',
+      title: 'Hiring Challenges?\nLet\'s Talk.',
+      subtitle: 'Inquiries just to learn about foreign hiring are also welcome.\nOur experienced staff will assist you promptly.',
+      button: 'Free Consultation',
+      secondaryButton: 'View How It Works',
+      footnote: '*Success-based model. No fees until successful hiring.',
+    },
+  },
+  japanesePage: {
+    hero: {
+      badge: 'Japanese Language Service',
+      title: 'Delivering the Japanese\nYou Need for Work,\nIn the Form You Need.',
+      subtitle: 'We support interpretation for seminars and training, document translation, and Japanese language learning for foreign employees and trainees. We design content tailored to your purpose and workplace, supporting smooth communication.',
+      ctaPrimary: 'Contact Us',
+      ctaSecondary: 'Free Trial & Consultation',
+      infoCards: {
+        audience: { label: 'Available To', value: 'Corporate & Individual' },
+        format: { label: 'Format', value: 'Online & In-person' },
+        content: { label: 'Content', value: 'Workplace Optimized' },
+      },
+    },
+    challenges: {
+      title: 'Are You Facing These Issues?',
+      items: [
+        'Due to Japanese language barriers, you can\'t fully understand content in training sessions designed for Japanese staff.',
+        'You hired someone with Japanese skills, but actual workplace communication is more difficult than expected.',
+        'You\'re aiming for permanent residency but lack the Japanese proficiency needed for the exam.',
+        'In foreign talent recruitment, the candidate\'s insufficient Japanese becomes a barrier to closing deals.',
+        'Instructions are unclear, and tasks are sometimes completed differently from what was requested.',
+        'Colleagues from the same native language tend to cluster together, reducing opportunities to practice Japanese and slowing improvement.',
+      ],
+    },
+    recommended: {
+      title: 'Recommended For',
+      description: 'Training, interpretation, learning support — pinpoint the exact support you need.',
+      items: [
+        'Those preparing for the Japanese Language Proficiency Test',
+        'Those wanting to improve business Japanese',
+        'Those wanting to speak like a native',
+        'Companies conducting training for foreign employees and trainees',
+        'Companies needing interpretation for seminars and training',
+      ],
+      ctaTitle: 'Start with a Free Consultation & Trial',
+      button: 'Contact Us',
+    },
+    professors: {
+      title: 'Instructor Profiles',
+      instructorLabel: 'Instructor',
+      profiles: [
+        {
+          id: 1,
+          name: 'Kana Koide',
+          kana: 'こいで かな',
+          sections: [
+            {
+              title: '【Licenses & Certifications】',
+              items: [
+                'Registered Japanese Language Teacher (Registration No.: D0000018660)',
+                'TOEIC 860 points',
+              ],
+            },
+            {
+              title: '【Career】',
+              items: [
+                'Language study abroad in Canada',
+                'Cram school instructor',
+                'Construction industry office worker',
+                'Overseas sales at automobile manufacturer',
+              ],
+            },
+          ],
+          image: '/japanese/koide.jpg',
+        },
+        {
+          id: 2,
+          name: 'Si Thu Lin',
+          kana: 'シ トゥ リン',
+          sections: [
+            {
+              title: '【Licenses & Certifications】',
+              items: [
+                'JLPT (Japanese Language Proficiency Test) N1',
+                'TOEIC 940 points',
+              ],
+            },
+            {
+              title: '【Career】',
+              items: [
+                'Japanese interpretation & translation 3 years',
+                'International student essay contest (2024) Bronze Prize',
+              ],
+            },
+          ],
+          image: '/english/prof2.jpg',
+        },
+      ],
+    },
+    serviceListing: {
+      title: 'Services',
+      estimateLabel: 'Estimate',
+      feeLabel: 'Fee',
+      bookingButton: 'Book This Service',
+      courses: [
+        {
+          id: 1,
+          prof: 'Kana Koide',
+          tags: ['Corporate & Individual', 'JLPT Preparation'],
+          payType: 'Monthly',
+          title: 'JLPT Preparation Course',
+          image: '/japanese/teaching.jpg',
+          description:
+            'A preparation course for JLPT levels N4 to N2. Learn grammar, vocabulary, reading, and listening skills in a balanced way to pass the exam. Includes mock exams and past paper practice for practical skill development.',
+          features: {
+            language: 'Japanese',
+            important: ['In-person lessons available in Hamamatsu area', 'Online lessons available'],
+          },
+          duration: '4 times/month',
+          pricing: [
+            {
+              type: 'Individual',
+              price: '¥20,000~',
+            },
+            {
+              type: 'Corporate (up to 10 people)',
+              price: '¥60,000~',
+            },
+          ],
+        },
+        {
+          id: 2,
+          prof: 'Si Thu Lin',
+          tags: ['Corporate & Individual', 'Translation', 'Document Proofreading'],
+          payType: 'Monthly',
+          title: 'Business Japanese Document Proofreading Course',
+          image: '/japanese/writing.jpg',
+          description:
+            'A course to strengthen Japanese language skills needed for business. Learn practical skills such as email writing and meeting minutes creation. Also includes document proofreading to develop accurate and effective writing.',
+          features: {
+            language:
+              'Japanese, English, Vietnamese, Indonesian, Burmese (Myanmar), Sinhalese (Sri Lanka), Portuguese, Spanish, Chinese, Persian (Iran)',
+            important: ['Fully online available', 'Translation of business documents also available'],
+          },
+          duration: '4 times/month',
+          pricing: [
+            {
+              type: 'Document Proofreading Course',
+              price: '¥20,000~',
+            },
+            {
+              type: 'Translation A4 (1 page)',
+              price: '¥18,000~',
+            },
+          ],
+        },
+        {
+          id: 3,
+          prof: 'Si Thu Lin',
+          tags: ['Corporate & Individual', 'Interpretation'],
+          payType: 'One-time',
+          title: 'Interpretation for Seminars, Interviews, etc.',
+          image: '/japanese/interpretation.jpg',
+          description:
+            'Interpretation services for seminars, training, and interviews for foreign employees and trainees. Handles specialized terminology to ensure smooth communication on-site.',
+          features: {
+            language:
+              'Japanese ⇔ English (Japanese, Licensed Guide), Chinese (Chinese, Social Insurance and Labor Consultant), Burmese, Vietnamese, Indonesian, Nepalese, Sinhalese, Portuguese, Spanish, French (Japanese), Italian (Japanese, Licensed Guide), Persian (Japanese, Administrative Scrivener)',
+            important: ['Adjustable in 4-hour units', 'Nationwide available (travel and accommodation costs separate)'],
+          },
+          duration: '1 day (8 hours)',
+          pricing: [
+            {
+              type: 'Interpretation Service',
+              price: '¥40,000',
+            },
+          ],
+        },
+      ],
+      modals: {
+        calendar: {
+          title: 'Select a Date',
+          instruction: 'Click on your preferred date',
+          closeLabel: 'Close',
+        },
+        timeSlots: {
+          title: 'Select a Time',
+          closeLabel: 'Close',
+          backLabel: 'Back',
+          contentLabel: 'Service Details',
+        },
+        userForm: {
+          title: 'Your Information',
+          closeLabel: 'Close',
+          backLabel: 'Back',
+          reservationLabel: 'Reservation Details',
+          labels: {
+            name: 'Name',
+            email: 'Email Address',
+            phone: 'Phone Number',
+            message: 'Message & Requests',
+          },
+          placeholders: {
+            name: 'Taro Tanaka',
+            email: 'example@email.com',
+            phone: '090-1234-5678',
+            message: 'Any questions or requests',
+          },
+          submitIdle: 'Send Reservation Request',
+          submitting: 'Processing...',
+        },
+      },
+      alerts: {
+        validationError: 'Name and email address are required.',
+        confirmTitle: 'Please Confirm Your Booking',
+        confirmService: '📚 Service:',
+        confirmDateTime: '📅 Preferred Date & Time:',
+        confirmName: '👤 Name:',
+        confirmEmail: '📧 Email:',
+        confirmPhone: '📞 Phone:',
+        confirmMessage: '💬 Message:',
+        confirmSend: 'Send with the above information?',
+        success: '✅ Sent! Our staff will contact you shortly.',
+        error: 'We apologize for the inconvenience. An error occurred during submission.\n\nPlease check your EmailJS settings.\nFor urgent inquiries, please call us directly.',
+      },
+    },
+    cta: {
+      title: 'Start with a Free Consultation',
+      subtitle: 'We adjust training content, interpretation scope, and delivery methods to suit your workplace.',
+      webButton: 'Contact Us Online',
+      phoneButton: '070-6616-0410',
+      phoneNote: 'For urgent inquiries, please call us.',
+    },
   },
 };

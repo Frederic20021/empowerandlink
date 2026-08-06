@@ -560,7 +560,7 @@ overflow-x: hidden;
 }
 .why-head h3 { color: #ffffff; font-size: .98rem; flex: 1; }
 .why-body { padding: 1.4rem 1.8rem; background: rgba(10,28,80,.75); backdrop-filter: blur(12px); }
-.why-body p { color: rgba(255,255,255,.65); font-size: .84rem; line-height: 1.85; white-space: pre-line; }
+.why-body p { color: rgba(255,255,255,.65); font-size: .84rem; line-height: 1.85; white-space: wrap; }
 
 /* ════════════════════════
    CTA
