@@ -9,4 +9,4 @@
 :HL["/empowerandlink/images/blog/1785638872013-FBC3DF9483C5F29CEFE7CF24338CAC0D0267A47C.jpeg","image"]
 :HL["/empowerandlink/images/blog/1785638946946-13873DAAB84C652696F39456B5061DC44AB66EA6.jpeg","image"]
 :HL["/empowerandlink/images/blog/1785638971798-67D68E85E6C7F24D43EF41F02FD32325017DE416.jpeg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"uij-turn-exchange-event","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"5PXI145X7FdhVD2Rfx4JI"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"uij-turn-exchange-event","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"EFo08M2HABwxTO4GoTVc5"}
