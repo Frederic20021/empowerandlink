@@ -11,4 +11,4 @@
 :HL["/empowerandlink/images/blog/1789356374769-6210D310283BA4A2CE4F0D9FE886313E599C55AD.jpeg","image"]
 :HL["/empowerandlink/images/blog/1789356386131-43E03359CF434C5864491DF34F29BE4EDF02BA05.jpeg","image"]
 :HL["/empowerandlink/images/blog/1789356736175-631698647511466446.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"indonesia-bandung-visit","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"EFo08M2HABwxTO4GoTVc5"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"indonesia-bandung-visit","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"OYg-grarvir19LQGYkjQ4"}
